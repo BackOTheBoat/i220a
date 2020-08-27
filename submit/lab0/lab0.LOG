@@ -1,0 +1,140 @@
+Script started on 2020-08-27 11:49:23-04:00 [TERM="xterm-256color" TTY="/dev/pts/9" COLUMNS="68" LINES="12"]
+estern7@remote00:~/tmp/lab0$ la [K[Ks ~/. ass[K[K[Kssh
+ls: cannot access 'ssh': No such file or directory
+/home/estern7/.:
+Arduino  cs120~   cs120.c~  Documents  Music	 Public     tmp
+cs120	 cs120.c  Desktop   Downloads  Pictures  Templates  Videos
+estern7@remote00:~/tmp/lab0$ ls ~/. ssh[1Pssh\ssh[1Pssh[C[1Ph[1Ph[K[K[K[K[K[K[K^V[Kls ~/.
+sshArduino  cs120~   cs120.c~  Documents  Music	 Public     tmp
+cs120	 cs120.c  Desktop   Downloads  Pictures  Templates  Videos
+estern7@remote00:~/tmp/lab0$ sshls ~/.
+sshbash: sshls: command not found
+estern7@remote00:~/tmp/lab0$ ssh[K[K[Kls ~/.
+sshArduino  cs120~   cs120.c~  Documents  Music	 Public     tmp
+cs120	 cs120.c  Desktop   Downloads  Pictures  Templates  Videos
+estern7@remote00:~/tmp/lab0$ ssh[Kestern7@remote00:~/tmp/lab0$ ssh[K[K[Kls ~/. ssh[K[K[K[K[K[K[K[K[K[Kssh -[K[K-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/estern7/.ssh/id_rsa): 
+Created directory '/home/estern7/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/estern7/.ssh/id_rsa.
+Your public key has been saved in /home/estern7/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:0mHOm2RG2yy69p7ZQ0WvfzpOGIsooXgKUgW95b65fiU estern7@remote00
+The key's randomart image is:
++---[RSA 2048]----+
+|  ..             |
+|   .. .     .    |
+|    .+  +  . .   |
+|   .. .* =  . .  |
+|  .  .o S o...   |
+| . . ..BE=o..+   |
+|o . o oo++. o..  |
+|.. o  +o.+.  .o .|
+|  .  o+== .. .o+ |
++----[SHA256]-----+
+estern7@remote00:~/tmp/lab0$ ssh-copy-id estern7@remote
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/estern7/.ssh/id_rsa.pub"
+The authenticity of host 'remote (128.226.114.200)' can't be established.
+ECDSA key fingerprint is SHA256:UEIh1TASIC96TC1hhxVbkVS0DrddNKHk7Q2nzgDCt+Y.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+estern7@remote's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'estern7@remote'"
+and check to make sure that only the key(s) you wanted were added.
+
+estern7@remote00:~/tmp/lab0$ ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git
+bash: ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git: No such file or directory
+estern7@remote00:~/tmp/lab0$ ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[37P-copy-id estern7@remote://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.gi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Kssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[Kt[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C7@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+bash: ssh://estern7@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git: No such file or directory
+estern7@remote00:~/tmp/lab0$ mkdir -p ~/projects
+estern7@remote00:~/tmp/lab0$ cd !/[K[K[K~/pro[K[K[K[K[K ~\[K/projects
+estern7@remote00:~/projects$ git clone ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git
+Cloning into 'cs220'...
+The authenticity of host 'remote.cs.binghamton.edu (128.226.114.200)' can't be established.
+ECDSA key fingerprint is SHA256:UEIh1TASIC96TC1hhxVbkVS0DrddNKHk7Q2nzgDCt+Y.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'remote.cs.binghamton.edu' (ECDSA) to the list of known hosts.
+user@remote.cs.binghamton.edu's password: 
+Permission denied, please try again.
+user@remote.cs.binghamton.edu's password: 
+Permission denied, please try again.
+user@remote.cs.binghamton.edu's password: 
+user@remote.cs.binghamton.edu: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+estern7@remote00:~/projects$ git clone ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/projects[Kgit clone ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C7@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Cloning into 'cs220'...
+remote: Enumerating objects: 261, done.[K
+remote: Counting objects:   0% (1/261)   [Kremote: Counting objects:   1% (3/261)   [Kremote: Counting objects:   2% (6/261)   [Kremote: Counting objects:   3% (8/261)   [Kremote: Counting objects:   4% (11/261)   [Kremote: Counting objects:   5% (14/261)   [Kremote: Counting objects:   6% (16/261)   [Kremote: Counting objects:   7% (19/261)   [Kremote: Counting objects:   8% (21/261)   [Kremote: Counting objects:   9% (24/261)   [Kremote: Counting objects:  10% (27/261)   [Kremote: Counting objects:  11% (29/261)   [Kremote: Counting objects:  12% (32/261)   [Kremote: Counting objects:  13% (34/261)   [Kremote: Counting objects:  14% (37/261)   [Kremote: Counting objects:  15% (40/261)   [Kremote: Counting objects:  16% (42/261)   [Kremote: Counting objects:  17% (45/261)   [Kremote: Counting objects:  18% (47/261)   [Kremote: Counting objects:  19% (50/261)   [Kremote: Counting objects:  20% (53/261)   [Kremote: Counting objects:  21% (55/261)   [Kremote: Counting objects:  22% (58/261)   [Kremote: Counting objects:  23% (61/261)   [Kremote: Counting objects:  24% (63/261)   [Kremote: Counting objects:  25% (66/261)   [Kremote: Counting objects:  26% (68/261)   [Kremote: Counting objects:  27% (71/261)   [Kremote: Counting objects:  28% (74/261)   [Kremote: Counting objects:  29% (76/261)   [Kremote: Counting objects:  30% (79/261)   [Kremote: Counting objects:  31% (81/261)   [Kremote: Counting objects:  32% (84/261)   [Kremote: Counting objects:  33% (87/261)   [Kremote: Counting objects:  34% (89/261)   [Kremote: Counting objects:  35% (92/261)   [Kremote: Counting objects:  36% (94/261)   [Kremote: Counting objects:  37% (97/261)   [Kremote: Counting objects:  38% (100/261)   [Kremote: Counting objects:  39% (102/261)   [Kremote: Counting objects:  40% (105/261)   [Kremote: Counting objects:  41% (108/261)   [Kremote: Counting objects:  42% (110/261)   [Kremote: Counting objects:  43% (113/261)   [Kremote: Counting objects:  44% (115/261)   [Kremote: Counting objects:  45% (118/261)   [Kremote: Counting objects:  46% (121/261)   [Kremote: Counting objects:  47% (123/261)   [Kremote: Counting objects:  48% (126/261)   [Kremote: Counting objects:  49% (128/261)   [Kremote: Counting objects:  50% (131/261)   [Kremote: Counting objects:  51% (134/261)   [Kremote: Counting objects:  52% (136/261)   [Kremote: Counting objects:  53% (139/261)   [Kremote: Counting objects:  54% (141/261)   [Kremote: Counting objects:  55% (144/261)   [Kremote: Counting objects:  56% (147/261)   [Kremote: Counting objects:  57% (149/261)   [Kremote: Counting objects:  58% (152/261)   [Kremote: Counting objects:  59% (154/261)   [Kremote: Counting objects:  60% (157/261)   [Kremote: Counting objects:  61% (160/261)   [Kremote: Counting objects:  62% (162/261)   [Kremote: Counting objects:  63% (165/261)   [Kremote: Counting objects:  64% (168/261)   [Kremote: Counting objects:  65% (170/261)   [Kremote: Counting objects:  66% (173/261)   [Kremote: Counting objects:  67% (175/261)   [Kremote: Counting objects:  68% (178/261)   [Kremote: Counting objects:  69% (181/261)   [Kremote: Counting objects:  70% (183/261)   [Kremote: Counting objects:  71% (186/261)   [Kremote: Counting objects:  72% (188/261)   [Kremote: Counting objects:  73% (191/261)   [Kremote: Counting objects:  74% (194/261)   [Kremote: Counting objects:  75% (196/261)   [Kremote: Counting objects:  76% (199/261)   [Kremote: Counting objects:  77% (201/261)   [Kremote: Counting objects:  78% (204/261)   [Kremote: Counting objects:  79% (207/261)   [Kremote: Counting objects:  80% (209/261)   [Kremote: Counting objects:  81% (212/261)   [Kremote: Counting objects:  82% (215/261)   [Kremote: Counting objects:  83% (217/261)   [Kremote: Counting objects:  84% (220/261)   [Kremote: Counting objects:  85% (222/261)   [Kremote: Counting objects:  86% (225/261)   [Kremote: Counting objects:  87% (228/261)   [Kremote: Counting objects:  88% (230/261)   [Kremote: Counting objects:  89% (233/261)   [Kremote: Counting objects:  90% (235/261)   [Kremote: Counting objects:  91% (238/261)   [Kremote: Counting objects:  92% (241/261)   [Kremote: Counting objects:  93% (243/261)   [Kremote: Counting objects:  94% (246/261)   [Kremote: Counting objects:  95% (248/261)   [Kremote: Counting objects:  96% (251/261)   [Kremote: Counting objects:  97% (254/261)   [Kremote: Counting objects:  98% (256/261)   [Kremote: Counting objects:  99% (259/261)   [Kremote: Counting objects: 100% (261/261)   [Kremote: Counting objects: 100% (261/261), done.[K
+remote: Compressing objects:   0% (1/224)   [Kremote: Compressing objects:   1% (3/224)   [Kremote: Compressing objects:   2% (5/224)   [Kremote: Compressing objects:   3% (7/224)   [Kremote: Compressing objects:   4% (9/224)   [Kremote: Compressing objects:   5% (12/224)   [Kremote: Compressing objects:   6% (14/224)   [Kremote: Compressing objects:   7% (16/224)   [Kremote: Compressing objects:   8% (18/224)   [Kremote: Compressing objects:   9% (21/224)   [Kremote: Compressing objects:  10% (23/224)   [Kremote: Compressing objects:  11% (25/224)   [Kremote: Compressing objects:  12% (27/224)   [Kremote: Compressing objects:  13% (30/224)   [Kremote: Compressing objects:  14% (32/224)   [Kremote: Compressing objects:  15% (34/224)   [Kremote: Compressing objects:  16% (36/224)   [Kremote: Compressing objects:  17% (39/224)   [Kremote: Compressing objects:  18% (41/224)   [Kremote: Compressing objects:  19% (43/224)   [Kremote: Compressing objects:  20% (45/224)   [Kremote: Compressing objects:  21% (48/224)   [Kremote: Compressing objects:  22% (50/224)   [Kremote: Compressing objects:  23% (52/224)   [Kremote: Compressing objects:  24% (54/224)   [Kremote: Compressing objects:  25% (56/224)   [Kremote: Compressing objects:  26% (59/224)   [Kremote: Compressing objects:  27% (61/224)   [Kremote: Compressing objects:  28% (63/224)   [Kremote: Compressing objects:  29% (65/224)   [Kremote: Compressing objects:  30% (68/224)   [Kremote: Compressing objects:  31% (70/224)   [Kremote: Compressing objects:  32% (72/224)   [Kremote: Compressing objects:  33% (74/224)   [Kremote: Compressing objects:  34% (77/224)   [Kremote: Compressing objects:  35% (79/224)   [Kremote: Compressing objects:  36% (81/224)   [Kremote: Compressing objects:  37% (83/224)   [Kremote: Compressing objects:  38% (86/224)   [Kremote: Compressing objects:  39% (88/224)   [Kremote: Compressing objects:  40% (90/224)   [Kremote: Compressing objects:  41% (92/224)   [Kremote: Compressing objects:  42% (95/224)   [Kremote: Compressing objects:  43% (97/224)   [Kremote: Compressing objects:  44% (99/224)   [Kremote: Compressing objects:  45% (101/224)   [Kremote: Compressing objects:  46% (104/224)   [Kremote: Compressing objects:  47% (106/224)   [Kremote: Compressing objects:  48% (108/224)   [Kremote: Compressing objects:  49% (110/224)   [Kremote: Compressing objects:  50% (112/224)   [Kremote: Compressing objects:  51% (115/224)   [Kremote: Compressing objects:  52% (117/224)   [Kremote: Compressing objects:  53% (119/224)   [Kremote: Compressing objects:  54% (121/224)   [Kremote: Compressing objects:  55% (124/224)   [Kremote: Compressing objects:  56% (126/224)   [Kremote: Compressing objects:  57% (128/224)   [Kremote: Compressing objects:  58% (130/224)   [Kremote: Compressing objects:  59% (133/224)   [Kremote: Compressing objects:  60% (135/224)   [Kremote: Compressing objects:  61% (137/224)   [Kremote: Compressing objects:  62% (139/224)   [Kremote: Compressing objects:  63% (142/224)   [Kremote: Compressing objects:  64% (144/224)   [Kremote: Compressing objects:  65% (146/224)   [Kremote: Compressing objects:  66% (148/224)   [Kremote: Compressing objects:  67% (151/224)   [Kremote: Compressing objects:  68% (153/224)   [Kremote: Compressing objects:  69% (155/224)   [Kremote: Compressing objects:  70% (157/224)   [Kremote: Compressing objects:  71% (160/224)   [Kremote: Compressing objects:  72% (162/224)   [Kremote: Compressing objects:  73% (164/224)   [Kremote: Compressing objects:  74% (166/224)   [Kremote: Compressing objects:  75% (168/224)   [Kremote: Compressing objects:  76% (171/224)   [Kremote: Compressing objects:  77% (173/224)   [Kremote: Compressing objects:  78% (175/224)   [Kremote: Compressing objects:  79% (177/224)   [Kremote: Compressing objects:  80% (180/224)   [Kremote: Compressing objects:  81% (182/224)   [Kremote: Compressing objects:  82% (184/224)   [Kremote: Compressing objects:  83% (186/224)   [Kremote: Compressing objects:  84% (189/224)   [Kremote: Compressing objects:  85% (191/224)   [Kremote: Compressing objects:  86% (193/224)   [Kremote: Compressing objects:  87% (195/224)   [Kremote: Compressing objects:  88% (198/224)   [Kremote: Compressing objects:  89% (200/224)   [Kremote: Compressing objects:  90% (202/224)   [Kremote: Compressing objects:  91% (204/224)   [Kremote: Compressing objects:  92% (207/224)   [Kremote: Compressing objects:  93% (209/224)   [Kremote: Compressing objects:  94% (211/224)   [Kremote: Compressing objects:  95% (213/224)   [Kremote: Compressing objects:  96% (216/224)   [Kremote: Compressing objects:  97% (218/224)   [Kremote: Compressing objects:  98% (220/224)   [Kremote: Compressing objects:  99% (222/224)   [Kremote: Compressing objects: 100% (224/224)   [Kremote: Compressing objects: 100% (224/224), done.[K
+Receiving objects:   0% (1/261)   Receiving objects:   1% (3/261)   Receiving objects:   2% (6/261)   Receiving objects:   3% (8/261)   Receiving objects:   4% (11/261)   Receiving objects:   5% (14/261)   Receiving objects:   6% (16/261)   Receiving objects:   7% (19/261)   Receiving objects:   8% (21/261)   Receiving objects:   9% (24/261)   Receiving objects:  10% (27/261)   Receiving objects:  11% (29/261)   Receiving objects:  12% (32/261)   Receiving objects:  13% (34/261)   Receiving objects:  14% (37/261)   Receiving objects:  15% (40/261)   Receiving objects:  16% (42/261)   Receiving objects:  17% (45/261)   Receiving objects:  18% (47/261)   Receiving objects:  19% (50/261)   Receiving objects:  20% (53/261)   Receiving objects:  21% (55/261)   Receiving objects:  22% (58/261)   Receiving objects:  23% (61/261)   Receiving objects:  24% (63/261)   Receiving objects:  25% (66/261)   Receiving objects:  26% (68/261)   Receiving objects:  27% (71/261)   Receiving objects:  28% (74/261)   Receiving objects:  29% (76/261)   Receiving objects:  30% (79/261)   Receiving objects:  31% (81/261)   Receiving objects:  32% (84/261)   Receiving objects:  33% (87/261)   Receiving objects:  34% (89/261)   Receiving objects:  35% (92/261)   Receiving objects:  36% (94/261)   Receiving objects:  37% (97/261)   Receiving objects:  38% (100/261)   Receiving objects:  39% (102/261)   Receiving objects:  40% (105/261)   Receiving objects:  41% (108/261)   Receiving objects:  42% (110/261)   Receiving objects:  43% (113/261)   Receiving objects:  44% (115/261)   Receiving objects:  45% (118/261)   Receiving objects:  46% (121/261)   Receiving objects:  47% (123/261)   Receiving objects:  48% (126/261)   Receiving objects:  49% (128/261)   Receiving objects:  50% (131/261)   Receiving objects:  51% (134/261)   Receiving objects:  52% (136/261)   Receiving objects:  53% (139/261)   Receiving objects:  54% (141/261)   Receiving objects:  55% (144/261)   Receiving objects:  56% (147/261)   Receiving objects:  57% (149/261)   Receiving objects:  58% (152/261)   Receiving objects:  59% (154/261)   Receiving objects:  60% (157/261)   Receiving objects:  61% (160/261)   Receiving objects:  62% (162/261)   Receiving objects:  63% (165/261)   Receiving objects:  64% (168/261)   Receiving objects:  65% (170/261)   Receiving objects:  66% (173/261)   Receiving objects:  67% (175/261)   Receiving objects:  68% (178/261)   Receiving objects:  69% (181/261)   Receiving objects:  70% (183/261)   Receiving objects:  71% (186/261)   Receiving objects:  72% (188/261)   Receiving objects:  73% (191/261)   Receiving objects:  74% (194/261)   Receiving objects:  75% (196/261)   Receiving objects:  76% (199/261)   Receiving objects:  77% (201/261)   Receiving objects:  78% (204/261)   Receiving objects:  79% (207/261)   Receiving objects:  80% (209/261)   Receiving objects:  81% (212/261)   Receiving objects:  82% (215/261)   Receiving objects:  83% (217/261)   Receiving objects:  84% (220/261)   Receiving objects:  85% (222/261)   Receiving objects:  86% (225/261)   Receiving objects:  87% (228/261)   Receiving objects:  88% (230/261)   Receiving objects:  89% (233/261)   Receiving objects:  90% (235/261)   Receiving objects:  91% (238/261)   Receiving objects:  92% (241/261)   Receiving objects:  93% (243/261)   Receiving objects:  94% (246/261)   Receiving objects:  95% (248/261)   Receiving objects:  96% (251/261)   remote: Total 261 (delta 70), reused 153 (delta 25)[K
+Receiving objects:  97% (254/261)   Receiving objects:  98% (256/261)   Receiving objects:  99% (259/261)   Receiving objects: 100% (261/261)   Receiving objects: 100% (261/261), 1.62 MiB | 27.23 MiB/s, done.
+Resolving deltas:   0% (0/70)   Resolving deltas:   8% (6/70)   Resolving deltas:  11% (8/70)   Resolving deltas:  12% (9/70)   Resolving deltas:  14% (10/70)   Resolving deltas:  17% (12/70)   Resolving deltas:  18% (13/70)   Resolving deltas:  22% (16/70)   Resolving deltas:  30% (21/70)   Resolving deltas:  32% (23/70)   Resolving deltas:  34% (24/70)   Resolving deltas:  35% (25/70)   Resolving deltas:  37% (26/70)   Resolving deltas:  38% (27/70)   Resolving deltas:  40% (28/70)   Resolving deltas:  42% (30/70)   Resolving deltas:  44% (31/70)   Resolving deltas:  45% (32/70)   Resolving deltas:  47% (33/70)   Resolving deltas:  51% (36/70)   Resolving deltas:  52% (37/70)   Resolving deltas:  54% (38/70)   Resolving deltas:  55% (39/70)   Resolving deltas:  62% (44/70)   Resolving deltas:  64% (45/70)   Resolving deltas:  72% (51/70)   Resolving deltas:  80% (56/70)   Resolving deltas:  81% (57/70)   Resolving deltas:  82% (58/70)   Resolving deltas:  84% (59/70)   Resolving deltas:  85% (60/70)   Resolving deltas:  90% (63/70)   Resolving deltas:  95% (67/70)   Resolving deltas: 100% (70/70)   Resolving deltas: 100% (70/70), done.
+estern7@remote00:~/projects$ cd ~[K[K[K[Kcd ~
+estern7@remote00:~$ ln -s projects/cs220
+estern7@remote00:~$ ln -s projects/cs220 .
+ln: failed to create symbolic link './cs220': File exists
+estern7@remote00:~$ ls
+Arduino  cs120	cs120~	cs120.c  cs120.c~  cs220  Desktop  Documents  Downloads  Music	Pictures  projects  Public  Templates  tmp  Videos
+estern7@remote00:~$ rm -r cs220
+estern7@remote00:~$ rm -r cs220ls[Kn -s projects/cs220 .
+estern7@remote00:~$ cd ~/git-pepos[K[K[K[K[Krepos/cd20[K20[K[K[K[Ks220
+bash: cd: /home/estern7/git-repos/cs220: No such file or directory
+estern7@remote00:~$ ls
+Arduino  cs120	cs120~	cs120.c  cs120.c~  cs220  Desktop  Documents  Downloads  Music	Pictures  projects  Public  Templates  tmp  Videos
+estern7@remote00:~$ cd ./~/projects
+bash: cd: ./~/projects: No such file or directory
+estern7@remote00:~$ ls
+Arduino  cs120	cs120~	cs120.c  cs120.c~  cs220  Desktop  Documents  Downloads  Music	Pictures  projects  Public  Templates  tmp  Videos
+estern7@remote00:~$ cd ./po[Ke[Ke[Krojects/
+estern7@remote00:~/projects$ mkdir -p ~/projects
+estern7@remote00:~/projects$ git clone[K[K[K[K[K[K[K[K[Kmkdir -p ~/projects[5Pcd ./projects/[C[1P/projects/~/projects/
+estern7@remote00:~/projects$ git clone https://github.com/BackOTheBoat/i220a.git
+Cloning into 'i220a'...
+Username for 'https://github.com': BackOTHE  heBoat
+Password for 'https://BackOTheBoat@github.com': 
+remote: Enumerating objects: 4, done.[K
+remote: Counting objects:  25% (1/4)[Kremote: Counting objects:  50% (2/4)[Kremote: Counting objects:  75% (3/4)[Kremote: Counting objects: 100% (4/4)[Kremote: Counting objects: 100% (4/4), done.[K
+remote: Compressing objects:  25% (1/4)[Kremote: Compressing objects:  50% (2/4)[Kremote: Compressing objects:  75% (3/4)[Kremote: Compressing objects: 100% (4/4)[Kremote: Compressing objects: 100% (4/4), done.[K
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  25% (1/4)   Unpacking objects:  50% (2/4)   Unpacking objects:  75% (3/4)   Unpacking objects: 100% (4/4)   Unpacking objects: 100% (4/4), done.
+estern7@remote00:~/projects$ cd ~
+estern7@remote00:~$ ln -s ~projects/projects[C[C[C[C[C[C[C[C/i220a .
+estern7@remote00:~$ cd ~/i220a
+estern7@remote00:~/i220a$ git stt[Kar[Ktus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+estern7@remote00:~/i220a$ git push
+Username for 'https://github.com': Back0 OTheBoat
+Password for 'https://BackOTheBoat@github.com': 
+Everything up-to-date
+estern7@remote00:~/i220a$ ls -dl ~/cs220 ~/i220a
+lrwxrwxrwx 1 estern7 estern7 14 Aug 27 12:37 /home/estern7/cs220 -> projects/cs220
+lrwxrwxrwx 1 estern7 estern7 28 Aug 27 12:54 /home/estern7/i220a -> /home/estern7/projects/i220a
+estern7@remote00:~/i220a$ ls -l ~/.ssh ~/cs220 ~/i220a
+lrwxrwxrwx 1 estern7 estern7 14 Aug 27 12:37 /home/estern7/cs220 -> projects/cs220
+lrwxrwxrwx 1 estern7 estern7 28 Aug 27 12:54 /home/estern7/i220a -> /home/estern7/projects/i220a
+
+/home/estern7/.ssh:
+total 16
+-rw------- 1 estern7 estern7  398 Aug 27 12:13 authorized_keys
+-rw------- 1 estern7 estern7 1823 Aug 27 12:11 id_rsa
+-rw-r----- 1 estern7 estern7  398 Aug 27 12:11 id_rsa.pub
+-rw-r--r-- 1 estern7 estern7  666 Aug 27 12:17 known_hosts
+estern7@remote00:~/i220a$ cd ~/i220a
+estern7@remote00:~/i220a$ git checkout -b lab0
+Switched to a new branch 'lab0'
+estern7@remote00:~/i220a$ mkdir -p submit
+estern7@remote00:~/i220a$ exit
+
+Script done on 2020-08-27 12:58:47-04:00 [COMMAND_EXIT_CODE="0"]

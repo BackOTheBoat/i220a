@@ -1,0 +1,45 @@
+#include "hamming.h"
+
+#include <assert.h>
+#include <errno.h>
+#include <limits.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+/** Read whitespace-separated HammingWord's from stream in.  If
+ *  doDecode is non-zero, then hamming-decode them onto stream out;
+ *  otherwise hamming-encode them on stream out.
+ *  If isVerbose (must be isDecode), then output a * after every
+ *  corrected output
+ */
+static int do_hamming(FILE *in, int nParityBits, bool isDecode, bool isVerbose, FILE *out)
+{
+  assert(isVerbose ? isDecode : true);
+  int hasError = 0;  //got an error on any word
+  int nEncodedBits = (1 << nParityBits) - 1;
+  int nInBits = (isDecode) ? nEncodedBits : nEncodedBits - nParityBits;
+  HammingWord maxIn = (1ULL << nInBits) - 1;
+  HammingWord v;
+  while (fscanf(in, "%llu", &v) == 1) {
+    if (v > maxIn) {
+      fprintf(stderr, "value %llu does not fit in %d bits\n", v, nInBits);
+      hasError = 1;
+      break;
+    }
+    if (isDecode) {
+      int isError = 0;  //for error in this word
+      HammingWord z = hamming_decode(v, nParityBits, &isError);
+      hasError = hasError || isError;
+      const char *errStr = (isVerbose && isError) ? "*" : "";
+      fprintf(out, "%llu%s\n", z, errStr);
+    }
+    else {
+      fprintf(out, "%llu\n", hamming_encode(v, nParityBits));
+    }
+    fflush(out);
+  } //while
+  return !feof(in) || hasError;
+}

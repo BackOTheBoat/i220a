@@ -1,0 +1,4347 @@
+Script started on 2020-09-16 20:03:49-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="117" LINES="55"]
+estern7@remote01:~/i220a/submit/lab3$ cd exercises/
+estern7@remote01:~/i220a/submit/lab3/exercises$ mkdir dir
+estern7@remote01:~/i220a/submit/lab3/exercises$ touch t1.x [K[Kc T1.s v.c v1.s x.c dir/t2.c dir/T2.s1 dir/t3
+estern7@remote01:~/i220a/submit/lab3/exercises$ sl[K[Kls
+dir  t1.c  T1.s  v1.s  v.c  x.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls -l
+total 0
+drwxr-x--- 2 estern7 estern7 54 Sep 16 20:05 dir
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 t1.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 T1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 x.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls -t1[Kl
+total 0
+drwxr-x--- 2 estern7 estern7 54 Sep 16 20:05 dir
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 x.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 t1.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 T1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls -
+ls: cannot access '-': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ clear
+[H[2J[3Jestern7@remote01:~/i220a/submit/lab3/exercises$ ls
+dir  t1.c  T1.s  v1.s  v.c  x.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls -l
+total 0
+drwxr-x--- 2 estern7 estern7 54 Sep 16 20:05 dir
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 t1.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 T1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 x.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls -t
+dir  v1.s  x.c	t1.c  T1.s  v.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls-l[K[K -l -t
+total 0
+drwxr-x--- 2 estern7 estern7 54 Sep 16 20:05 dir
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 x.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 t1.c
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 T1.s
+-rw-r----- 1 estern7 estern7  0 Sep 16 20:05 v.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ man touch
+[?1049h[22;0;0t[?1h=TOUCH(1)                                           User Commands                                          TOUCH(1)[m
+[m
+[1mNAME[0m[m
+       touch - change file timestamps[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtouch[0m [[4mOPTION[24m]... [4mFILE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       Update the access and modification times of each FILE to the current time.[m
+[m
+       A FILE argument that does not exist is created empty, unless [1m-c[0m or [1m-h[0m is supplied.[m
+[m
+       A  FILE  argument string of - is handled specially and causes touch to change the times of the file associ‐[m
+       ated with standard output.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m     change only the access time[m
+[m
+       [1m-c[0m, [1m--no-create[0m[m
+              do not create any files[m
+[m
+       [1m-d[0m, [1m--date[0m=[4mSTRING[24m[m
+              parse STRING and use it instead of current time[m
+[m
+       [1m-f[0m     (ignored)[m
+[m
+       [1m-h[0m, [1m--no-dereference[0m[m
+              affect each symbolic link instead of any referenced file (useful only on systems that can change the[m
+              timestamps of a symlink)[m
+[m
+       [1m-m[0m     change only the modification time[m
+[m
+       [1m-r[0m, [1m--reference[0m=[4mFILE[24m[m
+              use this file's times instead of current time[m
+[m
+       [1m-t[0m STAMP[m
+              use [[CC]YY]MMDDhhmm[.ss] instead of current time[m
+[m
+       [1m--time[0m=[4mWORD[24m[m
+              change  the specified time: WORD is access, atime, or use: equivalent to [1m-a[0m WORD is modify or mtime:[m
+              equivalent to [1m-m[0m[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       Note that the [1m-d[0m and [1m-t[0m options accept different time-date formats.[m
+[m
+[1mDATE[0m [1mSTRING[0m[m
+       The --date=STRING is a mostly free format human readable date string such as "Sun,  29  Feb  2004  16:21:42[m
+       -0800" or "2004-02-29 16:21:42" or even "next Thursday".  A date string may contain items indicating calen‐[m
+[7m Manual page touch(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       dar date, time of day, time zone, day of week, relative time, relative date, and numbers.  An empty  string[m
+[7m Manual page touch(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       indicates  the beginning of the day.  The date string format is more complex than is easily documented here[m
+[7m Manual page touch(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       but is fully described in the info documentation.[m
+[7m Manual page touch(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page touch(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTHOR[0m[m
+[7m Manual page touch(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Written by Paul Rubin, Arnold Robbins, Jim Kingdon, David MacKenzie, and Randy Smith.[m
+[7m Manual page touch(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page touch(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mREPORTING[0m [1mBUGS[0m[m
+[7m Manual page touch(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+[7m Manual page touch(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Report touch translation bugs to <https://translationproject.org/team/>[m
+[7m Manual page touch(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page touch(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOPYRIGHT[0m[m
+[7m Manual page touch(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Copyright  ©  2018  Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3   or   later[m
+[7m Manual page touch(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       <https://gnu.org/licenses/gpl.html>.[m
+[7m Manual page touch(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This  is  free  software:  you are free to change and redistribute it.  There is NO WARRANTY, to the extent[m
+[7m Manual page touch(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       permitted by law.[m
+[7m Manual page touch(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page touch(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSEE[0m [1mALSO[0m[m
+[7m Manual page touch(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Full documentation at: <https://www.gnu.org/software/coreutils/touch>[m
+[7m Manual page touch(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or available locally via: info '(coreutils) touch invocation'[m
+[7m Manual page touch(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page touch(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KGNU coreutils 8.30                                 February 2019                                          TOUCH(1)[m
+[7m Manual page touch(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page touch(1) line 23/76 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page touch(1) line 23/76 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page touch(1) line 23/76 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page touch(1) line 23/76 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0testern7@remote01:~/i220a/submit/lab3/exercises$ man ls
+[?1049h[22;0;0t[?1h=LS(1)                                              User Commands                                             LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about the FILEs (the current directory by default).  Sort entries alphabetically if none[m
+       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+       [1m--block-size[0m=[4mSIZE[24m[m
+              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with [1m-lt[0m: sort by, and show, ctime (time of last modification of file status information); with  [1m-l[0m:[m
+              show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[m
+       [1m-C[0m     list entries by columns[m
+[m
+       [1m--color[0m[=[4mWHEN[24m][m
+              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below[m
+[m
+       [1m-d[0m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[m
+       [1m-D[0m, [1m--dired[0m[m
+              generate output designed for Emacs' dired mode[m
+[m
+       [1m-f[0m     do not sort, enable [1m-aU[0m, disable [1m-ls[0m [1m--color[0m[m
+[m
+       [1m-F[0m, [1m--classify[0m[m
+              append indicator (one of */=>@|) to entries[m
+[m
+       [1m--file-type[0m[m
+              likewise, except do not append '*'[m
+[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--format[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, long [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[7m Manual page ls(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--full-time[0m[m
+[7m Manual page ls(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[7m Manual page ls(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[7m Manual page ls(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--group-directories-first[0m[m
+[7m Manual page ls(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group directories before files;[m
+[7m Manual page ls(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              can be augmented with a [1m--sort[0m option, but any use of [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[7m Manual page ls(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[0m, [1m--no-group[0m[m
+[7m Manual page ls(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in a long listing, don't print group names[m
+[7m Manual page ls(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-h[0m, [1m--human-readable[0m[m
+[7m Manual page ls(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[7m Manual page ls(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[7m Manual page ls(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-H[0m, [1m--dereference-command-line[0m[m
+[7m Manual page ls(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              follow symbolic links listed on the command line[m
+[7m Manual page ls(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--dereference-command-line-symlink-to-dir[0m[m
+[7m Manual page ls(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              follow each command line symbolic link[m
+[7m Manual page ls(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              that points to a directory[m
+[7m Manual page ls(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hide[0m=[4mPATTERN[24m[m
+[7m Manual page ls(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PATTERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[7m Manual page ls(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hyperlink[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'[m
+[7m Manual page ls(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--indicator-style[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append   indicator   with  style  WORD  to  entry  names:  none  (default),  slash  ([1m-p[0m),  file-type[m
+[7m Manual page ls(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[7m Manual page ls(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m, [1m--inode[0m[m
+[7m Manual page ls(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the index number of each file[m
+[7m Manual page ls(1) line 42 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0testern7@remote01:~/i220a/submit/lab3/exercises$ clear
+[H[2J[3Jestern7@remote01:~/i220a/submit/lab3/exercises$ ;s[K[Kls *T
+ls: cannot access '*T': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls *T"*T[C[C"
+ls: cannot access '*T': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls "*T"[1P*T"\*T"[C[C[1P"T"[K
+ls: cannot access '*T': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls \*T[K[K[K;[K-l *t
+ls: cannot access '*t': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls -l *t[KT
+ls: cannot access '*T': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ clear
+[H[2J[3Jestern7@remote01:~/i220a/submit/lab3/exercises$ ls
+dir  t1.c  T1.s  v1.s  v.c  x.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls t*[K[KT8
+ls: cannot access 'T8': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls T8[K*
+T1.s
+estern7@remote01:~/i220a/submit/lab3/exercises$ dir /*.?
+dir: cannot access '/*.?': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ dir /*.?[1P/*.?
+bash: dir/t2.c: Permission denied
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls [t-v]*.c
+t1.c  v.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls /bin
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote01:~/i220a/submit/lab3/exercises$ /bin /[K[K/*.?
+bash: /bin/*.?: No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ /bin/*.?[1P*.?
+bash: /bin*.?: No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls bin/ [C[C
+ls: cannot access 'bin/': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls bin/ [1@/[C[C[C
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls /bin/ [1P [1P [1P [1P [1P [K
+dir  t1.c  T1.s  v1.s  v.c  x.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls /bin/ [Ktq[Kouch [K[K[K[K[K[K []s][1P]p]-]s][C
+ls: cannot access '[p-s]': No such file or directory
+/bin/:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls /bin/ [p-s][1P[p-s]
+ls: cannot access '/bin/[p-s]': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls /bin/[p-s][1P[p-s]
+ls: cannot access '/bin[p-s]': No such file or directory
+estern7@remote01:~/i220a/submit/lab3/exercises$ ls /bin[p-s]/[p-s] [p-s][C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd /bin
+estern7@remote01:/bin$ ls [p0s[K[K-s]
+ls: cannot access '[p-s]': No such file or directory
+estern7@remote01:/bin$ ls [p-s]/[p-s]
+ls: cannot access '/[p-s]': No such file or directory
+estern7@remote01:/bin$ ls /[p-s][C[C[C[C[C[C[1P[p-s]"[p-s][C[C[C[C[C"
+ls: cannot access '[p-s]': No such file or directory
+estern7@remote01:/bin$ ls "[p-s]"[C "[p-s]"- "[p-s]"l "[p-s]"
+ls: cannot access '[p-s]': No such file or directory
+estern7@remote01:/bin$ ls -l "[p-s]"*"
+ls: cannot access '[p-s]*': No such file or directory
+estern7@remote01:/bin$ ls -l "[p-s]*"[1P"[3P"[p-s]"-l "[p-s]"*"[K[K[K[K[K[K[K[K[K[K[Kcd ip [K[K[K[K[K[K~/i220as[K/submit/lab3/exercises/
+bash: /home/estern7/i220a/submit/lab3/exercises/: Is a directory
+estern7@remote01:/bin$ ls [c-v]*.c
+ls: cannot access '[c-v]*.c': No such file or directory
+estern7@remote01:/bin$ ls [c-v]*.c[1P-v]*.ct-v]*.c
+ls: cannot access '[t-v]*.c': No such file or directory
+estern7@remote01:/bin$ ls [t-v]*.cc-v]*.c~/i220a/submit/lab3/exercises/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pls -l "[p-s]*"~/i220a/submit/lab3/exercises/c~/i220a/submit/lab3/exercises/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd~/i220a/submit/lab3/exercises/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ~/i220a/submit/lab3/exercises/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+estern7@remote01:~/i220a/submit/lab3/exercises$ cd ~/i220a/submit/lab3/exercises/[22Pls [t-v]*.c
+t1.c  v.c
+estern7@remote01:~/i220a/submit/lab3/exercises$ cd /bin [K
+estern7@remote01:/bin$ ls [p-s]
+ls: cannot access '[p-s]': No such file or directory
+estern7@remote01:/bin$ ls -l
+total 13356
+-rwxr-xr-x 1 root root 1168776 Apr 18  2019 bash
+-rwxr-xr-x 3 root root   38984 Jul 10  2019 bunzip2
+-rwxr-xr-x 1 root root  707288 Apr  1  2019 busybox
+-rwxr-xr-x 3 root root   38984 Jul 10  2019 bzcat
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzcmp -> bzdiff
+-rwxr-xr-x 1 root root    2227 Jul 10  2019 bzdiff
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzegrep -> bzgrep
+-rwxr-xr-x 1 root root    4877 Jun 24  2019 bzexe
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzfgrep -> bzgrep
+-rwxr-xr-x 1 root root    3641 Jul 10  2019 bzgrep
+-rwxr-xr-x 3 root root   38984 Jul 10  2019 bzip2
+-rwxr-xr-x 1 root root   14328 Jul 10  2019 bzip2recover
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzless -> bzmore
+-rwxr-xr-x 1 root root    1297 Jul 10  2019 bzmore
+-rwxr-xr-x 1 root root   43744 Feb 28  2019 cat
+-rwxr-xr-x 1 root root   14328 Mar  1  2019 chacl
+-rwxr-xr-x 1 root root   64320 Feb 28  2019 chgrp
+-rwxr-xr-x 1 root root   64288 Feb 28  2019 chmod
+-rwxr-xr-x 1 root root   72512 Feb 28  2019 chown
+-rwxr-xr-x 1 root root   14648 Jul 28  2018 chvt
+-rwxr-xr-x 1 root root  146880 Feb 28  2019 cp
+-rwxr-xr-x 1 root root  158320 Apr 23  2019 cpio
+lrwxrwxrwx 1 root root      21 Jun 24  2019 csh -> /etc/alternatives/csh
+-rwxr-xr-x 1 root root  121464 Jan 17  2019 dash
+-rwxr-xr-x 1 root root  109408 Feb 28  2019 date
+-rwxr-xr-x 1 root root   76712 Feb 28  2019 dd
+-rwxr-xr-x 1 root root   93744 Feb 28  2019 df
+-rwxr-xr-x 1 root root  138856 Feb 28  2019 dir
+-rwxr-xr-x 1 root root   84288 Jan 10  2019 dmesg
+lrwxrwxrwx 1 root root       8 Sep 27  2018 dnsdomainname -> hostname
+lrwxrwxrwx 1 root root       8 Sep 27  2018 domainname -> hostname
+-rwxr-xr-x 1 root root  179104 Jul 28  2018 dumpkeys
+-rwxr-xr-x 1 root root   39520 Feb 28  2019 echo
+-rwxr-xr-x 1 root root   55424 Jan  3  2019 ed
+-rwxr-xr-x 1 root root      28 Jan  7  2019 egrep
+-rwxr-xr-x 1 root root   35424 Feb 28  2019 false
+-rwxr-xr-x 1 root root   14648 Jul 28  2018 fgconsole
+-rwxr-xr-x 1 root root      28 Jan  7  2019 fgrep
+-rwxr-xr-x 1 root root   68880 Jan 10  2019 findmnt
+-rwxr-xr-x 1 root root   40576 Sep 24  2018 fuser
+-rwsr-xr-x 1 root root   34896 Apr 22 15:38 fusermount
+-rwxr-xr-x 1 root root   31352 Mar  1  2019 getfacl
+-rwxr-xr-x 1 root root  198976 Jan  7  2019 grep
+-rwxr-xr-x 2 root root    2345 Jan  5  2019 gunzip
+-rwxr-xr-x 1 root root    6375 Jan  5  2019 gzexe
+-rwxr-xr-x 1 root root   98048 Jan  5  2019 gzip
+-rwxr-xr-x 1 root root  204824 Mar 22 05:55 hciconfig
+-rwxr-xr-x 1 root root   26696 Sep 27  2018 hostname
+-rwxr-xr-x 1 root root  620344 Aug 19 07:58 ip
+-rwxr-xr-x 1 root root   76024 Aug  3 03:43 journalctl
+-rwxr-xr-x 1 root root   14648 Jul 28  2018 kbd_mode
+-rwxr-xr-x 1 root root   43232 Mar  6  2019 keyctl
+-rwxr-xr-x 1 root root   26704 May 31  2018 kill
+-rwxr-xr-x 1 root root  166072 Feb  9  2019 kmod
+-rwxr-xr-x 1 root root   68552 Feb 28  2019 ln
+-rwxr-xr-x 1 root root  212112 Jul 28  2018 loadkeys
+-rwxr-xr-x 1 root root   56760 Jul 27  2018 login
+-rwxr-xr-x 1 root root   59728 Aug  3 03:43 loginctl
+-rwxr-xr-x 1 root root  117456 Mar 21  2019 lowntfs-3g
+-rwxr-xr-x 1 root root  138856 Feb 28  2019 ls
+-rwxr-xr-x 1 root root  108624 Jan 10  2019 lsblk
+lrwxrwxrwx 1 root root       4 Feb  9  2019 lsmod -> kmod
+-rwxr-xr-x 1 root root   89088 Feb 28  2019 mkdir
+-rwxr-xr-x 1 root root   68544 Feb 28  2019 mknod
+-rwxr-xr-x 1 root root   43808 Feb 28  2019 mktemp
+-rwxr-xr-x 1 root root   43008 Jan 10  2019 more
+-rwsr-xr-x 1 root root   51280 Jan 10  2019 mount
+-rwxr-xr-x 1 root root   14408 Jan 10  2019 mountpoint
+lrwxrwxrwx 1 root root      20 Dec  4  2016 mt -> /etc/alternatives/mt
+-rwxr-xr-x 1 root root   85320 Apr 23  2019 mt-gnu
+-rwxr-xr-x 1 root root  138728 Feb 28  2019 mv
+-rwxr-xr-x 1 root root  246160 Jun 11  2019 nano
+lrwxrwxrwx 1 root root      20 Dec  4  2016 nc -> /etc/alternatives/nc
+-rwxr-xr-x 1 root root   27400 Apr 13  2017 nc.traditional
+lrwxrwxrwx 1 root root      24 Dec  4  2016 netcat -> /etc/alternatives/netcat
+-rwxr-xr-x 1 root root  155096 Sep 24  2018 netstat
+-rwxr-xr-x 1 root root   71904 Aug  3 03:43 networkctl
+lrwxrwxrwx 1 root root       8 Sep 27  2018 nisdomainname -> hostname
+-rwsr-xr-x 1 root root  154352 Mar 21  2019 ntfs-3g
+-rwxr-xr-x 1 root root   14408 Mar 21  2019 ntfs-3g.probe
+-rwxr-xr-x 1 root root   34920 Mar 21  2019 ntfscat
+-rwxr-xr-x 1 root root   39016 Mar 21  2019 ntfscluster
+-rwxr-xr-x 1 root root   39016 Mar 21  2019 ntfscmp
+-rwxr-xr-x 1 root root   39024 Mar 21  2019 ntfsfallocate
+-rwxr-xr-x 1 root root   43120 Mar 21  2019 ntfsfix
+-rwxr-xr-x 1 root root   59512 Mar 21  2019 ntfsinfo
+-rwxr-xr-x 1 root root   36024 Mar 21  2019 ntfsls
+-rwxr-xr-x 1 root root   39016 Mar 21  2019 ntfsmove
+-rwxr-xr-x 1 root root  120936 Mar 21  2019 ntfsrecover
+-rwxr-xr-x 1 root root   96864 Mar 21  2019 ntfssecaudit
+-rwxr-xr-x 1 root root   43040 Mar 21  2019 ntfstruncate
+-rwxr-xr-x 1 root root   38936 Mar 21  2019 ntfsusermap
+-rwxr-xr-x 1 root root   47752 Mar 21  2019 ntfswipe
+-rwxr-xr-x 1 root root   23424 Jul 28  2018 openvt
+lrwxrwxrwx 1 root root      14 Feb 14  2019 pidof -> /sbin/killall5
+-rwsr-xr-x 1 root root   69368 Jan 13  2020 ping
+lrwxrwxrwx 1 root root       4 Jan 13  2020 ping4 -> ping
+lrwxrwxrwx 1 root root       4 Jan 13  2020 ping6 -> ping
+-rwxr-xr-x 1 root root  133432 May 31  2018 ps
+-rwxr-xr-x 1 root root   39616 Feb 28  2019 pwd
+lrwxrwxrwx 1 root root       4 Apr 18  2019 rbash -> bash
+-rwxr-xr-x 1 root root   47776 Feb 28  2019 readlink
+-rwxr-xr-x 1 root root      89 Jan  3  2019 red
+-rwxr-xr-x 1 root root   68416 Feb 28  2019 rm
+-rwxr-xr-x 1 root root   47776 Feb 28  2019 rmdir
+lrwxrwxrwx 1 root root       4 Jun 11  2019 rnano -> nano
+-rwxr-xr-x 1 root root   23312 Jan 21  2019 run-parts
+lrwxrwxrwx 1 root root       3 Feb  4  2019 rzsh -> zsh
+-rwxr-xr-x 1 root root  122224 Dec 22  2018 sed
+-rwxr-xr-x 1 root root   39608 Mar  1  2019 setfacl
+-rwxr-xr-x 1 root root   47792 Jul 28  2018 setfont
+-rwxr-xr-x 1 root root   38267 Aug 15  2019 setupcon
+lrwxrwxrwx 1 root root       4 Jan 17  2019 sh -> dash
+lrwxrwxrwx 1 root root       4 Dec  4  2016 sh.distrib -> dash
+-rwxr-xr-x 1 root root   39552 Feb 28  2019 sleep
+-rwxr-xr-x 1 root root  177216 Aug 19 07:58 ss
+-rwxr-xr-x 1 root root   80672 Feb 28  2019 stty
+-rwsr-xr-x 1 root root   63568 Jan 10  2019 su
+-rwxr-xr-x 1 root root   35488 Feb 28  2019 sync
+-rwxr-xr-x 1 root root  996592 Aug  3 03:43 systemctl
+lrwxrwxrwx 1 root root      20 Aug  3 03:43 systemd -> /lib/systemd/systemd
+-rwxr-xr-x 1 root root   14672 Aug  3 03:43 systemd-ask-password
+-rwxr-xr-x 1 root root   18648 Aug  3 03:43 systemd-escape
+-rwxr-xr-x 1 root root  104968 Aug  3 03:43 systemd-hwdb
+-rwxr-xr-x 1 root root   22768 Aug  3 03:43 systemd-inhibit
+-rwxr-xr-x 1 root root   26944 Aug  3 03:43 systemd-machine-id-setup
+-rwxr-xr-x 1 root root   18656 Aug  3 03:43 systemd-notify
+-rwxr-xr-x 1 root root   55816 Aug  3 03:43 systemd-sysusers
+-rwxr-xr-x 1 root root   84376 Aug  3 03:43 systemd-tmpfiles
+-rwxr-xr-x 1 root root   30944 Aug  3 03:43 systemd-tty-ask-password-agent
+-rwxr-xr-x 1 root root  445560 Apr 23  2019 tar
+-rwxr-xr-x 1 root root  424640 May  5  2018 tcsh
+-rwxr-xr-x 1 root root   14440 Jan 21  2019 tempfile
+-rwxr-xr-x 1 root root   97152 Feb 28  2019 touch
+-rwxr-xr-x 1 root root   35424 Feb 28  2019 true
+-rwxr-xr-x 1 root root  945360 Aug  3 03:43 udevadm
+-rwxr-xr-x 1 root root   14328 Apr 22 15:38 ulockmgr_server
+-rwsr-xr-x 1 root root   34888 Jan 10  2019 umount
+-rwxr-xr-x 1 root root   39584 Feb 28  2019 uname
+-rwxr-xr-x 2 root root    2345 Jan  5  2019 uncompress
+-rwxr-xr-x 1 root root    2762 Jul 28  2018 unicode_start
+-rwxr-xr-x 1 root root  138856 Feb 28  2019 vdir
+-rwxr-xr-x 1 root root   34896 Jan 10  2019 wdctl
+-rwxr-xr-x 1 root root     946 Jan 21  2019 which
+lrwxrwxrwx 1 root root       8 Sep 27  2018 ypdomainname -> hostname
+-rwxr-xr-x 1 root root    1983 Jan  5  2019 zcat
+-rwxr-xr-x 1 root root    1677 Jan  5  2019 zcmp
+-rwxr-xr-x 1 root root    5879 Jan  5  2019 zdiff
+-rwxr-xr-x 1 root root      29 Jan  5  2019 zegrep
+-rwxr-xr-x 1 root root      29 Jan  5  2019 zfgrep
+-rwxr-xr-x 1 root root    2080 Jan  5  2019 zforce
+-rwxr-xr-x 1 root root    7584 Jan  5  2019 zgrep
+-rwxr-xr-x 1 root root    2205 Jan  5  2019 zless
+-rwxr-xr-x 1 root root    1841 Jan  5  2019 zmore
+-rwxr-xr-x 1 root root    4552 Jan  5  2019 znew
+-rwxr-xr-x 1 root root  861568 Feb  4  2019 zsh
+-rwxr-xr-x 1 root root     843 Feb  4  2019 zsh5
+estern7@remote01:/bin$ ls -l[p-s]?
+ps  rm	sh  ss	su
+estern7@remote01:/bin$ ls [p-s]?2?
+ls: cannot access '[p-s]2?': No such file or directory
+estern7@remote01:/bin$ ls [p-s]2?[1P?[K?2p-s]?
+ps  rm	sh  ss	su
+estern7@remote01:/bin$ ls [2p-s]?[1Pp-s]?[C[C[C[C[C[K*
+pidof  rbash	 run-parts  sh		sync		      systemd-inhibit
+ping   readlink  rzsh	    sh.distrib	systemctl	      systemd-machine-id-setup
+ping4  red	 sed	    sleep	systemd		      systemd-notify
+ping6  rm	 setfacl    ss		systemd-ask-password  systemd-sysusers
+ps     rmdir	 setfont    stty	systemd-escape	      systemd-tmpfiles
+pwd    rnano	 setupcon   su		systemd-hwdb	      systemd-tty-ask-password-agent
+estern7@remote01:/bin$ ls [p-s]?
+ps  rm	sh  ss	su
+estern7@remote01:/bin$ clear
+[H[2J[3Jestern7@remote01:/bin$ cd /etc
+estern7@remote01:/etc$ ls [rc]
+ls: cannot access '[rc]': No such file or directory
+estern7@remote01:/etc$ ls [rc][Kls [rc]*
+ca-certificates.conf	       crontab	    rarfiles.lst      resolv.conf	    rpc
+ca-certificates.conf.dpkg-old  csh.cshrc    rc.local	      resolv.conf.class     rsyslog.conf
+chktexrc		       csh.login    rearj.cfg	      resolv.conf.external  rsyslog-haproxy.conf
+complete.tcsh		       csh.logout   reportbug.conf    resolv.conf.internal  rsyslog-normal.conf
+cowpoke.conf		       cvsdeb.conf  request-key.conf  rmt
+
+ca-certificates:
+update.d
+
+calendar:
+default
+
+chatscripts:
+gprs  pap  provider
+
+chromium:
+master_preferences
+
+chromium.d:
+apikeys  default-flags	extensions  pepperflashplugin-nonfree  README
+
+cifs-utils:
+idmap-plugin
+
+common-lisp:
+asdf-output-translations.conf.d  source-registry.conf.d
+
+console:
+
+console-setup:
+cached_Lat15-Fixed16.psf.gz  compose.GEORGIAN-ACADEMY.inc  compose.ISO-8859-16.inc  compose.ISO-8859-9.inc
+cached_setup_font.sh	     compose.GEORGIAN-PS.inc	   compose.ISO-8859-1.inc   compose.KOI8-R.inc
+cached_setup_keyboard.sh     compose.IBM1133.inc	   compose.ISO-8859-2.inc   compose.KOI8-U.inc
+cached_setup_terminal.sh     compose.ISIRI-3342.inc	   compose.ISO-8859-3.inc   compose.TIS-620.inc
+cached_UTF-8_del.kmap.gz     compose.ISO-8859-10.inc	   compose.ISO-8859-4.inc   compose.VISCII.inc
+compose.ARMSCII-8.inc	     compose.ISO-8859-11.inc	   compose.ISO-8859-5.inc   remap.inc
+compose.CP1251.inc	     compose.ISO-8859-13.inc	   compose.ISO-8859-6.inc
+compose.CP1255.inc	     compose.ISO-8859-14.inc	   compose.ISO-8859-7.inc
+compose.CP1256.inc	     compose.ISO-8859-15.inc	   compose.ISO-8859-8.inc
+
+cracklib:
+cracklib.conf
+
+cron.d:
+anacron  e2scrub_all  php  sysstat
+
+cron.daily:
+0anacron      aptitude		dpkg	       google-chrome	   man-db.dpkg-old   passwd
+acct	      bsdmainutils	dpkg.dpkg-old  logrotate	   mlocate	     quota
+apt-compat    cracklib-runtime	dpkg-list      logrotate.dpkg-old  mlocate.dpkg-old  samba
+apt.dpkg-bak  debsums		exim4-base     man-db		   ntp		     sysstat
+
+cron.hourly:
+
+cron.monthly:
+0anacron  acct	debsums
+
+cron.weekly:
+0anacron  debsums  man-db  man-db.dpkg-old
+
+cruft:
+explain  filters
+
+csh:
+login.d
+
+cupshelpers:
+preferreddrivers.xml
+
+racket:
+config.rktd
+
+rc0.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10halt
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+rc1.d:
+K01acct		 K01gdomap	K01nscd			K01pyro-nsd	  K01speech-dispatcher	README
+K01alsa-utils	 K01hddtemp	K01nslcd		K01quotarpc	  K01stunnel4		S01killprocs
+K01atd		 K01ipmievd	K01nvidia-persistenced	K01samba-ad-dc	  K01winbind		S02single
+K01avahi-daemon  K01irqbalance	K01openipmi		K01saned	  K01x2goserver		S06bootlogs
+K01bluetooth	 K01lightdm	K01open-vm-tools	K01smartmontools  K04rsyslog		S07bootchart-done
+K01exim4	 K01lldpd	K01openvpn		K01smbd		  K06nfs-common
+K01fail2ban	 K01nmbd	K01pcscd		K01snmpd	  K06rpcbind
+
+rc2.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		     Script started on 2020-09-17 00:53:39-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="55"]
+estern7@remote05:~/i220a/submit/lab3$ cd /etc
+estern7@remote05:/etc$ ls [rc]*[rc].[rc]
+ls: cannot access '*.[rc]': No such file or directory
+estern7@remote05:/etc$ ls *.[rc][1P.[rc][1P[rc][C[C[C[C.*
+ls: cannot access '[rc].*': No such file or directory
+estern7@remote05:/etc$ ls
+3270			       ghostscript		   mail.rc		      request-key.d
+a2ps.cfg		       gimp			   manpath.config	      resolv.conf
+a2ps-site.cfg		       git-buildpackage		   matplotlibrc		      resolvconf
+acpi			       glvnd			   matplotlibrc2	      resolv.conf.class
+adduser.conf		       gnashpluginrc		   mediaprm		      resolv.conf.external
+adjtime			       gnashrc			   mercurial		      resolv.conf.internal
+aliases			       gnashthumbnailrc		   mime.types		      rlwrap
+alsa			       gnome			   minicom		      rmt
+alternatives		       gnome-vfs-2.0		   mke2fs.conf		      rpc
+anacrontab		       gnome-vfs-mime-magic	   modprobe.d		      rsyslog.conf
+apache2			       GNUstep			   modules		      rsyslog.d
+apm			       go-mmproxy		   modules-load.d	      rsyslog-haproxy.conf
+apparmor		       groff			   monit		      rsyslog-normal.conf
+apparmor.d		       groovy			   motd			      runit
+apt			       group			   mtab			      samba
+apt-venv.conf		       group-			   mtools.conf		      sane.d
+at.deny			       gshadow			   Muttrc		      sbclrc
+at-spi2			       gshadow-			   Muttrc.d		      scite
+autoconf2.13		       gss			   mysql		      screenrc
+avahi			       gssapi_mech.conf		   nanorc		      securetty
+bash.bashrc		       gssapi_mech.conf.dpkg-dist  netconf		      security
+bash_completion		       gtk-2.0			   netconfig		      selinux
+bash_completion.d	       gtk-3.0			   netgroup		      sensors3.conf
+bindresvport.blacklist	       hddtemp.db		   netscsid.conf	      sensors.d
+binfmt.d		       hdparm.conf		   network		      services
+bluetooth		       highlight		   NetworkManager	      sgml
+bogofilter.cf		       host.conf		   networks		      shadow
+bonobo-activation	       hostname			   nftables.conf	      shadow-
+bootchartd.conf		       hosts			   nscd.conf		      shells
+ca-certificates		       hosts.allow		   nslcd.conf		      skel
+ca-certificates.conf	       hosts.class		   nslcd.conf.buster-upgrade  slsh.rc
+ca-certificates.conf.dpkg-old  hosts.deny		   nslcd.conf.class	      smartd.conf
+calendar		       hosts.external		   nslcd.conf.linux	      smartmontools
+chatscripts		       hosts.internal		   nsswitch.conf	      smi.conf
+chktexrc		       idmapd.conf		   ntp.conf		      snmp
+chromium		       idmapd.conf.ucf-dist	   ntp.conf.dpkg-old	      sound
+chromium.d		       ifplugd			   nvcc.profile		      speech-dispatcher
+cifs-utils		       ImageMagick-6		   nvidia		      ssh
+common-lisp		       init			   nxagent		      ssl
+complete.tcsh		       init.d			   ocamlfind.conf	      staff-group-for-usr-local
+console			       initramfs-tools		   ODBCDataSources	      stunnel
+console-setup		       inputrc			   odbc.ini		      subgid
+cowpoke.conf		       insserv			   odbcinst.ini		      subgid-
+cracklib		       insserv.conf		   openal		      subuid
+cron.d			       insserv.conf.d		   OpenCL		      subuid-
+cron.daily		       installed_packages	   openmpi		      subversion
+cron.hourly		       iproute2			   opensc		      sudoers
+cron.monthly		       iscsi			   openvpn		      sudoers.d
+crontab			       issue			   opt			      sudoers.old
+cron.weekly		       issue.net		   os-release		      sudoers.save
+cruft			       java			   PackageKit		      sv
+csh			       java-10-oracle		   pam.conf		      sysctl.conf
+csh.cshrc		       java-11-oracle		   pam.d		      sysctl.d
+csh.login		       java-8-oracle		   pam_ldap.conf	      sysfs.conf
+csh.logout		       jed.d			   pam_ldap.conf.class	      sysfs.d
+cupshelpers		       jython			   pam_ldap.conf.linux	      sysstat
+cvsdeb.conf		       kernel			   papersize		      systemd
+dat.conf		       kernel-img.conf		   passwd		      terminfo
+dbus-1			       krb5.conf		   passwd-		      tex4ht
+debconf.conf		       krb5.keytab		   pbuilder		      texmf
+debian_version		       latex2html.conf		   pbuilderrc		      thunderbird
+debsums-ignore		       LatexMk			   perl			      tigervnc
+debtree			       ldap			   php			      timezone
+default			       ld.so.cache		   piuparts		      timidity
+deluser.conf		       ld.so.conf		   pm			      tmpfiles.d
+devscripts.conf		       ld.so.conf.d		   polkit-1		      ucf.conf
+dhcp			       libao.conf		   postgresql-common	      udev
+dictionaries-common	       libaudit.conf		   ppp			      udisks2
+dirmngr			       libblockdev		   printcap		      ufw
+discover.conf.d		       libccid_Info.plist	   profile		      updatedb.conf
+discover-modprobe.conf	       libgda-5.0		   profile.d		      update-motd.d
+dkms			       libibverbs.d		   protocols		      UPower
+dleyna-server-service.conf     libnl-3			   pulse		      usb_modeswitch.conf
+doc-base		       libnss-ldap.conf		   purple		      usb_modeswitch.d
+dpkg			       libnss-ldap.conf.class	   python		      vbox
+dpkg-list		       libnss-ldap.conf.linux	   python2.7		      vdpau_wrapper.cfg
+dput.cf			       libpaper.d		   python3		      video_format
+e2scrub.conf		       libreoffice		   python3.5		      vim
+eclipse.ini		       lightdm			   python3.7		      visualvm
+emacs			       lighttpd			   qemu-ifdown		      vmware-tools
+email-addresses		       lisp-config.lisp		   qemu-ifup		      vnc.conf
+environment		       lldpd.d			   quilt.quiltrc	      vulkan
+environment.d		       locale.alias		   quotagrpadmins	      w3m
+ethertypes		       locale.gen		   quotatab		      warnquota.conf
+exim4			       localtime		   R			      wgetrc
+fail2ban		       logcheck			   racket		      wildmidi
+fdmount.conf		       login.defs		   rarfiles.lst		      wireshark
+firebird		       login.warn		   rc0.d		      wodim.conf
+firefox-esr		       logrotate.conf		   rc1.d		      wpa_supplicant
+fonts			       logrotate.conf.dpkg-old	   rc2.d		      X11
+freeipmi		       logrotate.d		   rc3.d		      x2go
+fstab			       logrotate.d.save		   rc4.d		      xattr.conf
+fstab.save		       ltrace.conf		   rc5.d		      xdg
+fstab.save.1		       lynx			   rc6.d		      xfce4
+fuse.conf		       machine-id		   rc.local		      xml
+gai.conf		       magic			   rcS.d		      xpdf
+gamin			       magic.mime		   reader.conf.d	      xprofile
+gconf			       mailcap			   rearj.cfg		      zsh
+gdb			       mailcap.order		   reportbug.conf
+geoclue			       mailname			   request-key.conf
+estern7@remote05:/etc$ ls[C [rc].*[C[C[C[1P*[C.?
+chromium.d:
+apikeys  default-flags	extensions  pepperflashplugin-nonfree  README
+
+cron.d:
+anacron  e2scrub_all  php  sysstat
+
+rc0.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10halt
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+rc1.d:
+K01acct		 K01gdomap	K01nscd			K01pyro-nsd	  K01speech-dispatcher	README
+K01alsa-utils	 K01hddtemp	K01nslcd		K01quotarpc	  K01stunnel4		S01killprocs
+K01atd		 K01ipmievd	K01nvidia-persistenced	K01samba-ad-dc	  K01winbind		S02single
+K01avahi-daemon  K01irqbalance	K01openipmi		K01saned	  K01x2goserver		S06bootlogs
+K01bluetooth	 K01lightdm	K01open-vm-tools	K01smartmontools  K04rsyslog		S07bootchart-done
+K01exim4	 K01lldpd	K01openvpn		K01smbd		  K06nfs-common
+K01fail2ban	 K01nmbd	K01pcscd		K01snmpd	  K06rpcbind
+
+rc2.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc3.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc4.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc5.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc6.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10reboot
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+rcS.d:
+K15nfs-common	   S03keyboard-setup.sh       S08kmod			S11procps		  S16alsa-utils
+K20quota	   S04mountdevsubfs.sh	      S09mountall.sh		S11urandom		  S16bootmisc.sh
+README		   S05hwclock.sh	      S10mountall-bootclean.sh	S12networking		  S16lm-sensors
+S01hostname.sh	   S06checkroot.sh	      S11apparmor		S13rpcbind		  S16screen-cleanup
+S01mountkernfs.sh  S07checkfs.sh	      S11brightness		S14mountnfs.sh		  S16x11-common
+S02udev		   S08checkroot-bootclean.sh  S11pppd-dns		S15mountnfs-bootclean.sh
+
+reader.conf.d:
+libccidtwin
+
+request-key.d:
+cifs.idmap.conf  cifs.spnego.conf  id_resolver.conf
+
+rsyslog.d:
+estern7@remote05:/etc$ clear
+[H[2J[3Jestern7@remote05:/etc$ ls *[K???.*
+csh.cshrc  csh.logout  gai.conf  ntp.conf.dpkg-old  smi.conf  vnc.conf
+csh.login  dat.conf    ntp.conf  pam.conf	    ucf.conf
+
+jed.d:
+05jed-common.sl  README
+
+pam.d:
+atd		common-auth		       lightdm		  other     runuser-l  su-l
+chfn		common-password		       lightdm-autologin  passwd    samba      systemd-user
+chpasswd	common-session		       lightdm-greeter	  polkit-1  sshd       tigervnc
+chsh		common-session-noninteractive  login		  ppp	    su	       vmtoolsd
+common-account	cron			       newusers		  runuser   sudo
+
+rc0.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10halt
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+rc1.d:
+K01acct		 K01gdomap	K01nscd			K01pyro-nsd	  K01speech-dispatcher	README
+K01alsa-utils	 K01hddtemp	K01nslcd		K01quotarpc	  K01stunnel4		S01killprocs
+K01atd		 K01ipmievd	K01nvidia-persistenced	K01samba-ad-dc	  K01winbind		S02single
+K01avahi-daemon  K01irqbalance	K01openipmi		K01saned	  K01x2goserver		S06bootlogs
+K01bluetooth	 K01lightdm	K01open-vm-tools	K01smartmontools  K04rsyslog		S07bootchart-done
+K01exim4	 K01lldpd	K01openvpn		K01smbd		  K06nfs-common
+K01fail2ban	 K01nmbd	K01pcscd		K01snmpd	  K06rpcbind
+
+rc2.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc3.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc4.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc5.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+rc6.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10reboot
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+rcS.d:
+K15nfs-common	   S03keyboard-setup.sh       S08kmod			S11procps		  S16alsa-utils
+K20quota	   S04mountdevsubfs.sh	      S09mountall.sh		S11urandom		  S16bootmisc.sh
+README		   S05hwclock.sh	      S10mountall-bootclean.sh	S12networking		  S16lm-sensors
+S01hostname.sh	   S06checkroot.sh	      S11apparmor		S13rpcbind		  S16screen-cleanup
+S01mountkernfs.sh  S07checkfs.sh	      S11brightness		S14mountnfs.sh		  S16x11-common
+S02udev		   S08checkroot-bootclean.sh  S11pppd-dns		S15mountnfs-bootclean.sh
+estern7@remote05:/etc$ ls ???.*[C[C[C[K[K[K[K[K[K[K[Kcd /bin
+estern7@remote05:/bin$ clear
+[H[2J[3Jestern7@remote05:/bin$ cleard /binls ???.*
+ls: cannot access '???.*': No such file or directory
+estern7@remote05:/bin$ ls ???.*[1P.*[1P.*[1P?.*[1P.* .*
+.:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+
+..:
+backup	home	    initrd.img	    libnss-ldap.conf.linux  mnt		      pam_ldap.conf.linux  srv	vmlinuz
+bin	home1	    initrd.img.old  libx32		    nslcd.conf.linux  proc		   sys	vmlinuz.old
+boot	home.local  lib		    lost+found		    opt		      root		   tmp
+dev	home.save   lib32	    media		    opt.local	      run		   usr
+etc	import	    lib64	    microchip		    opt.old	      sbin		   var
+estern7@remote05:/bin$ /ls .*???.*
+ls: cannot access '???.*': No such file or directory
+estern7@remote05:/bin$ ls *.???
+ls: cannot access '*.???': No such file or directory
+estern7@remote05:/bin$ /ls *.???[1P.???[1P.???[1P??? ???
+cat  csh  dir  pwd  red  sed  tar  zsh
+estern7@remote05:/bin$ clear
+[H[2J[3Jestern7@remote05:/bin$ cd ~/cs220/labs/lab3/exercises/
+estern7@remote05:~/cs220/labs/lab3/exercises$ ls
+estern7@remote05:~/cs220/labs/lab3/exercises$ cd ~/i220a/
+.git/       .gitignore  README.md   submit/     
+estern7@remote05:~/cs220/labs/lab3/exercises$ cd ~/i220a/submit/lab3/
+estern7@remote05:~/i220a/submit/lab3$ ls
+exercises  lab3.LOG
+estern7@remote05:~/i220a/submit/lab3$ cd exercises/
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls
+dir  t1.c  T1.s  v1.s  v.c  x.c
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls > ls.log
+estern7@remote05:~/i220a/submit/lab3/exercises$ cat ls.log
+dir
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls dir >>ls.log
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls dir >>ls.log[5Pcat ls.log
+dir
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
+t2.c
+T2.s1
+t3
+estern7@remote05:~/i220a/submit/lab3/exercises$ cat <ls.log
+dir
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
+t2.c
+T2.s1
+t3
+estern7@remote05:~/i220a/submit/lab3/exercises$ wc -l
+^C
+estern7@remote05:~/i220a/submit/lab3/exercises$ man wc
+[?1049h[22;0;0t[?1h=WC(1)                                              User Commands                                             WC(1)[m
+[m
+[1mNAME[0m[m
+       wc - print newline, word, and byte counts for each file[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mwc[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+       [1mwc[0m [[4mOPTION[24m]... [4m--files0-from=F[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified.  A[m
+       word is a non-zero-length sequence of characters delimited by white space.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       The options below may be used to select which counts are printed, always in the following  order:  newline,[m
+       word, character, byte, maximum line length.[m
+[m
+       [1m-c[0m, [1m--bytes[0m[m
+              print the byte counts[m
+[m
+       [1m-m[0m, [1m--chars[0m[m
+              print the character counts[m
+[m
+       [1m-l[0m, [1m--lines[0m[m
+              print the newline counts[m
+[m
+       [1m--files0-from[0m=[4mF[24m[m
+              read  input  from  the  files specified by NUL-terminated names in file F; If F is - then read names[m
+              from standard input[m
+[m
+       [1m-L[0m, [1m--max-line-length[0m[m
+              print the maximum display width[m
+[m
+       [1m-w[0m, [1m--words[0m[m
+              print the word counts[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+[1mAUTHOR[0m[m
+       Written by Paul Rubin and David MacKenzie.[m
+[m
+[1mREPORTING[0m [1mBUGS[0m[m
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+       Report wc translation bugs to <https://translationproject.org/team/>[m
+[m
+[1mCOPYRIGHT[0m[m
+       Copyright  ©  2018  Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3   or   later[m
+       <https://gnu.org/licenses/gpl.html>.[m
+       This  is  free  software:  you are free to change and redistribute it.  There is NO WARRANTY, to the extent[m
+       permitted by law.[m
+[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0testern7@remote05:~/i220a/submit/lab3/exercises$ clear
+[H[2J[3Jestern7@remote05:~/i220a/submit/lab3/exercises$ ls | wc -l
+7
+estern7@remote05:~/i220a/submit/lab3/exercises$ cd /[K/bin
+estern7@remote05:/bin$ cd /binls | wc -l[5Pclearman wc[1Pwc -lcat <ls.log[1Pls.logls dir >>ls.log[5Pcat ls.log[1@ls >[C[C[C[C[C[C[C[Kcd exercises/ls[Kcd ~/i220a/submit/lab3/ls[Kcd ~/i220a/submit/lab3/ls[Kcd ~/cs220/labs/lab3/exercises/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clear[Kd ~/cs220/labs/lab3/exercises/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd ~/i220a/submit/lab3/
+estern7@remote05:~/i220a/submit/lab3$ cd exercises/
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls/[K /bin [K[K[K[K[K[K[K[Kls /bin ???
+v.c  x.c
+
+/bin:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+
+dir:
+t2.c  T2.s1  t3
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin ???[1@-[1@l[1@ 
+-rw-r----- 1 estern7 estern7    0 Sep 16 20:05 v.c
+-rw-r----- 1 estern7 estern7    0 Sep 16 20:05 x.c
+
+/bin:
+total 13356
+-rwxr-xr-x 1 root root 1168776 Apr 18  2019 bash
+-rwxr-xr-x 3 root root   38984 Jul 10  2019 bunzip2
+-rwxr-xr-x 1 root root  707288 Apr  1  2019 busybox
+-rwxr-xr-x 3 root root   38984 Jul 10  2019 bzcat
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzcmp -> bzdiff
+-rwxr-xr-x 1 root root    2227 Jul 10  2019 bzdiff
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzegrep -> bzgrep
+-rwxr-xr-x 1 root root    4877 Jun 24  2019 bzexe
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzfgrep -> bzgrep
+-rwxr-xr-x 1 root root    3641 Jul 10  2019 bzgrep
+-rwxr-xr-x 3 root root   38984 Jul 10  2019 bzip2
+-rwxr-xr-x 1 root root   14328 Jul 10  2019 bzip2recover
+lrwxrwxrwx 1 root root       6 Jul 10  2019 bzless -> bzmore
+-rwxr-xr-x 1 root root    1297 Jul 10  2019 bzmore
+-rwxr-xr-x 1 root root   43744 Feb 28  2019 cat
+-rwxr-xr-x 1 root root   14328 Mar  1  2019 chacl
+-rwxr-xr-x 1 root root   64320 Feb 28  2019 chgrp
+-rwxr-xr-x 1 root root   64288 Feb 28  2019 chmod
+-rwxr-xr-x 1 root root   72512 Feb 28  2019 chown
+-rwxr-xr-x 1 root root   14648 Jul 28  2018 chvt
+-rwxr-xr-x 1 root root  146880 Feb 28  2019 cp
+-rwxr-xr-x 1 root root  158320 Apr 23  2019 cpio
+lrwxrwxrwx 1 root root      21 Jun 24  2019 csh -> /etc/alternatives/csh
+-rwxr-xr-x 1 root root  121464 Jan 17  2019 dash
+-rwxr-xr-x 1 root root  109408 Feb 28  2019 date
+-rwxr-xr-x 1 root root   76712 Feb 28  2019 dd
+-rwxr-xr-x 1 root root   93744 Feb 28  2019 df
+-rwxr-xr-x 1 root root  138856 Feb 28  2019 dir
+-rwxr-xr-x 1 root root   84288 Jan 10  2019 dmesg
+lrwxrwxrwx 1 root root       8 Sep 27  2018 dnsdomainname -> hostname
+lrwxrwxrwx 1 root root       8 Sep 27  2018 domainname -> hostname
+-rwxr-xr-x 1 root root  179104 Jul 28  2018 dumpkeys
+-rwxr-xr-x 1 root root   39520 Feb 28  2019 echo
+-rwxr-xr-x 1 root root   55424 Jan  3  2019 ed
+-rwxr-xr-x 1 root root      28 Jan  7  2019 egrep
+-rwxr-xr-x 1 root root   35424 Feb 28  2019 false
+-rwxr-xr-x 1 root root   14648 Jul 28  2018 fgconsole
+-rwxr-xr-x 1 root root      28 Jan  7  2019 fgrep
+-rwxr-xr-x 1 root root   68880 Jan 10  2019 findmnt
+-rwxr-xr-x 1 root root   40576 Sep 24  2018 fuser
+-rwsr-xr-x 1 root root   34896 Apr 22 15:38 fusermount
+-rwxr-xr-x 1 root root   31352 Mar  1  2019 getfacl
+-rwxr-xr-x 1 root root  198976 Jan  7  2019 grep
+-rwxr-xr-x 2 root root    2345 Jan  5  2019 gunzip
+-rwxr-xr-x 1 root root    6375 Jan  5  2019 gzexe
+-rwxr-xr-x 1 root root   98048 Jan  5  2019 gzip
+-rwxr-xr-x 1 root root  204824 Mar 22 05:55 hciconfig
+-rwxr-xr-x 1 root root   26696 Sep 27  2018 hostname
+-rwxr-xr-x 1 root root  620344 Aug 19 07:58 ip
+-rwxr-xr-x 1 root root   76024 Aug  3 03:43 journalctl
+-rwxr-xr-x 1 root root   14648 Jul 28  2018 kbd_mode
+-rwxr-xr-x 1 root root   43232 Mar  6  2019 keyctl
+-rwxr-xr-x 1 root root   26704 May 31  2018 kill
+-rwxr-xr-x 1 root root  166072 Feb  9  2019 kmod
+-rwxr-xr-x 1 root root   68552 Feb 28  2019 ln
+-rwxr-xr-x 1 root root  212112 Jul 28  2018 loadkeys
+-rwxr-xr-x 1 root root   56760 Jul 27  2018 login
+-rwxr-xr-x 1 root root   59728 Aug  3 03:43 loginctl
+-rwxr-xr-x 1 root root  117456 Mar 21  2019 lowntfs-3g
+-rwxr-xr-x 1 root root  138856 Feb 28  2019 ls
+-rwxr-xr-x 1 root root  108624 Jan 10  2019 lsblk
+lrwxrwxrwx 1 root root       4 Feb  9  2019 lsmod -> kmod
+-rwxr-xr-x 1 root root   89088 Feb 28  2019 mkdir
+-rwxr-xr-x 1 root root   68544 Feb 28  2019 mknod
+-rwxr-xr-x 1 root root   43808 Feb 28  2019 mktemp
+-rwxr-xr-x 1 root root   43008 Jan 10  2019 more
+-rwsr-xr-x 1 root root   51280 Jan 10  2019 mount
+-rwxr-xr-x 1 root root   14408 Jan 10  2019 mountpoint
+lrwxrwxrwx 1 root root      20 Dec  4  2016 mt -> /etc/alternatives/mt
+-rwxr-xr-x 1 root root   85320 Apr 23  2019 mt-gnu
+-rwxr-xr-x 1 root root  138728 Feb 28  2019 mv
+-rwxr-xr-x 1 root root  246160 Jun 11  2019 nano
+lrwxrwxrwx 1 root root      20 Dec  4  2016 nc -> /etc/alternatives/nc
+-rwxr-xr-x 1 root root   27400 Apr 13  2017 nc.traditional
+lrwxrwxrwx 1 root root      24 Dec  4  2016 netcat -> /etc/alternatives/netcat
+-rwxr-xr-x 1 root root  155096 Sep 24  2018 netstat
+-rwxr-xr-x 1 root root   71904 Aug  3 03:43 networkctl
+lrwxrwxrwx 1 root root       8 Sep 27  2018 nisdomainname -> hostname
+-rwsr-xr-x 1 root root  154352 Mar 21  2019 ntfs-3g
+-rwxr-xr-x 1 root root   14408 Mar 21  2019 ntfs-3g.probe
+-rwxr-xr-x 1 root root   34920 Mar 21  2019 ntfscat
+-rwxr-xr-x 1 root root   39016 Mar 21  2019 ntfscluster
+-rwxr-xr-x 1 root root   39016 Mar 21  2019 ntfscmp
+-rwxr-xr-x 1 root root   39024 Mar 21  2019 ntfsfallocate
+-rwxr-xr-x 1 root root   43120 Mar 21  2019 ntfsfix
+-rwxr-xr-x 1 root root   59512 Mar 21  2019 ntfsinfo
+-rwxr-xr-x 1 root root   36024 Mar 21  2019 ntfsls
+-rwxr-xr-x 1 root root   39016 Mar 21  2019 ntfsmove
+-rwxr-xr-x 1 root root  120936 Mar 21  2019 ntfsrecover
+-rwxr-xr-x 1 root root   96864 Mar 21  2019 ntfssecaudit
+-rwxr-xr-x 1 root root   43040 Mar 21  2019 ntfstruncate
+-rwxr-xr-x 1 root root   38936 Mar 21  2019 ntfsusermap
+-rwxr-xr-x 1 root root   47752 Mar 21  2019 ntfswipe
+-rwxr-xr-x 1 root root   23424 Jul 28  2018 openvt
+lrwxrwxrwx 1 root root      14 Feb 14  2019 pidof -> /sbin/killall5
+-rwsr-xr-x 1 root root   69368 Jan 13  2020 ping
+lrwxrwxrwx 1 root root       4 Jan 13  2020 ping4 -> ping
+lrwxrwxrwx 1 root root       4 Jan 13  2020 ping6 -> ping
+-rwxr-xr-x 1 root root  133432 May 31  2018 ps
+-rwxr-xr-x 1 root root   39616 Feb 28  2019 pwd
+lrwxrwxrwx 1 root root       4 Apr 18  2019 rbash -> bash
+-rwxr-xr-x 1 root root   47776 Feb 28  2019 readlink
+-rwxr-xr-x 1 root root      89 Jan  3  2019 red
+-rwxr-xr-x 1 root root   68416 Feb 28  2019 rm
+-rwxr-xr-x 1 root root   47776 Feb 28  2019 rmdir
+lrwxrwxrwx 1 root root       4 Jun 11  2019 rnano -> nano
+-rwxr-xr-x 1 root root   23312 Jan 21  2019 run-parts
+lrwxrwxrwx 1 root root       3 Feb  4  2019 rzsh -> zsh
+-rwxr-xr-x 1 root root  122224 Dec 22  2018 sed
+-rwxr-xr-x 1 root root   39608 Mar  1  2019 setfacl
+-rwxr-xr-x 1 root root   47792 Jul 28  2018 setfont
+-rwxr-xr-x 1 root root   38267 Aug 15  2019 setupcon
+lrwxrwxrwx 1 root root       4 Jan 17  2019 sh -> dash
+lrwxrwxrwx 1 root root       4 Dec  4  2016 sh.distrib -> dash
+-rwxr-xr-x 1 root root   39552 Feb 28  2019 sleep
+-rwxr-xr-x 1 root root  177216 Aug 19 07:58 ss
+-rwxr-xr-x 1 root root   80672 Feb 28  2019 stty
+-rwsr-xr-x 1 root root   63568 Jan 10  2019 su
+-rwxr-xr-x 1 root root   35488 Feb 28  2019 sync
+-rwxr-xr-x 1 root root  996592 Aug  3 03:43 systemctl
+lrwxrwxrwx 1 root root      20 Aug  3 03:43 systemd -> /lib/systemd/systemd
+-rwxr-xr-x 1 root root   14672 Aug  3 03:43 systemd-ask-password
+-rwxr-xr-x 1 root root   18648 Aug  3 03:43 systemd-escape
+-rwxr-xr-x 1 root root  104968 Aug  3 03:43 systemd-hwdb
+-rwxr-xr-x 1 root root   22768 Aug  3 03:43 systemd-inhibit
+-rwxr-xr-x 1 root root   26944 Aug  3 03:43 systemd-machine-id-setup
+-rwxr-xr-x 1 root root   18656 Aug  3 03:43 systemd-notify
+-rwxr-xr-x 1 root root   55816 Aug  3 03:43 systemd-sysusers
+-rwxr-xr-x 1 root root   84376 Aug  3 03:43 systemd-tmpfiles
+-rwxr-xr-x 1 root root   30944 Aug  3 03:43 systemd-tty-ask-password-agent
+-rwxr-xr-x 1 root root  445560 Apr 23  2019 tar
+-rwxr-xr-x 1 root root  424640 May  5  2018 tcsh
+-rwxr-xr-x 1 root root   14440 Jan 21  2019 tempfile
+-rwxr-xr-x 1 root root   97152 Feb 28  2019 touch
+-rwxr-xr-x 1 root root   35424 Feb 28  2019 true
+-rwxr-xr-x 1 root root  945360 Aug  3 03:43 udevadm
+-rwxr-xr-x 1 root root   14328 Apr 22 15:38 ulockmgr_server
+-rwsr-xr-x 1 root root   34888 Jan 10  2019 umount
+-rwxr-xr-x 1 root root   39584 Feb 28  2019 uname
+-rwxr-xr-x 2 root root    2345 Jan  5  2019 uncompress
+-rwxr-xr-x 1 root root    2762 Jul 28  2018 unicode_start
+-rwxr-xr-x 1 root root  138856 Feb 28  2019 vdir
+-rwxr-xr-x 1 root root   34896 Jan 10  2019 wdctl
+-rwxr-xr-x 1 root root     946 Jan 21  2019 which
+lrwxrwxrwx 1 root root       8 Sep 27  2018 ypdomainname -> hostname
+-rwxr-xr-x 1 root root    1983 Jan  5  2019 zcat
+-rwxr-xr-x 1 root root    1677 Jan  5  2019 zcmp
+-rwxr-xr-x 1 root root    5879 Jan  5  2019 zdiff
+-rwxr-xr-x 1 root root      29 Jan  5  2019 zegrep
+-rwxr-xr-x 1 root root      29 Jan  5  2019 zfgrep
+-rwxr-xr-x 1 root root    2080 Jan  5  2019 zforce
+-rwxr-xr-x 1 root root    7584 Jan  5  2019 zgrep
+-rwxr-xr-x 1 root root    2205 Jan  5  2019 zless
+-rwxr-xr-x 1 root root    1841 Jan  5  2019 zmore
+-rwxr-xr-x 1 root root    4552 Jan  5  2019 znew
+-rwxr-xr-x 1 root root  861568 Feb  4  2019 zsh
+-rwxr-xr-x 1 root root     843 Feb  4  2019 zsh5
+
+dir:
+total 0
+-rw-r----- 1 estern7 estern7 0 Sep 16 20:05 t2.c
+-rw-r----- 1 estern7 estern7 0 Sep 16 20:05 T2.s1
+-rw-r----- 1 estern7 estern7 0 Sep 16 20:05 t3
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls -l /bin ??? > bin-c.log
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin [c].*
+ls: cannot access '[c].*': No such file or directory
+/bin:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin [c]
+ls: cannot access '[c]': No such file or directory
+/bin:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin [c][1P[1P[1P[1P [c][1P[c][C[C[C[C /bin
+ls: cannot access '[c]': No such file or directory
+/bin:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls -d /bin [[K[K/[c]
+ls: cannot access '/bin/[c]': No such file or directory
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls -d /bin/[c][1Pbin/[c][1Pbin/[c][1Pbin/[c][1Pbin/[c]
+ls: cannot access 'bin/[c]': No such file or directory
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls bin [s][K[Kc[[K]
+ls: cannot access 'bin': No such file or directory
+ls: cannot access '[c]': No such file or directory
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin /[c]
+ls: cannot access '/[c]': No such file or directory
+/bin:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote05:~/i220a/submit/lab3/exercises$ /ls /bin /[c][1P[c][1P[c]/[c]"[c][C[C[C"
+ls: cannot access '/bin/[c]': No such file or directory
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin/"[c]"[1P[c]"'[c]"[C[C[C[C[K'
+ls: cannot access '/bin/[c]': No such file or directory
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin/'[c]'[K[1P[c][C[C[C?[K*[K.*
+ls: cannot access '/bin/[c].*': No such file or directory
+estern7@remote05:~/i220a/submit/lab3/exercises$ ls /bin/[c].*[1P[c].* [c].*
+ls: cannot access '[c].*': No such file or directory
+/bin:
+bash	      dash	     hciconfig	 mt-gnu		 ntfswipe    ss				     uname
+bunzip2       date	     hostname	 mv		 openvt      stty			     uncompress
+busybox       dd	     ip		 nano		 pidof	     su				     unicode_start
+bzcat	      df	     journalctl  nc		 ping	     sync			     vdir
+bzcmp	      dir	     kbd_mode	 nc.traditional  ping4	     systemctl			     wdctl
+bzdiff	      dmesg	     keyctl	 netcat		 ping6	     systemd			     which
+bzegrep       dnsdomainname  kill	 netstat	 ps	     systemd-ask-password	     ypdomainname
+bzexe	      domainname     kmod	 networkctl	 pwd	     systemd-escape		     zcat
+bzfgrep       dumpkeys	     ln		 nisdomainname	 rbash	     systemd-hwdb		     zcmp
+bzgrep	      echo	     loadkeys	 ntfs-3g	 readlink    systemd-inhibit		     zdiff
+bzip2	      ed	     login	 ntfs-3g.probe	 red	     systemd-machine-id-setup	     zegrep
+bzip2recover  egrep	     loginctl	 ntfscat	 rm	     systemd-notify		     zfgrep
+bzless	      false	     lowntfs-3g  ntfscluster	 rmdir	     systemd-sysusers		     zforce
+bzmore	      fgconsole      ls		 ntfscmp	 rnano	     systemd-tmpfiles		     zgrep
+cat	      fgrep	     lsblk	 ntfsfallocate	 run-parts   systemd-tty-ask-password-agent  zless
+chacl	      findmnt	     lsmod	 ntfsfix	 rzsh	     tar			     zmore
+chgrp	      fuser	     mkdir	 ntfsinfo	 sed	     tcsh			     znew
+chmod	      fusermount     mknod	 ntfsls		 setfacl     tempfile			     zsh
+chown	      getfacl	     mktemp	 ntfsmove	 setfont     touch			     zsh5
+chvt	      grep	     more	 ntfsrecover	 setupcon    true
+cp	      gunzip	     mount	 ntfssecaudit	 sh	     udevadm
+cpio	      gzexe	     mountpoint  ntfstruncate	 sh.distrib  ulockmgr_server
+csh	      gzip	     mt		 ntfsusermap	 sleep	     umount
+estern7@remote05:~/i220a/submit/lab3/exercises$ clear
+[H[2J[3Jestern7@remote05:~/i220a/submit/lab3/exercises$ ^C
+estern7@remote05:~/i220a/submit/lab3/exercises$ ^C
+estern7@remote05:~/i220a/submit/lab3/exercises$ exit
+exit
+
+Script done on 2020-09-17 01:08:25-04:00 [COMMAND_EXIT_CODE="130"]
+Script started on 2020-09-17 13:02:02-04:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="117" LINES="55"]
+estern7@remote05:~/i220a/submit/lab3$ ls -R /etc[C[C[C[C.*
+ls: cannot access '/etc.*': No such file or directory
+estern7@remote05:~/i220a/submit/lab3$ ls -R /etc.*[C[1P*[K
+/etc:
+3270			       ghostscript		   mail.rc		      request-key.d
+a2ps.cfg		       gimp			   manpath.config	      resolv.conf
+a2ps-site.cfg		       git-buildpackage		   matplotlibrc		      resolvconf
+acpi			       glvnd			   matplotlibrc2	      resolv.conf.class
+adduser.conf		       gnashpluginrc		   mediaprm		      resolv.conf.external
+adjtime			       gnashrc			   mercurial		      resolv.conf.internal
+aliases			       gnashthumbnailrc		   mime.types		      rlwrap
+alsa			       gnome			   minicom		      rmt
+alternatives		       gnome-vfs-2.0		   mke2fs.conf		      rpc
+anacrontab		       gnome-vfs-mime-magic	   modprobe.d		      rsyslog.conf
+apache2			       GNUstep			   modules		      rsyslog.d
+apm			       go-mmproxy		   modules-load.d	      rsyslog-haproxy.conf
+apparmor		       groff			   monit		      rsyslog-normal.conf
+apparmor.d		       groovy			   motd			      runit
+apt			       group			   mtab			      samba
+apt-venv.conf		       group-			   mtools.conf		      sane.d
+at.deny			       gshadow			   Muttrc		      sbclrc
+at-spi2			       gshadow-			   Muttrc.d		      scite
+autoconf2.13		       gss			   mysql		      screenrc
+avahi			       gssapi_mech.conf		   nanorc		      securetty
+bash.bashrc		       gssapi_mech.conf.dpkg-dist  netconf		      security
+bash_completion		       gtk-2.0			   netconfig		      selinux
+bash_completion.d	       gtk-3.0			   netgroup		      sensors3.conf
+bindresvport.blacklist	       hddtemp.db		   netscsid.conf	      sensors.d
+binfmt.d		       hdparm.conf		   network		      services
+bluetooth		       highlight		   NetworkManager	      sgml
+bogofilter.cf		       host.conf		   networks		      shadow
+bonobo-activation	       hostname			   nftables.conf	      shadow-
+bootchartd.conf		       hosts			   nscd.conf		      shells
+ca-certificates		       hosts.allow		   nslcd.conf		      skel
+ca-certificates.conf	       hosts.class		   nslcd.conf.buster-upgrade  slsh.rc
+ca-certificates.conf.dpkg-old  hosts.deny		   nslcd.conf.class	      smartd.conf
+calendar		       hosts.external		   nslcd.conf.linux	      smartmontools
+chatscripts		       hosts.internal		   nsswitch.conf	      smi.conf
+chktexrc		       idmapd.conf		   ntp.conf		      snmp
+chromium		       idmapd.conf.ucf-dist	   ntp.conf.dpkg-old	      sound
+chromium.d		       ifplugd			   nvcc.profile		      speech-dispatcher
+cifs-utils		       ImageMagick-6		   nvidia		      ssh
+common-lisp		       init			   nxagent		      ssl
+complete.tcsh		       init.d			   ocamlfind.conf	      staff-group-for-usr-local
+console			       initramfs-tools		   ODBCDataSources	      stunnel
+console-setup		       inputrc			   odbc.ini		      subgid
+cowpoke.conf		       insserv			   odbcinst.ini		      subgid-
+cracklib		       insserv.conf		   openal		      subuid
+cron.d			       insserv.conf.d		   OpenCL		      subuid-
+cron.daily		       installed_packages	   openmpi		      subversion
+cron.hourly		       iproute2			   opensc		      sudoers
+cron.monthly		       iscsi			   openvpn		      sudoers.d
+crontab			       issue			   opt			      sudoers.old
+cron.weekly		       issue.net		   os-release		      sudoers.save
+cruft			       java			   PackageKit		      sv
+csh			       java-10-oracle		   pam.conf		      sysctl.conf
+csh.cshrc		       java-11-oracle		   pam.d		      sysctl.d
+csh.login		       java-8-oracle		   pam_ldap.conf	      sysfs.conf
+csh.logout		       jed.d			   pam_ldap.conf.class	      sysfs.d
+cupshelpers		       jython			   pam_ldap.conf.linux	      sysstat
+cvsdeb.conf		       kernel			   papersize		      systemd
+dat.conf		       kernel-img.conf		   passwd		      terminfo
+dbus-1			       krb5.conf		   passwd-		      tex4ht
+debconf.conf		       krb5.keytab		   pbuilder		      texmf
+debian_version		       latex2html.conf		   pbuilderrc		      thunderbird
+debsums-ignore		       LatexMk			   perl			      tigervnc
+debtree			       ldap			   php			      timezone
+default			       ld.so.cache		   piuparts		      timidity
+deluser.conf		       ld.so.conf		   pm			      tmpfiles.d
+devscripts.conf		       ld.so.conf.d		   polkit-1		      ucf.conf
+dhcp			       libao.conf		   postgresql-common	      udev
+dictionaries-common	       libaudit.conf		   ppp			      udisks2
+dirmngr			       libblockdev		   printcap		      ufw
+discover.conf.d		       libccid_Info.plist	   profile		      updatedb.conf
+discover-modprobe.conf	       libgda-5.0		   profile.d		      update-motd.d
+dkms			       libibverbs.d		   protocols		      UPower
+dleyna-server-service.conf     libnl-3			   pulse		      usb_modeswitch.conf
+doc-base		       libnss-ldap.conf		   purple		      usb_modeswitch.d
+dpkg			       libnss-ldap.conf.class	   python		      vbox
+dpkg-list		       libnss-ldap.conf.linux	   python2.7		      vdpau_wrapper.cfg
+dput.cf			       libpaper.d		   python3		      video_format
+e2scrub.conf		       libreoffice		   python3.5		      vim
+eclipse.ini		       lightdm			   python3.7		      visualvm
+emacs			       lighttpd			   qemu-ifdown		      vmware-tools
+email-addresses		       lisp-config.lisp		   qemu-ifup		      vnc.conf
+environment		       lldpd.d			   quilt.quiltrc	      vulkan
+environment.d		       locale.alias		   quotagrpadmins	      w3m
+ethertypes		       locale.gen		   quotatab		      warnquota.conf
+exim4			       localtime		   R			      wgetrc
+fail2ban		       logcheck			   racket		      wildmidi
+fdmount.conf		       login.defs		   rarfiles.lst		      wireshark
+firebird		       login.warn		   rc0.d		      wodim.conf
+firefox-esr		       logrotate.conf		   rc1.d		      wpa_supplicant
+fonts			       logrotate.conf.dpkg-old	   rc2.d		      X11
+freeipmi		       logrotate.d		   rc3.d		      x2go
+fstab			       logrotate.d.save		   rc4.d		      xattr.conf
+fstab.save		       ltrace.conf		   rc5.d		      xdg
+fstab.save.1		       lynx			   rc6.d		      xfce4
+fuse.conf		       machine-id		   rc.local		      xml
+gai.conf		       magic			   rcS.d		      xpdf
+gamin			       magic.mime		   reader.conf.d	      xprofile
+gconf			       mailcap			   rearj.cfg		      zsh
+gdb			       mailcap.order		   reportbug.conf
+geoclue			       mailname			   request-key.conf
+
+/etc/3270:
+ibm_hosts
+
+/etc/acpi:
+events	powerbtn-acpi-support.sh
+
+/etc/acpi/events:
+powerbtn-acpi-support
+
+/etc/alsa:
+conf.d
+
+/etc/alsa/conf.d:
+10-rate-lav.conf    50-arcam-av-ctl.conf  50-pulseaudio.conf   60-vdownmix.conf			   99-pulse.conf
+10-samplerate.conf  50-jack.conf	  60-a52-encoder.conf  98-usb-stream.conf
+10-speexrate.conf   50-oss.conf		  60-upmix.conf        99-pulseaudio-default.conf.example
+
+/etc/alternatives:
+ABORT.7.gz				    javap
+aclocal					    javap.1
+aclocal.1.gz				    javapackager
+ALTER_AGGREGATE.7.gz			    javapackager.1.gz
+ALTER_COLLATION.7.gz			    javaws
+ALTER_CONVERSION.7.gz			    javaws.1.gz
+ALTER_DATABASE.7.gz			    javaws.real
+ALTER_DEFAULT_PRIVILEGES.7.gz		    jcmd
+ALTER_DOMAIN.7.gz			    jcmd.1
+ALTER_EVENT_TRIGGER.7.gz		    jconsole
+ALTER_EXTENSION.7.gz			    jconsole.1
+ALTER_FOREIGN_DATA_WRAPPER.7.gz		    jcontrol
+ALTER_FOREIGN_TABLE.7.gz		    jdb
+ALTER_FUNCTION.7.gz			    jdb.1
+ALTER_GROUP.7.gz			    jdeprscan
+ALTER_INDEX.7.gz			    jdeprscan.1
+ALTER_LANGUAGE.7.gz			    jdeps
+ALTER_LARGE_OBJECT.7.gz			    jdeps.1
+ALTER_MATERIALIZED_VIEW.7.gz		    jed-script
+ALTER_OPERATOR.7.gz			    jed-script.1.gz
+ALTER_OPERATOR_CLASS.7.gz		    jexec
+ALTER_OPERATOR_FAMILY.7.gz		    jexec-binfmt
+ALTER_POLICY.7.gz			    jfr
+ALTER_PROCEDURE.7.gz			    jfr.1
+ALTER_PUBLICATION.7.gz			    jhat
+ALTER_ROLE.7.gz				    jhat.1.gz
+ALTER_ROUTINE.7.gz			    jhsdb
+ALTER_RULE.7.gz				    jhsdb.1
+ALTER_SCHEMA.7.gz			    jimage
+ALTER_SEQUENCE.7.gz			    jinfo
+ALTER_SERVER.7.gz			    jinfo.1
+ALTER_STATISTICS.7.gz			    jjs
+ALTER_SUBSCRIPTION.7.gz			    jjs.1
+ALTER_SYSTEM.7.gz			    jlink
+ALTER_TABLE.7.gz			    jlink.1
+ALTER_TABLESPACE.7.gz			    jmap
+ALTER_TEXT_SEARCH_CONFIGURATION.7.gz	    jmap.1
+ALTER_TEXT_SEARCH_DICTIONARY.7.gz	    jmc
+ALTER_TEXT_SEARCH_PARSER.7.gz		    jmc.1.gz
+ALTER_TEXT_SEARCH_TEMPLATE.7.gz		    jmod
+ALTER_TRIGGER.7.gz			    jmod.1
+ALTER_TYPE.7.gz				    jpackage
+ALTER_USER.7.gz				    jpackage.1
+ALTER_USER_MAPPING.7.gz			    jps
+ALTER_VIEW.7.gz				    jps.1
+ANALYZE.7.gz				    jrunscript
+animate					    jrunscript.1
+animate.1.gz				    js
+animate-im6				    js.1.gz
+animate-im6.1.gz			    jsadebugd
+appletviewer				    jsadebugd.1.gz
+appletviewer.1.gz			    jshell
+aptitude				    jshell.1
+aptitude.8.gz				    jstack
+aptitude.cs.8.gz			    jstack.1
+aptitude.de.8.gz			    jstat
+aptitude.es.8.gz			    jstat.1
+aptitude.fi.8.gz			    jstatd
+aptitude.fr.8.gz			    jstatd.1
+aptitude.gl.8.gz			    jvisualvm
+aptitude.it.8.gz			    jvisualvm.1.gz
+aptitude.ja.8.gz			    jweblauncher
+aptitude.pl.8.gz			    kdesu
+arptables				    keytool
+arptables-restore			    keytool.1.gz
+arptables-save				    lapack.pc-x86_64-linux-gnu
+automake				    lft
+automake.1.gz				    lft.1.gz
+awk					    libblas.a-x86_64-linux-gnu
+awk.1.gz				    libblas.so.3-x86_64-linux-gnu
+BEGIN.7.gz				    libblas.so-x86_64-linux-gnu
+bf_compact				    libGL.so-master
+bf_copy					    liblapack.a-x86_64-linux-gnu
+bf_tar					    liblapack.so.3-x86_64-linux-gnu
+bibtex					    liblapack.so-x86_64-linux-gnu
+bibtex.1.gz				    libmpi++.so-x86_64-linux-gnu
+blas.pc-x86_64-linux-gnu		    libmpi.so-x86_64-linux-gnu
+bogofilter				    libpsm_infinipath.so.1
+bogolexer				    lightdm-greeter
+bogotune				    LISTEN.7.gz
+bogoupgrade				    LOAD.7.gz
+bogoutil				    locate
+builtins.7.gz				    locate.1.gz
+bzr					    LOCK.7.gz
+bzr.1.gz				    lzcat
+c++					    lzcat.1.gz
+c89					    lzip
+c89.1.gz				    lzip.1.gz
+c99					    lzip-compressor
+c99.1.gz				    lzip-compressor.1.gz
+CALL.7.gz				    lzip-compressor.info.gz
+cblas.h-x86_64-linux-gnu		    lzip-decompressor
+cc					    lzip-decompressor.1.gz
+CHECKPOINT.7.gz				    lzip-decompressor.info.gz
+clojure					    lzip.info.gz
+clojure.1.gz				    lzma
+clojurec				    lzma.1.gz
+clojurec.1.gz				    mail
+clojure.jar				    Mail
+CLOSE.7.gz				    mail.1.gz
+CLUSTER.7.gz				    Mail.1.gz
+clusterdb.1.gz				    mailx
+COMMENT.7.gz				    mailx.1.gz
+COMMIT.7.gz				    messages
+COMMIT_PREPARED.7.gz			    messages.1.gz
+compare					    mogrify
+compare.1.gz				    mogrify.1.gz
+compare-im6				    mogrify-im6
+compare-im6.1.gz			    mogrify-im6.1.gz
+composite				    montage
+composite.1.gz				    montage.1.gz
+composite-im6				    montage-im6
+composite-im6.1.gz			    montage-im6.1.gz
+conjure					    MOVE.7.gz
+conjure.1.gz				    movemail
+conjure-im6				    movemail.1.gz
+conjure-im6.1.gz			    mozilla-javaplugin.so
+ControlPanel				    mpi
+convert					    mpic++
+convert.1.gz				    mpic++.1.gz
+convert-im6				    mpiCC
+convert-im6.1.gz			    mpicc.1.gz
+COPY.7.gz				    mpiCC.1.gz
+cpp					    mpi-c.pc-x86_64-linux-gnu
+CREATE_ACCESS_METHOD.7.gz		    mpicxx
+CREATE_AGGREGATE.7.gz			    mpicxx.1.gz
+CREATE_CAST.7.gz			    mpi-cxx.pc-x86_64-linux-gnu
+CREATE_COLLATION.7.gz			    mpiexec
+CREATE_CONVERSION.7.gz			    mpiexec.1.gz
+CREATE_DATABASE.7.gz			    mpif77
+createdb.1.gz				    mpif77.1.gz
+CREATE_DOMAIN.7.gz			    mpif90
+CREATE_EVENT_TRIGGER.7.gz		    mpif90.1.gz
+CREATE_EXTENSION.7.gz			    mpifort
+CREATE_FOREIGN_DATA_WRAPPER.7.gz	    mpifort.1.gz
+CREATE_FOREIGN_TABLE.7.gz		    mpi-fort.pc-x86_64-linux-gnu
+CREATE_FUNCTION.7.gz			    mpi.pc-x86_64-linux-gnu
+CREATE_GROUP.7.gz			    mpirun
+CREATE_INDEX.7.gz			    mpirun.1.gz
+CREATE_LANGUAGE.7.gz			    mpi-x86_64-linux-gnu
+CREATE_MATERIALIZED_VIEW.7.gz		    mt
+CREATE_OPERATOR.7.gz			    mt.1.gz
+CREATE_OPERATOR_CLASS.7.gz		    my.cnf
+CREATE_OPERATOR_FAMILY.7.gz		    native2ascii
+CREATE_POLICY.7.gz			    native2ascii.1.gz
+CREATE_PROCEDURE.7.gz			    nawk
+CREATE_PUBLICATION.7.gz			    nawk.1.gz
+CREATE_ROLE.7.gz			    nc
+CREATE_RULE.7.gz			    nc.1.gz
+CREATE_SCHEMA.7.gz			    netcat
+CREATE_SEQUENCE.7.gz			    netcat.1.gz
+CREATE_SERVER.7.gz			    netrc.5.gz
+CREATE_STATISTICS.7.gz			    NOTIFY.7.gz
+CREATE_SUBSCRIPTION.7.gz		    nvidia
+CREATE_TABLE.7.gz			    nvidia--libcuda.so.1-x86_64-linux-gnu
+CREATE_TABLE_AS.7.gz			    nvidia--libcuda.so-x86_64-linux-gnu
+CREATE_TABLESPACE.7.gz			    nvidia--libEGL_nvidia.so.0-i386-linux-gnu
+CREATE_TEXT_SEARCH_CONFIGURATION.7.gz	    nvidia--libEGL_nvidia.so.0-x86_64-linux-gnu
+CREATE_TEXT_SEARCH_DICTIONARY.7.gz	    nvidia--libGLESv1_CM_nvidia.so.1-i386-linux-gnu
+CREATE_TEXT_SEARCH_PARSER.7.gz		    nvidia--libGLESv1_CM_nvidia.so.1-x86_64-linux-gnu
+CREATE_TEXT_SEARCH_TEMPLATE.7.gz	    nvidia--libGLESv2_nvidia.so.2-i386-linux-gnu
+CREATE_TRANSFORM.7.gz			    nvidia--libGLESv2_nvidia.so.2-x86_64-linux-gnu
+CREATE_TRIGGER.7.gz			    nvidia--libGLX_nvidia.so.0-i386-linux-gnu
+CREATE_TYPE.7.gz			    nvidia--libGLX_nvidia.so.0-x86_64-linux-gnu
+createuser.1.gz				    nvidia--libglx.so
+CREATE_USER.7.gz			    nvidia--libnvcuvid.so.1-x86_64-linux-gnu
+CREATE_USER_MAPPING.7.gz		    nvidia--libnvcuvid.so-x86_64-linux-gnu
+CREATE_VIEW.7.gz			    nvidia--libnvidia-cfg.so.1-x86_64-linux-gnu
+csh					    nvidia--libnvidia-ml.so.1-x86_64-linux-gnu
+csh.1.gz				    nvidia--libnvidia-opencl.so.1-x86_64-linux-gnu
+ctags					    nvidia--libnvidia-ptxjitcompiler.so.1-x86_64-linux-gnu
+ctags.1.gz				    nvidia--libvdpau_nvidia.so.1-x86_64-linux-gnu
+DEALLOCATE.7.gz				    nvidia--nv-control-dpy
+DECLARE.7.gz				    nvidia--nvidia-application-profiles-key-documentation
+DELETE.7.gz				    nvidia--nvidia-blacklists-nouveau.conf
+desktop-background			    nvidia--nvidia-bug-report.sh
+desktop-background.xml			    nvidia--nvidia-debugdump
+desktop-grub				    nvidia--nvidia-drm-outputclass.conf
+desktop-grub.sh				    nvidia--nvidia_drv.so
+desktop-lockscreen.xml			    nvidia--nvidia-load.conf
+desktop-login-background		    nvidia--nvidia-modprobe.conf
+desktop-plasma5-wallpaper		    nvidia--nvidia-settings
+desktop-theme				    nvidia--nvidia-settings.1.gz
+DISCARD.7.gz				    nvidia--nvidia-settings.desktop
+display					    nvidia--nvidia-smi
+display.1.gz				    nvidia--nvidia-smi.1.gz
+display-im6				    openjade
+display-im6.1.gz			    openjade.1.gz
+DO.7.gz					    orbd
+dotlock					    orbd.1.gz
+dotlock.1.gz				    pack200
+DROP_ACCESS_METHOD.7.gz			    pack200.1.gz
+DROP_AGGREGATE.7.gz			    pager
+DROP_CAST.7.gz				    pager.1.gz
+DROP_COLLATION.7.gz			    pasteurize
+DROP_CONVERSION.7.gz			    pbr
+DROP_DATABASE.7.gz			    pdftk
+dropdb.1.gz				    pdftkman
+DROP_DOMAIN.7.gz			    pftp
+DROP_EVENT_TRIGGER.7.gz			    pftp.1.gz
+DROP_EXTENSION.7.gz			    pg_basebackup.1.gz
+DROP_FOREIGN_DATA_WRAPPER.7.gz		    pg_dump.1.gz
+DROP_FOREIGN_TABLE.7.gz			    pg_dumpall.1.gz
+DROP_FUNCTION.7.gz			    pg_isready.1.gz
+DROP_GROUP.7.gz				    pg_receivewal.1.gz
+DROP_INDEX.7.gz				    pg_recvlogical.1.gz
+DROP_LANGUAGE.7.gz			    pg_restore.1.gz
+DROP_MATERIALIZED_VIEW.7.gz		    phar
+DROP_OPERATOR.7.gz			    phar.1.gz
+DROP_OPERATOR_CLASS.7.gz		    phar.phar
+DROP_OPERATOR_FAMILY.7.gz		    phar.phar.1.gz
+DROP_OWNED.7.gz				    php
+DROP_POLICY.7.gz			    php.1.gz
+DROP_PROCEDURE.7.gz			    pico
+DROP_PUBLICATION.7.gz			    pico.1.gz
+DROP_ROLE.7.gz				    pinentry
+DROP_ROUTINE.7.gz			    pinentry.1.gz
+DROP_RULE.7.gz				    pinentry-x11
+DROP_SCHEMA.7.gz			    pinentry-x11.1.gz
+DROP_SEQUENCE.7.gz			    policytool
+DROP_SERVER.7.gz			    policytool.1.gz
+DROP_STATISTICS.7.gz			    PREPARE.7.gz
+DROP_SUBSCRIPTION.7.gz			    PREPARE_TRANSACTION.7.gz
+DROP_TABLE.7.gz				    prolog
+DROP_TABLESPACE.7.gz			    prolog.1.gz
+DROP_TEXT_SEARCH_CONFIGURATION.7.gz	    psql.1.gz
+DROP_TEXT_SEARCH_DICTIONARY.7.gz	    python
+DROP_TEXT_SEARCH_PARSER.7.gz		    rcp
+DROP_TEXT_SEARCH_TEMPLATE.7.gz		    rcp.1.gz
+DROP_TRANSFORM.7.gz			    readline-editor
+DROP_TRIGGER.7.gz			    readline-editor.1.gz
+DROP_TYPE.7.gz				    README
+dropuser.1.gz				    readmsg
+DROP_USER.7.gz				    readmsg.1.gz
+DROP_USER_MAPPING.7.gz			    REASSIGN_OWNED.7.gz
+DROP_VIEW.7.gz				    REFRESH_MATERIALIZED_VIEW.7.gz
+ebrowse					    regulatory.db
+ebrowse.1.gz				    regulatory.db.p7s
+ebtables				    REINDEX.7.gz
+ebtables-restore			    reindexdb.1.gz
+ebtables-save				    RELEASE_SAVEPOINT.7.gz
+editor					    RESET.7.gz
+editor.1.gz				    REVOKE.7.gz
+editor.da.1.gz				    rgview
+editor.de.1.gz				    rgvim
+editor.fr.1.gz				    rlogin
+editor.it.1.gz				    rlogin.1.gz
+editor.ja.1.gz				    rmic
+editor.pl.1.gz				    rmic.1.gz
+editor.ru.1.gz				    rmid
+emacs					    rmid.1.gz
+emacs.1.gz				    rmiregistry
+emacsclient				    rmiregistry.1.gz
+emacsclient.1.gz			    rmt
+emblem-vendor-128			    rmt.8.gz
+emblem-vendor-256			    ROLLBACK.7.gz
+emblem-vendor-64			    ROLLBACK_PREPARED.7.gz
+emblem-vendor-scalable			    ROLLBACK_TO_SAVEPOINT.7.gz
+emblem-vendor-symbolic-128		    rsh
+emblem-vendor-symbolic-256		    rsh.1.gz
+emblem-vendor-symbolic-64		    rst2html
+emblem-vendor-symbolic-scalable		    rst2html4
+emblem-vendor-white-128			    rst2html5
+emblem-vendor-white-256			    rst2latex
+emblem-vendor-white-64			    rst2man
+emblem-vendor-white-scalable		    rst2odt
+END.7.gz				    rst2odt_prepstyles
+etags					    rst2pseudoxml
+etags.1.gz				    rst2s5
+eview					    rst2xetex
+evim					    rst2xml
+ex					    rst-buildhtml
+ex.1.gz					    rstpep2html
+ex.da.1.gz				    runhaskell
+ex.de.1.gz				    runhaskell.1.gz
+EXECUTE.7.gz				    rview
+ex.fr.1.gz				    rvim
+ex.it.1.gz				    sar
+ex.ja.1.gz				    sar.1.gz
+ex.pl.1.gz				    SAVEPOINT.7.gz
+EXPLAIN.7.gz				    schemagen
+ex.ru.1.gz				    schemagen.1.gz
+extcheck				    SECURITY_LABEL.7.gz
+extcheck.1.gz				    SELECT.7.gz
+f77					    SELECT_INTO.7.gz
+f95					    serialver
+faked.1.gz				    serialver.1.gz
+faked.es.1.gz				    servertool
+faked.fr.1.gz				    servertool.1.gz
+faked.sv.1.gz				    SET.7.gz
+fakeroot				    SET_CONSTRAINTS.7.gz
+fakeroot.1.gz				    SET_ROLE.7.gz
+fakeroot.es.1.gz			    SET_SESSION_AUTHORIZATION.7.gz
+fakeroot.fr.1.gz			    SET_TRANSACTION.7.gz
+fakeroot.sv.1.gz			    SHOW.7.gz
+FETCH.7.gz				    startGroovy
+flash-mozilla.so			    start-here-16.png
+fonts-japanese-gothic.ttf		    start-here-22.png
+fonts-japanese-mincho.ttf		    start-here-24.png
+frm					    start-here-256.png
+frm.1.gz				    start-here-32.png
+from					    start-here-48.png
+from.1.gz				    start-here.svg
+ftp					    START_TRANSACTION.7.gz
+ftp.1.gz				    stream
+futurize				    stream.1.gz
+gcc-arm-none-eabi-include		    stream-im6
+gcc-arm-none-eabi-lib			    stream-im6.1.gz
+glx					    TABLE.7.gz
+glx--libEGL.so.1-i386-linux-gnu		    tcptraceroute
+glx--libEGL.so.1-x86_64-linux-gnu	    tcptraceroute.1.gz
+glx--libEGL.so-x86_64-linux-gnu		    tdbbackup
+glx--libGLESv1_CM.so.1-i386-linux-gnu	    tdbbackup.8.gz
+glx--libGLESv1_CM.so.1-x86_64-linux-gnu     telnet
+glx--libGLESv1_CM.so-x86_64-linux-gnu	    telnet.1.gz
+glx--libGLESv2.so.2-i386-linux-gnu	    tnameserv
+glx--libGLESv2.so.2-x86_64-linux-gnu	    tnameserv.1.gz
+glx--libGLESv2.so-x86_64-linux-gnu	    traceproto
+glx--libGL.so.1-i386-linux-gnu		    traceproto.1.gz
+glx--libGL.so.1-x86_64-linux-gnu	    traceroute
+glx--libGL.so-x86_64-linux-gnu		    traceroute.1.gz
+glx--libGLX_indirect.so.0-i386-linux-gnu    traceroute6
+glx--libGLX_indirect.so.0-x86_64-linux-gnu  traceroute6.8.gz
+glx--libnvidia-cfg.so.1-x86_64-linux-gnu    traceroute.sbin
+glx--linux-libglx.so			    TRUNCATE.7.gz
+glx--nvidia-blacklists-nouveau.conf	    UNLISTEN.7.gz
+glx--nvidia-bug-report.sh		    unlzma
+glx--nvidia-drm-outputclass.conf	    unlzma.1.gz
+glx--nvidia_drv.so			    unpack200
+glx--nvidia-load.conf			    unpack200.1.gz
+glx--nvidia-modprobe.conf		    unrar
+gnome-text-editor			    unrar.1.gz
+gnome-text-editor.1.gz			    UPDATE.7.gz
+gnome-www-browser			    updatedb
+gnuplot					    updatedb.8.gz
+gnuplot.1.gz				    VACUUM.7.gz
+gnuplot.gih				    vacuumdb.1.gz
+google-chrome				    VALUES.7.gz
+gplc					    vendor-logos
+gprolog					    vi
+gprolog-inc				    vi.1.gz
+GRANT.7.gz				    vi.da.1.gz
+grape					    vi.de.1.gz
+grape.1.gz				    view
+groovy					    view.1.gz
+groovy.1.gz				    view.da.1.gz
+groovyc					    view.de.1.gz
+groovyc.1.gz				    view.fr.1.gz
+groovyConsole				    view.it.1.gz
+groovydoc				    view.ja.1.gz
+groovysh				    view.pl.1.gz
+gview					    view.ru.1.gz
+gvim					    vi.fr.1.gz
+gvimdiff				    vi.it.1.gz
+haskell-compiler			    vi.ja.1.gz
+haskell-compiler.1.gz			    vim
+hexgplc					    vimdiff
+identify				    vi.pl.1.gz
+identify.1.gz				    vi.ru.1.gz
+identify-im6				    vncconfig
+identify-im6.1.gz			    vncconfig.1.gz
+idlj					    vncpasswd
+idlj.1.gz				    vncpasswd.1.gz
+idmap-plugin				    vncserver
+idmap-plugin.8.gz			    vncserver.1.gz
+import					    vncviewer
+import.1.gz				    vncviewer.1.gz
+IMPORT_FOREIGN_SCHEMA.7.gz		    w
+import-im6				    w.1.gz
+import-im6.1.gz				    WITH.7.gz
+infobrowser				    write
+infobrowser.1.gz			    write.1.gz
+INSERT.7.gz				    wsgen
+ip6tables				    wsgen.1.gz
+ip6tables-restore			    wsimport
+ip6tables-save				    wsimport.1.gz
+iptables				    www-browser
+iptables-restore			    www-browser.1.gz
+iptables-save				    wx.pth
+jaotc					    x-cursor-theme
+jaotc.1					    xdvi.bin
+jar					    xjc
+jar.1					    xjc.1.gz
+jarsigner				    x-session-manager
+jarsigner.1				    x-session-manager.1.gz
+java					    x-terminal-emulator
+java.1					    x-terminal-emulator.1.gz
+java2groovy				    Xvnc
+javac					    Xvnc.1.gz
+javac.1					    xvncviewer
+javadoc					    xvncviewer.1.gz
+javadoc.1				    x-window-manager
+javafxpackager				    x-window-manager.1.gz
+javafxpackager.1.gz			    x-www-browser
+javah					    yacc
+javah.1.gz				    yaccman
+
+/etc/apache2:
+conf-available
+
+/etc/apache2/conf-available:
+javascript-common.conf
+
+/etc/apm:
+event.d
+
+/etc/apm/event.d:
+
+/etc/apparmor:
+init  parser.conf
+
+/etc/apparmor/init:
+network-interface-security
+
+/etc/apparmor/init/network-interface-security:
+usr.sbin.ntpd
+
+/etc/apparmor.d:
+abstractions	       samba				     usr.lib.libreoffice.program.soffice.bin
+cache		       tunables				     usr.lib.libreoffice.program.xpdfimport
+disable		       usr.bin.evince			     usr.sbin.gpsd
+force-complain	       usr.bin.man			     usr.sbin.ntpd
+lightdm-guest-session  usr.bin.thunderbird		     usr.sbin.ntpd.dpkg-old
+local		       usr.lib.libreoffice.program.oosplash
+nvidia_modprobe        usr.lib.libreoffice.program.senddoc
+
+/etc/apparmor.d/abstractions:
+apache2-common		   gnupg		     openssl			ubuntu-feed-readers
+apparmor_api		   ibus			     orbit2			ubuntu-gnome-terminal
+aspell			   kde			     p11-kit			ubuntu-helpers
+audio			   kde-globals-write	     perl			ubuntu-konsole
+authentication		   kde-icon-cache-write      php			ubuntu-media-players
+base			   kde-language-write	     php5			ubuntu-unity7-base
+bash			   kerberosclient	     postfix-common		ubuntu-unity7-launcher
+consoles		   ldapclient		     private-files		ubuntu-unity7-messaging
+cups-client		   libpam-systemd	     private-files-strict	ubuntu-xterm
+dbus			   lightdm		     python			user-download
+dbus-accessibility	   lightdm_chromium-browser  qt5			user-mail
+dbus-accessibility-strict  likewise		     qt5-compose-cache-write	user-manpages
+dbus-session		   mdns			     qt5-settings-write		user-tmp
+dbus-session-strict	   mesa			     recent-documents-write	user-write
+dbus-strict		   mir			     ruby			video
+dconf			   mozc			     samba			vulkan
+dovecot-common		   mysql		     smbpass			wayland
+dri-common		   nameservice		     ssl_certs			web-data
+dri-enumerate		   nis			     ssl_keys			winbind
+enchant			   nvidia		     svn-repositories		wutmp
+evince			   opencl		     ubuntu-bittorrent-clients	X
+fcitx			   opencl-common	     ubuntu-browsers		xad
+fcitx-strict		   opencl-intel		     ubuntu-browsers.d		xdg-desktop
+fonts			   opencl-mesa		     ubuntu-console-browsers
+freedesktop.org		   opencl-nvidia	     ubuntu-console-email
+gnome			   opencl-pocl		     ubuntu-email
+
+/etc/apparmor.d/abstractions/apparmor_api:
+change_profile	examine  find_mountpoint  introspect  is_enabled
+
+/etc/apparmor.d/abstractions/ubuntu-browsers.d:
+java  mailto	  plugins-common  text-editors	      ubuntu-integration-xul
+kde   multimedia  productivity	  ubuntu-integration  user-files
+
+/etc/apparmor.d/cache:
+
+/etc/apparmor.d/disable:
+usr.bin.thunderbird
+
+/etc/apparmor.d/force-complain:
+
+/etc/apparmor.d/local:
+nvidia_modprobe  usr.bin.man			       usr.lib.libreoffice.program.senddoc	usr.sbin.gpsd
+README		 usr.bin.thunderbird		       usr.lib.libreoffice.program.soffice.bin	usr.sbin.ntpd
+usr.bin.evince	 usr.lib.libreoffice.program.oosplash  usr.lib.libreoffice.program.xpdfimport
+
+/etc/apparmor.d/samba:
+
+/etc/apparmor.d/tunables:
+alias	    dovecot  home    kernelvars  multiarch.d  proc	  share  xdg-user-dirs
+apparmorfs  global   home.d  multiarch	 ntpd	      securityfs  sys	 xdg-user-dirs.d
+
+/etc/apparmor.d/tunables/home.d:
+site.local  ubuntu
+
+/etc/apparmor.d/tunables/multiarch.d:
+site.local
+
+/etc/apparmor.d/tunables/xdg-user-dirs.d:
+site.local
+
+/etc/apt:
+apt.conf.d   listchanges.conf  sources.list   sources.list.d  trusted.gpg~
+auth.conf.d  preferences.d     sources.list~  trusted.gpg     trusted.gpg.d
+
+/etc/apt/apt.conf.d:
+000DefaultRelease  00trustcdrom  01autoremove-kernels  20dbus	      20packagekit     70debconf
+00CDMountPoint	   01autoremove  20adequate	       20listchanges  50apt-file.conf  99synaptic
+
+/etc/apt/auth.conf.d:
+
+/etc/apt/preferences.d:
+libssh-4  manpages  remmina
+
+/etc/apt/sources.list.d:
+backports.list	    linuxuprising-java.list  sublime-text.list	    x2go.list
+google-chrome.list  neo4j.list		     virtualbox.list	    zulu-openjdk.list
+google.list	    paparazzi.list	     webupd8team-java.list
+
+/etc/apt/trusted.gpg.d:
+debian-archive-buster-automatic.gpg	      debian-archive-stretch-security-automatic.gpg
+debian-archive-buster-security-automatic.gpg  debian-archive-stretch-stable.gpg
+debian-archive-buster-stable.gpg	      x2go-archive-debian-ubuntu-signing-key.gpg
+debian-archive-jessie-automatic.gpg	      x2go-archive-git-admin.gpg
+debian-archive-jessie-security-automatic.gpg  x2go-archive-ncryer.gpg
+debian-archive-jessie-stable.gpg	      x2go-archive-X2Go-Packages-Automatic-Signing-Key.gpg
+debian-archive-stretch-automatic.gpg
+
+/etc/at-spi2:
+
+/etc/autoconf2.13:
+acconfig.h
+
+/etc/avahi:
+avahi-daemon.conf  hosts  services
+
+/etc/avahi/services:
+
+/etc/bash_completion.d:
+apt-venv	       dkms	 git-prompt  licensecheck  openvpn	     thunderbird  virtualenvwrapper
+desktop-file-validate  fail2ban  insserv     ocamlfind	   svn-buildpackage  unp
+
+/etc/binfmt.d:
+
+/etc/bluetooth:
+input.conf  main.conf  network.conf  proximity.conf.dpkg-remove
+
+/etc/bonobo-activation:
+bonobo-activation-config.xml
+
+/etc/ca-certificates:
+update.d
+
+/etc/ca-certificates/update.d:
+
+/etc/calendar:
+default
+
+/etc/chatscripts:
+gprs  pap  provider
+
+/etc/chromium:
+master_preferences
+
+/etc/chromium.d:
+apikeys  default-flags	extensions  pepperflashplugin-nonfree  README
+
+/etc/cifs-utils:
+idmap-plugin
+
+/etc/common-lisp:
+asdf-output-translations.conf.d  source-registry.conf.d
+
+/etc/common-lisp/asdf-output-translations.conf.d:
+01-common-lisp-controller.conf
+
+/etc/common-lisp/source-registry.conf.d:
+01-common-lisp-controller.conf	02-common-lisp-controller-userdir.conf	03-clbuild.conf
+
+/etc/console:
+
+/etc/console-setup:
+cached_Lat15-Fixed16.psf.gz  compose.GEORGIAN-ACADEMY.inc  compose.ISO-8859-16.inc  compose.ISO-8859-9.inc
+cached_setup_font.sh	     compose.GEORGIAN-PS.inc	   compose.ISO-8859-1.inc   compose.KOI8-R.inc
+cached_setup_keyboard.sh     compose.IBM1133.inc	   compose.ISO-8859-2.inc   compose.KOI8-U.inc
+cached_setup_terminal.sh     compose.ISIRI-3342.inc	   compose.ISO-8859-3.inc   compose.TIS-620.inc
+cached_UTF-8_del.kmap.gz     compose.ISO-8859-10.inc	   compose.ISO-8859-4.inc   compose.VISCII.inc
+compose.ARMSCII-8.inc	     compose.ISO-8859-11.inc	   compose.ISO-8859-5.inc   remap.inc
+compose.CP1251.inc	     compose.ISO-8859-13.inc	   compose.ISO-8859-6.inc
+compose.CP1255.inc	     compose.ISO-8859-14.inc	   compose.ISO-8859-7.inc
+compose.CP1256.inc	     compose.ISO-8859-15.inc	   compose.ISO-8859-8.inc
+
+/etc/cracklib:
+cracklib.conf
+
+/etc/cron.d:
+anacron  e2scrub_all  php  sysstat
+
+/etc/cron.daily:
+0anacron      aptitude		dpkg	       google-chrome	   man-db.dpkg-old   passwd
+acct	      bsdmainutils	dpkg.dpkg-old  logrotate	   mlocate	     quota
+apt-compat    cracklib-runtime	dpkg-list      logrotate.dpkg-old  mlocate.dpkg-old  samba
+apt.dpkg-bak  debsums		exim4-base     man-db		   ntp		     sysstat
+
+/etc/cron.hourly:
+
+/etc/cron.monthly:
+0anacron  acct	debsums
+
+/etc/cron.weekly:
+0anacron  debsums  man-db  man-db.dpkg-old
+
+/etc/cruft:
+explain  filters
+
+/etc/cruft/explain:
+
+/etc/cruft/filters:
+
+/etc/csh:
+login.d
+
+/etc/csh/login.d:
+cs424.csh  umask.csh
+
+/etc/cupshelpers:
+preferreddrivers.xml
+
+/etc/dbus-1:
+session.d  system.d
+
+/etc/dbus-1/session.d:
+
+/etc/dbus-1/system.d:
+avahi-dbus.conf				 org.freedesktop.PackageKit.conf
+bluetooth.conf				 org.freedesktop.RealtimeKit1.conf
+com.redhat.NewPrinterNotification.conf	 org.gnome.GConf.Defaults.conf
+com.redhat.PrinterDriversInstaller.conf  org.kde.auth.conf
+net.hadess.SensorProxy.conf		 org.kde.kcontrol.kcmremotewidgets.conf
+org.debian.apt.conf			 org.kde.kf5auth.conf
+org.freedesktop.Accounts.conf		 org.kde.ktexteditor.katetextbuffer.conf
+org.freedesktop.DisplayManager.conf	 org.opensuse.CupsPkHelper.Mechanism.conf
+org.freedesktop.GeoClue2.Agent.conf	 pulseaudio-system.conf
+org.freedesktop.GeoClue2.conf		 wpa_supplicant.conf
+org.freedesktop.ModemManager1.conf
+
+/etc/debtree:
+endlist  skiplist
+
+/etc/default:
+acct		 console-setup	fail2ban       hwclock		 locale      openvpn   smartmontools   useradd
+acpid		 crda		gdomap	       intel-microcode	 networking  pyro-nsd  snmpd	       winbind
+amd64-microcode  cron		go-mmproxy     ipmievd		 nfs-common  quota     snmpd.dpkg-old
+anacron		 dbus		google-chrome  ipmievd.dpkg-old  nslcd	     rcS       ssh
+avahi-daemon	 debsums	gpsd	       irqbalance	 nss	     rsync     stunnel4
+bluetooth	 devpts		halt	       keyboard		 ntp	     rsyslog   sysstat
+bsdmainutils	 exim4		hddtemp        lldpd		 openipmi    saned     tmpfs
+
+/etc/dhcp:
+debug  dhclient.conf  dhclient-enter-hooks.d  dhclient-exit-hooks.d
+
+/etc/dhcp/dhclient-enter-hooks.d:
+debug  samba
+
+/etc/dhcp/dhclient-exit-hooks.d:
+debug  ntp  rfc3442-classless-routes  timesyncd
+
+/etc/dictionaries-common:
+default.aff  default.hash  ispell-default  words
+
+/etc/dirmngr:
+
+/etc/discover.conf.d:
+00discover
+
+/etc/dkms:
+framework.conf	template-dkms-mkbmdeb  template-dkms-mkdeb  template-dkms-mkdsc
+
+/etc/dkms/template-dkms-mkbmdeb:
+debian	Makefile
+
+/etc/dkms/template-dkms-mkbmdeb/debian:
+changelog  compat  control  copyright  README.Debian  rules
+
+/etc/dkms/template-dkms-mkdeb:
+debian	Makefile
+
+/etc/dkms/template-dkms-mkdeb/debian:
+changelog  compat  control  copyright  dirs  postinst  prerm  README.Debian  rules
+
+/etc/doc-base:
+documents
+
+/etc/doc-base/documents:
+README
+
+/etc/dpkg:
+dpkg.cfg  dpkg.cfg.d  origins  shlibs.default  shlibs.override
+
+/etc/dpkg/dpkg.cfg.d:
+pkg-config-hook-config
+
+/etc/dpkg/origins:
+debian	default
+
+/etc/emacs:
+site-start.d
+
+/etc/emacs/site-start.d:
+00debian.el	50autoconf.el	 50dictionaries-common.el  50latex-cjk-common.el  50python-docutils.el
+50a2ps.el	50cmake-data.el  50erlang-mode.el	   50latex-cjk-thai.el	  50tcsh.el
+50asymptote.el	50devhelp.el	 50haskell-mode.el	   50psvn.el		  50texlive-lang-english.el
+
+/etc/environment.d:
+90atk-adaptor.conf  90qt-a11y.conf
+
+/etc/exim4:
+conf.d	exim4.conf.template  passwd.client  update-exim4.conf.conf
+
+/etc/exim4/conf.d:
+acl  auth  main  retry	rewrite  router  transport
+
+/etc/exim4/conf.d/acl:
+00_exim4-config_header		       30_exim4-config_check_mail  40_exim4-config_check_data
+20_exim4-config_local_deny_exceptions  30_exim4-config_check_rcpt
+
+/etc/exim4/conf.d/auth:
+00_exim4-config_header	30_exim4-config_examples
+
+/etc/exim4/conf.d/main:
+01_exim4-config_listmacrosdefs	02_exim4-config_options  03_exim4-config_tlsoptions  90_exim4-config_log_selector
+
+/etc/exim4/conf.d/retry:
+00_exim4-config_header	30_exim4-config
+
+/etc/exim4/conf.d/rewrite:
+00_exim4-config_header	31_exim4-config_rewriting
+
+/etc/exim4/conf.d/router:
+00_exim4-config_header		 300_exim4-config_real_local	  700_exim4-config_procmail    mmm_mail4root
+100_exim4-config_domain_literal  400_exim4-config_system_aliases  800_exim4-config_maildrop
+150_exim4-config_hubbed_hosts	 500_exim4-config_hubuser	  850_exim4-config_lowuid
+200_exim4-config_primary	 600_exim4-config_userforward	  900_exim4-config_local_user
+
+/etc/exim4/conf.d/transport:
+00_exim4-config_header		  30_exim4-config_address_reply  30_exim4-config_procmail_pipe
+10_exim4-config_transport-macros  30_exim4-config_maildir_home	 30_exim4-config_remote_smtp
+30_exim4-config_address_file	  30_exim4-config_maildrop_pipe  30_exim4-config_remote_smtp_smarthost
+30_exim4-config_address_pipe	  30_exim4-config_mail_spool	 35_exim4-config_address_directory
+
+/etc/fail2ban:
+action.d       fail2ban.conf.dpkg-dist	filter.d   jail.d      paths-arch.conf	  paths-debian.conf
+fail2ban.conf  fail2ban.d		jail.conf  jail.local  paths-common.conf  paths-opensuse.conf
+
+/etc/fail2ban/action.d:
+abuseipdb.conf		       iptables-allports.conf		    npf.conf
+apf.conf		       iptables-common.conf		    nsupdate.conf
+badips.conf		       iptables.conf			    osx-afctl.conf
+badips.py		       iptables-ipset-proto4.conf	    osx-ipfw.conf
+blocklist_de.conf	       iptables-ipset-proto6-allports.conf  pf.conf
+bsd-ipfw.conf		       iptables-ipset-proto6.conf	    route.conf
+cloudflare.conf		       iptables-multiport.conf		    sendmail-buffered.conf
+complain.conf		       iptables-multiport-log.conf	    sendmail-common.conf
+dshield.conf		       iptables-new.conf		    sendmail.conf
+dummy.conf		       iptables-xt_recent-echo.conf	    sendmail-geoip-lines.conf
+firewallcmd-allports.conf      mail-buffered.conf		    sendmail-whois.conf
+firewallcmd-common.conf        mail.conf			    sendmail-whois-ipjailmatches.conf
+firewallcmd-ipset.conf	       mail-whois-common.conf		    sendmail-whois-ipmatches.conf
+firewallcmd-multiport.conf     mail-whois.conf			    sendmail-whois-lines.conf
+firewallcmd-new.conf	       mail-whois-lines.conf		    sendmail-whois-matches.conf
+firewallcmd-rich-logging.conf  mynetwatchman.conf		    shorewall.conf
+firewallcmd-rich-rules.conf    netscaler.conf			    shorewall-ipset-proto6.conf
+helpers-common.conf	       nftables-allports.conf		    smtp.py
+hostsdeny.conf		       nftables-common.conf		    symbiosis-blacklist-allports.conf
+ipfilter.conf		       nftables-multiport.conf		    ufw.conf
+ipfw.conf		       nginx-block-map.conf		    xarf-login-attack.conf
+
+/etc/fail2ban/fail2ban.d:
+
+/etc/fail2ban/filter.d:
+3proxy.conf		   courier-smtp.conf	   ignorecommands	 phpmyadmin-syslog.conf  sogo-auth.conf
+apache-auth.conf	   cyrus-imap.conf	   kerio.conf		 php-url-fopen.conf	 solid-pop3d.conf
+apache-badbots.conf	   directadmin.conf	   lighttpd-auth.conf	 portsentry.conf	 squid.conf
+apache-botsearch.conf	   domino-smtp.conf	   mongodb-auth.conf	 postfix.conf		 squirrelmail.conf
+apache-common.conf	   dovecot.conf		   monit.conf		 postfix-rbl.conf	 sshd.conf
+apache-fakegooglebot.conf  dropbear.conf	   murmur.conf		 postfix-sasl.conf	 sshd-ddos.conf
+apache-modsecurity.conf    drupal-auth.conf	   mysqld-auth.conf	 proftpd.conf		 stunnel.conf
+apache-nohome.conf	   ejabberd-auth.conf	   nagios.conf		 pure-ftpd.conf		 suhosin.conf
+apache-noscript.conf	   exim-common.conf	   named-refused.conf	 qmail.conf		 tine20.conf
+apache-overflows.conf	   exim.conf		   nginx-botsearch.conf  recidive.conf		 uwimap-auth.conf
+apache-pass.conf	   exim-spam.conf	   nginx-http-auth.conf  roundcube-auth.conf	 vsftpd.conf
+apache-shellshock.conf	   freeswitch.conf	   nginx-limit-req.conf  screensharingd.conf	 webmin-auth.conf
+assp.conf		   froxlor-auth.conf	   nsd.conf		 selinux-common.conf	 wuftpd.conf
+asterisk.conf		   groupoffice.conf	   openhab.conf		 selinux-ssh.conf	 xinetd-fail.conf
+botsearch-common.conf	   gssftpd.conf		   openwebmail.conf	 sendmail-auth.conf	 zoneminder.conf
+common.conf		   guacamole.conf	   oracleims.conf	 sendmail-reject.conf
+counter-strike.conf	   haproxy-http-auth.conf  pam-generic.conf	 sieve.conf
+courier-auth.conf	   horde.conf		   perdition.conf	 slapd.conf
+
+/etc/fail2ban/filter.d/ignorecommands:
+apache-fakegooglebot
+
+/etc/fail2ban/jail.d:
+defaults-debian.conf
+
+/etc/firebird:
+3.0
+
+/etc/firebird/3.0:
+fbintl.conf  firebird.conf  plugins.conf
+
+/etc/firefox-esr:
+firefox-esr.js
+
+/etc/fonts:
+conf.avail  conf.d  fonts.conf
+
+/etc/fonts/conf.avail:
+20-unhint-small-dejavu-lgc-sans.conf	       57-dejavu-sans-mono.conf
+20-unhint-small-dejavu-lgc-sans-mono.conf      57-dejavu-serif.conf
+20-unhint-small-dejavu-lgc-serif.conf	       58-dejavu-lgc-sans.conf
+20-unhint-small-dejavu-sans.conf	       58-dejavu-lgc-sans-mono.conf
+20-unhint-small-dejavu-sans-mono.conf	       58-dejavu-lgc-serif.conf
+20-unhint-small-dejavu-serif.conf	       62-google-crosextra-carlito-fontconfig.conf
+30-0-google-crosextra-carlito-fontconfig.conf  65-droid-sans-fallback.conf
+30-droid-noto.conf			       65-fonts-lmodern.conf
+30-droid-noto-mono.conf			       65-fonts-texgyre.conf
+57-dejavu-sans.conf
+
+/etc/fonts/conf.d:
+10-hinting-slight.conf			       51-local.conf		     64-23-tlwg-mono.conf
+10-scale-bitmap-fonts.conf		       57-dejavu-sans.conf	     65-fonts-lmodern.conf
+11-lcdfilter-default.conf		       57-dejavu-sans-mono.conf      65-fonts-persian.conf
+20-unhint-small-dejavu-lgc-sans.conf	       57-dejavu-serif.conf	     65-fonts-texgyre.conf
+20-unhint-small-dejavu-lgc-sans-mono.conf      58-dejavu-lgc-sans.conf	     65-nonlatin.conf
+20-unhint-small-dejavu-lgc-serif.conf	       58-dejavu-lgc-sans-mono.conf  69-unifont.conf
+20-unhint-small-dejavu-sans.conf	       58-dejavu-lgc-serif.conf      70-no-bitmaps.conf
+20-unhint-small-dejavu-sans-mono.conf	       60-generic.conf		     80-delicious.conf
+20-unhint-small-dejavu-serif.conf	       60-latin.conf		     89-tlwg-garuda-synthetic.conf
+20-unhint-small-vera.conf		       64-01-tlwg-kinnari.conf	     89-tlwg-kinnari-synthetic.conf
+30-0-google-crosextra-carlito-fontconfig.conf  64-02-tlwg-norasi.conf	     89-tlwg-laksaman-synthetic.conf
+30-metric-aliases.conf			       64-10-tlwg-loma.conf	     89-tlwg-umpush-synthetic.conf
+30-opensymbol.conf			       64-11-tlwg-waree.conf	     90-fonts-baekmuk.conf
+40-nonlatin.conf			       64-13-tlwg-garuda.conf	     90-fonts-linux-libertine.conf
+45-generic.conf				       64-14-tlwg-umpush.conf	     90-fonts-unfonts-core.conf
+45-latin.conf				       64-15-laksaman.conf	     90-fonts-unfonts-extra.conf
+49-sansserif.conf			       64-21-tlwg-typo.conf	     90-synthetic.conf
+50-user.conf				       64-22-tlwg-typist.conf	     README
+
+/etc/freeipmi:
+freeipmi.conf  freeipmi_interpret_sel.conf  freeipmi_interpret_sensor.conf  libipmiconsole.conf
+
+/etc/gamin:
+gaminrc
+
+/etc/gconf:
+2  gconf.xml.defaults  gconf.xml.mandatory
+
+/etc/gconf/2:
+evoldap.conf  path
+
+/etc/gconf/gconf.xml.defaults:
+%gconf-tree.xml
+
+/etc/gconf/gconf.xml.mandatory:
+%gconf-tree.xml
+
+/etc/gdb:
+gdbinit
+
+/etc/geoclue:
+geoclue.conf
+
+/etc/ghostscript:
+cidfmap.d  fontmap.d
+
+/etc/ghostscript/cidfmap.d:
+90gs-cjk-resource-cns1.conf  90gs-cjk-resource-japan1.conf  90gs-cjk-resource-korea1.conf
+90gs-cjk-resource-gb1.conf   90gs-cjk-resource-japan2.conf
+
+/etc/ghostscript/fontmap.d:
+10gsfonts.conf
+
+/etc/gimp:
+2.0
+
+/etc/gimp/2.0:
+controllerrc  gimprc  gtkrc  menurc  sessionrc	templaterc  unitrc
+
+/etc/git-buildpackage:
+gbp.conf
+
+/etc/glvnd:
+egl_vendor.d
+
+/etc/glvnd/egl_vendor.d:
+
+/etc/gnome:
+menus.blacklist
+
+/etc/gnome-vfs-2.0:
+modules
+
+/etc/gnome-vfs-2.0/modules:
+default-modules.conf  extra-modules.conf
+
+/etc/GNUstep:
+gdomap_probes  GNUstep.conf
+
+/etc/go-mmproxy:
+path-prefixes.txt
+
+/etc/groff:
+man.local  mdoc.local
+
+/etc/groovy:
+groovy-starter.conf
+
+/etc/gss:
+mech.d
+
+/etc/gss/mech.d:
+README
+
+/etc/gtk-2.0:
+im-multipress.conf
+
+/etc/gtk-3.0:
+im-multipress.conf
+
+/etc/highlight:
+filetypes.conf
+
+/etc/ifplugd:
+action.d
+
+/etc/ifplugd/action.d:
+action_wpa
+
+/etc/ImageMagick-6:
+coder.xml      log.xml	  policy.xml		  type-apple.xml	type-urw-base35.xml
+colors.xml     magic.xml  quantization-table.xml  type-dejavu.xml	type-windows.xml
+delegates.xml  mime.xml   thresholds.xml	  type-ghostscript.xml	type.xml
+
+/etc/init:
+lldpd.conf  nmbd.override  smbd.override  winbind.override
+
+/etc/init.d:
+acct			cron		   loadcpufreq		  pppd-dns	  single
+acpid			dbus		   mountall-bootclean.sh  procps	  smartmontools
+alsa-utils		exim4		   mountall.sh		  pyro-nsd	  smbd
+anacron			fail2ban	   mountdevsubfs.sh	  quota		  snmpd
+apparmor		fancontrol	   mountkernfs.sh	  quotarpc	  speech-dispatcher
+atd			gdomap		   mountnfs-bootclean.sh  rc		  ssh
+avahi-daemon		halt		   mountnfs.sh		  rc.local	  stunnel4
+binfmt-support		hddtemp		   networking		  rcS		  sudo
+bluetooth		hostname.sh	   nfs-common		  README	  sysfsutils
+bootchart-done		hwclock.sh	   nmbd			  reboot	  sysstat
+bootlogs		ipmievd		   nscd			  rmnologin	  udev
+bootmisc.sh		irqbalance	   nslcd		  rpcbind	  umountfs
+brightness		keyboard-setup.sh  ntp			  rsync		  umountnfs.sh
+checkfs.sh		killprocs	   nvidia-persistenced	  rsyslog	  umountroot
+checkroot-bootclean.sh	kmod		   openipmi		  samba-ad-dc	  urandom
+checkroot.sh		lightdm		   open-vm-tools	  saned		  winbind
+console-setup.sh	lldpd		   openvpn		  screen-cleanup  x11-common
+cpufrequtils		lm-sensors	   pcscd		  sendsigs	  x2goserver
+
+/etc/initramfs-tools:
+conf.d	hooks  initramfs.conf  initramfs.conf.dpkg-old	modules  scripts  update-initramfs.conf
+
+/etc/initramfs-tools/conf.d:
+resume
+
+/etc/initramfs-tools/hooks:
+
+/etc/initramfs-tools/scripts:
+init-bottom    init-top      local-premount  nfs-bottom    nfs-top
+init-premount  local-bottom  local-top	     nfs-premount  panic
+
+/etc/initramfs-tools/scripts/init-bottom:
+
+/etc/initramfs-tools/scripts/init-premount:
+
+/etc/initramfs-tools/scripts/init-top:
+
+/etc/initramfs-tools/scripts/local-bottom:
+
+/etc/initramfs-tools/scripts/local-premount:
+
+/etc/initramfs-tools/scripts/local-top:
+
+/etc/initramfs-tools/scripts/nfs-bottom:
+
+/etc/initramfs-tools/scripts/nfs-premount:
+
+/etc/initramfs-tools/scripts/nfs-top:
+
+/etc/initramfs-tools/scripts/panic:
+
+/etc/insserv:
+overrides
+
+/etc/insserv/overrides:
+
+/etc/insserv.conf.d:
+rpcbind
+
+/etc/iproute2:
+bpf_pinning  group	rt_dsfield  rt_protos.d  rt_scopes  rt_tables.d
+ematch_map   nl_protos	rt_protos   rt_realms	 rt_tables
+
+/etc/iproute2/rt_protos.d:
+README
+
+/etc/iproute2/rt_tables.d:
+README
+
+/etc/iscsi:
+iscsid.conf
+
+/etc/java:
+security
+
+/etc/java/security:
+security.d
+
+/etc/java/security/security.d:
+2000-org.bouncycastle.jce.provider.BouncyCastleProvider
+
+/etc/java-10-oracle:
+conf
+
+/etc/java-10-oracle/conf:
+logging.properties  management	net.properties	security  sound.properties
+
+/etc/java-10-oracle/conf/management:
+jmxremote.access  management.properties
+
+/etc/java-10-oracle/conf/security:
+java.policy  java.security  javaws.policy
+
+/etc/java-11-oracle:
+conf
+
+/etc/java-11-oracle/conf:
+logging.properties  management	net.properties	security  sound.properties
+
+/etc/java-11-oracle/conf/management:
+jmxremote.access  management.properties
+
+/etc/java-11-oracle/conf/security:
+java.policy  java.security
+
+/etc/java-8-oracle:
+security
+
+/etc/java-8-oracle/security:
+blacklist  blacklisted.certs  java.policy  java.security  javaws.policy  trusted.libraries
+
+/etc/jed.d:
+05jed-common.sl  README
+
+/etc/jython:
+jython.conf
+
+/etc/kernel:
+header_postinst.d  install.d  postinst.d  postrm.d  preinst.d  prerm.d
+
+/etc/kernel/header_postinst.d:
+dkms
+
+/etc/kernel/install.d:
+
+/etc/kernel/postinst.d:
+apt-auto-removal  dkms	initramfs-tools  pm-utils
+
+/etc/kernel/postrm.d:
+initramfs-tools
+
+/etc/kernel/preinst.d:
+intel-microcode
+
+/etc/kernel/prerm.d:
+dkms
+
+/etc/ldap:
+ldap.conf  ldap.conf.dpkg-dist
+
+/etc/ld.so.conf.d:
+fakeroot-x86_64-linux-gnu.conf	libc.conf	       zz_i386-biarch-compat.conf
+i386-linux-gnu.conf		x86_64-linux-gnu.conf  zz_x32-biarch-compat.conf
+
+/etc/libblockdev:
+conf.d
+
+/etc/libblockdev/conf.d:
+00-default.cfg
+
+/etc/libgda-5.0:
+config
+
+/etc/libibverbs.d:
+bnxt_re.driver	efa.driver	  i40iw.driver	     mlx5.driver   ocrdma.driver  vmw_pvrdma.driver
+cxgb3.driver	hfi1verbs.driver  ipathverbs.driver  mthca.driver  qedr.driver
+cxgb4.driver	hns.driver	  mlx4.driver	     nes.driver    rxe.driver
+
+/etc/libnl-3:
+classid  pktloc
+
+/etc/libpaper.d:
+texlive-base
+
+/etc/libreoffice:
+psprint.conf  registry	sofficerc  soffice.sh
+
+/etc/libreoffice/registry:
+base.xcd	   impress.xcd	       main.xcd		      oo-ldap.xcd.sample  reportbuilder.xcd
+calc.xcd	   Langpack-en-US.xcd  math.xcd		      pdfimport.xcd	  res
+draw.xcd	   librelogo.xcd       ogltrans.xcd	      postgresql.xcd	  writer.xcd
+graphicfilter.xcd  lingucomponent.xcd  oo-ad-ldap.xcd.sample  pyuno.xcd		  xsltfilter.xcd
+
+/etc/libreoffice/registry/res:
+fcfg_langpack_en-US.xcd
+
+/etc/lightdm:
+keys.conf  lightdm.conf  lightdm-gtk-greeter.conf  users.conf
+
+/etc/lighttpd:
+conf-available	conf-enabled
+
+/etc/lighttpd/conf-available:
+90-javascript-alias.conf
+
+/etc/lighttpd/conf-enabled:
+90-javascript-alias.conf
+
+/etc/lldpd.d:
+README.conf
+
+/etc/logcheck:
+ignore.d.paranoid  ignore.d.server
+
+/etc/logcheck/ignore.d.paranoid:
+cracklib-runtime
+
+/etc/logcheck/ignore.d.server:
+gpg-agent  hddtemp  libsasl2-modules  rsyslog  x2goserver
+
+/etc/logrotate.d:
+alternatives  aptitude	dpkg	    exim4-paniclog  pacct     ppp      samba		  stunnel4  wtmp
+apt	      btmp	exim4-base  fail2ban	    pm-utils  rsyslog  speech-dispatcher  winbind
+
+/etc/logrotate.d.save:
+fail2ban  wtmp.conf
+
+/etc/lynx:
+lynx.cfg  lynx.lss
+
+/etc/mercurial:
+hgrc  hgrc.d
+
+/etc/mercurial/hgrc.d:
+cacerts.rc  hgext.rc
+
+/etc/minicom:
+
+/etc/modprobe.d:
+amd64-microcode-blacklist.conf	nvidia-blacklists-nouveau.conf	nvidia-kernel-common.conf.dpkg-old
+dkms.conf			nvidia.conf			open-vm-tools-dkms.conf
+intel-microcode-blacklist.conf	nvidia-kernel-common.conf
+
+/etc/modules-load.d:
+ipmievd.conf  modules.conf  nvidia.conf
+
+/etc/monit:
+conf-available	monitrc.d
+
+/etc/monit/conf-available:
+
+/etc/monit/monitrc.d:
+fail2ban
+
+/etc/Muttrc.d:
+charset.rc  colors.rc  compressed-folders.rc  gpg.rc  smime.rc
+
+/etc/mysql:
+conf.d	mariadb.cnf  mariadb.conf.d  my.cnf  my.cnf.fallback
+
+/etc/mysql/conf.d:
+mysql.cnf  mysqldump.cnf
+
+/etc/mysql/mariadb.conf.d:
+
+/etc/netconf:
+hostname  hosts  ip  libnss-ldap.conf  nslcd.conf  pam_ldap.conf  resolv.conf  rsyslog.conf
+
+/etc/network:
+if-down.d  if-post-down.d  if-pre-up.d	if-up.d  interfaces  interfaces.d  run
+
+/etc/network/if-down.d:
+openvpn  wpasupplicant
+
+/etc/network/if-post-down.d:
+avahi-daemon  wpasupplicant
+
+/etc/network/if-pre-up.d:
+ethtool  wpasupplicant
+
+/etc/network/if-up.d:
+avahi-daemon  ethtool  mountnfs  nslcd	openvpn  wpasupplicant
+
+/etc/network/interfaces.d:
+
+/etc/NetworkManager:
+dispatcher.d
+
+/etc/NetworkManager/dispatcher.d:
+ntp
+
+/etc/nvidia:
+current       nvidia-blacklists-nouveau.conf  nvidia-load.conf
+legacy-390xx  nvidia-drm-outputclass.conf     nvidia-modprobe.conf
+
+/etc/nvidia/current:
+nvidia-drm-outputclass.conf
+
+/etc/nvidia/legacy-390xx:
+nvidia-blacklists-nouveau.conf	nvidia-drm-outputclass.conf  nvidia-load.conf  nvidia-modprobe.conf
+
+/etc/nxagent:
+keystrokes.cfg
+
+/etc/ODBCDataSources:
+
+/etc/openal:
+alsoft.conf
+
+/etc/OpenCL:
+vendors
+
+/etc/OpenCL/vendors:
+nvidia.icd
+
+/etc/openmpi:
+openmpi-default-hostfile  openmpi-mca-params.conf  openmpi-totalview.tcl
+
+/etc/opensc:
+opensc.conf
+
+/etc/openvpn:
+client	server	update-resolv-conf
+
+/etc/openvpn/client:
+
+/etc/openvpn/server:
+
+/etc/opt:
+
+/etc/PackageKit:
+PackageKit.conf  Vendor.conf
+
+/etc/pam.d:
+atd		common-auth		       lightdm		  other     runuser-l  su-l
+chfn		common-password		       lightdm-autologin  passwd    samba      systemd-user
+chpasswd	common-session		       lightdm-greeter	  polkit-1  sshd       tigervnc
+chsh		common-session-noninteractive  login		  ppp	    su	       vmtoolsd
+common-account	cron			       newusers		  runuser   sudo
+
+/etc/pbuilder:
+buildd-config.sh
+
+/etc/perl:
+CPAN  Net  XML
+
+/etc/perl/CPAN:
+
+/etc/perl/Net:
+libnet.cfg
+
+/etc/perl/XML:
+SAX
+
+/etc/perl/XML/SAX:
+ParserDetails.ini
+
+/etc/php:
+7.0  7.3
+
+/etc/php/7.0:
+cli  mods-available
+
+/etc/php/7.0/cli:
+conf.d
+
+/etc/php/7.0/cli/conf.d:
+
+/etc/php/7.0/mods-available:
+
+/etc/php/7.3:
+cli  mods-available
+
+/etc/php/7.3/cli:
+conf.d	php.ini
+
+/etc/php/7.3/cli/conf.d:
+10-mysqlnd.ini	 20-ctype.ini	  20-gettext.ini  20-pdo_mysql.ini  20-simplexml.ini  20-tokenizer.ini
+10-opcache.ini	 20-dom.ini	  20-iconv.ini	  20-phar.ini	    20-sockets.ini    20-wddx.ini
+10-pdo.ini	 20-exif.ini	  20-json.ini	  20-posix.ini	    20-sysvmsg.ini    20-xmlreader.ini
+15-xml.ini	 20-fileinfo.ini  20-ldap.ini	  20-readline.ini   20-sysvsem.ini    20-xmlwriter.ini
+20-calendar.ini  20-ftp.ini	  20-mysqli.ini   20-shmop.ini	    20-sysvshm.ini    20-xsl.ini
+
+/etc/php/7.3/mods-available:
+calendar.ini  fileinfo.ini  json.ini	 opcache.ini	posix.ini      sockets.ini  tokenizer.ini  xmlwriter.ini
+ctype.ini     ftp.ini	    ldap.ini	 pdo.ini	readline.ini   sysvmsg.ini  wddx.ini	   xsl.ini
+dom.ini       gettext.ini   mysqli.ini	 pdo_mysql.ini	shmop.ini      sysvsem.ini  xml.ini
+exif.ini      iconv.ini     mysqlnd.ini  phar.ini	simplexml.ini  sysvshm.ini  xmlreader.ini
+
+/etc/piuparts:
+distros.conf		      scripts-debug-problemresolver  scripts-leftovers		   scripts-squeeze
+scripts			      scripts-debug-purge	     scripts-lenny		   scripts-sysvinit
+scripts-apt-first	      scripts-debug-remove	     scripts-log-alternatives	   scripts-unused-examples
+scripts-broken-symlinks       scripts-debug-triggers	     scripts-multi-distro-upgrade  scripts-wheezy
+scripts-debug-packagemanager  scripts-jessie		     scripts-no-usr-share-doc
+
+/etc/piuparts/scripts:
+is_testable_uninstallable		  pre_distupgrade_exceptions
+post_chroot_unpack_allow_unauthenticated  pre_distupgrade_foreign_architecture_i386
+post_distupgrade_base_cleanup		  pre_distupgrade_zz_database-server
+post_distupgrade_exceptions		  pre_distupgrade_zz_upgrade_early
+post_distupgrade_force-unsafe-io	  pre_install_database-server
+post_distupgrade_squeeze-backports	  pre_install_exceptions
+post_distupgrade_zz_backports		  pre_install_extras
+post_install_exceptions			  pre_install_foreign_architecture
+post_purge_exceptions			  pre_install_foreign_architecture_i386
+post_remove_exceptions			  pre_remove_40_find_missing_md5sums
+post_setup_dummy_users			  pre_remove_40_find_obsolete_conffiles
+post_setup_forbid_home			  pre_remove_40_find_unowned_lib_links
+post_setup_force-unsafe-io		  pre_remove_50_find_bad_permissions
+post_setup_minimize			  pre_remove_50_find_missing_copyright
+post_setup_squeeze-backports		  pre_remove_exceptions
+post_setup_zz_backports			  pre_test_exceptions
+post_test_exceptions			  pre_test_root_password
+pre_distupgrade_allow_unauthenticated
+
+/etc/piuparts/scripts-apt-first:
+pre_distupgrade_zz_apt_first
+
+/etc/piuparts/scripts-broken-symlinks:
+post_install_extras_unbreak_symlinks  post_setup_fake-essential_unbreak_symlinks
+
+/etc/piuparts/scripts-debug-packagemanager:
+pre_distupgrade_debug_packagemanager
+
+/etc/piuparts/scripts-debug-problemresolver:
+pre_distupgrade_debug_problemresolver  pre_install_debug_problemresolver
+
+/etc/piuparts/scripts-debug-purge:
+post_remove_postrm_set-x
+
+/etc/piuparts/scripts-debug-remove:
+pre_remove_prerm_postrm_set-x
+
+/etc/piuparts/scripts-debug-triggers:
+pre_distupgrade_debug_triggers	pre_install_debug_triggers
+
+/etc/piuparts/scripts-jessie:
+post_setup_jessie-fake-essential
+
+/etc/piuparts/scripts-leftovers:
+post_purge_manual_cleanup  post_remove_cleanup	post_setup_fake-essential  pre_remove_preseed_cleanup
+
+/etc/piuparts/scripts-lenny:
+post_remove_exceptions_lenny  post_setup_lenny-fake-essential
+
+/etc/piuparts/scripts-log-alternatives:
+post_install_log_alternatives  pre_install_log_alternatives
+
+/etc/piuparts/scripts-multi-distro-upgrade:
+post_distupgrade_base_cleanup_multi-distro-upgrade  post_setup_fake-essential_multi-distro-upgrade
+post_distupgrade_exceptions_multi-distro-upgrade    pre_remove_exceptions_multi-distro-upgrade
+
+/etc/piuparts/scripts-no-usr-share-doc:
+post_setup_disable_usr_share_doc
+
+/etc/piuparts/scripts-squeeze:
+post_distupgrade_squeeze-fake-essential  post_remove_exceptions_squeeze  post_setup_squeeze-fake-essential
+
+/etc/piuparts/scripts-sysvinit:
+pre_distupgrade_zz_sysvinit
+
+/etc/piuparts/scripts-unused-examples:
+post_chroot_unpack_key_setup
+
+/etc/piuparts/scripts-wheezy:
+post_setup_wheezy-fake-essential  pre_distupgrade_wheezy
+
+/etc/pm:
+config.d  power.d  sleep.d
+
+/etc/pm/config.d:
+
+/etc/pm/power.d:
+
+/etc/pm/sleep.d:
+
+/etc/polkit-1:
+localauthority	localauthority.conf.d  nullbackend.conf.d
+ls: cannot open directory '/etc/polkit-1/localauthority': Permission denied
+
+/etc/polkit-1/localauthority.conf.d:
+50-localauthority.conf	51-debian-sudo.conf
+
+/etc/polkit-1/nullbackend.conf.d:
+50-nullbackend.conf
+
+/etc/postgresql-common:
+supported_versions  user_clusters
+
+/etc/ppp:
+chap-secrets  ip-down.d  ip-up.d    ipv6-down.d  ipv6-up.d  pap-secrets
+ip-down       ip-up	 ipv6-down  ipv6-up	 options    peers
+
+/etc/ppp/ip-down.d:
+0000usepeerdns	0stunnel4
+
+/etc/ppp/ip-up.d:
+0000usepeerdns	0stunnel4  exim4
+
+/etc/ppp/ipv6-down.d:
+
+/etc/ppp/ipv6-up.d:
+
+/etc/ppp/peers:
+provider
+
+/etc/profile.d:
+bash_completion.sh  cs424.sh  gawk.csh	gawk.sh  jdk.csh  jdk.sh  umask.sh  vte-2.91.sh
+
+/etc/pulse:
+client.conf  client.conf.d  daemon.conf  default.pa  system.pa
+
+/etc/pulse/client.conf.d:
+00-disable-autospawn.conf
+
+/etc/purple:
+prefs.xml
+
+/etc/python:
+debian_config
+
+/etc/python2.7:
+sitecustomize.py
+
+/etc/python3:
+debian_config
+
+/etc/python3.5:
+sitecustomize.py
+
+/etc/python3.7:
+sitecustomize.py
+
+/etc/R:
+ldpaths  Makeconf  Renviron  Renviron.site  repositories  Rprofile.site
+
+/etc/racket:
+config.rktd
+
+/etc/rc0.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10halt
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+/etc/rc1.d:
+K01acct		 K01gdomap	K01nscd			K01pyro-nsd	  K01speech-dispatcher	README
+K01alsa-utils	 K01hddtemp	K01nslcd		K01quotarpc	  K01stunnel4		S01killprocs
+K01atd		 K01ipmievd	K01nvidia-persistenced	K01samba-ad-dc	  K01winbind		S02single
+K01avahi-daemon  K01irqbalance	K01openipmi		K01saned	  K01x2goserver		S06bootlogs
+K01bluetooth	 K01lightdm	K01open-vm-tools	K01smartmontools  K04rsyslog		S07bootchart-done
+K01exim4	 K01lldpd	K01openvpn		K01smbd		  K06nfs-common
+K01fail2ban	 K01nmbd	K01pcscd		K01snmpd	  K06rpcbind
+
+/etc/rc2.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+/etc/rc3.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+/etc/rc4.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+/etc/rc5.d:
+K01gdomap	      S01console-setup.sh     S03openvpn     S04loadcpufreq  S04stunnel4      S06bootlogs
+K01ipmievd	      S02binfmt-support       S04acct	     S04nscd	     S04sysstat       S06cron
+K01nmbd		      S02fancontrol	      S04acpid	     S04nslcd	     S04x2goserver    S06rsync
+K01openipmi	      S02nvidia-persistenced  S04anacron     S04ntp	     S05atd	      S06saned
+K01smartmontools      S02open-vm-tools	      S04dbus	     S04pcscd	     S05avahi-daemon  S06sysfsutils
+K01smbd		      S02pyro-nsd	      S04fail2ban    S04quotarpc     S05bluetooth     S07bootchart-done
+K01speech-dispatcher  S02rsyslog	      S04hddtemp     S04rmnologin    S05cpufrequtils  S07rc.local
+K01winbind	      S02samba-ad-dc	      S04irqbalance  S04snmpd	     S05exim4
+README		      S02sudo		      S04lldpd	     S04ssh	     S05lightdm
+
+/etc/rc6.d:
+K01acct		 K01gdomap	K01nslcd		K01samba-ad-dc	      K01x2goserver    K07hwclock.sh
+K01alsa-utils	 K01hddtemp	K01nvidia-persistenced	K01saned	      K02quota	       K07networking
+K01atd		 K01ipmievd	K01openipmi		K01smbd		      K02udev	       K08umountfs
+K01avahi-daemon  K01irqbalance	K01open-vm-tools	K01snmpd	      K03sendsigs      K09umountroot
+K01bluetooth	 K01lightdm	K01openvpn		K01speech-dispatcher  K04rsyslog       K10reboot
+K01brightness	 K01lldpd	K01pcscd		K01stunnel4	      K05umountnfs.sh  README
+K01exim4	 K01nmbd	K01pyro-nsd		K01urandom	      K06nfs-common
+K01fail2ban	 K01nscd	K01quotarpc		K01winbind	      K06rpcbind
+
+/etc/rcS.d:
+K15nfs-common	   S03keyboard-setup.sh       S08kmod			S11procps		  S16alsa-utils
+K20quota	   S04mountdevsubfs.sh	      S09mountall.sh		S11urandom		  S16bootmisc.sh
+README		   S05hwclock.sh	      S10mountall-bootclean.sh	S12networking		  S16lm-sensors
+S01hostname.sh	   S06checkroot.sh	      S11apparmor		S13rpcbind		  S16screen-cleanup
+S01mountkernfs.sh  S07checkfs.sh	      S11brightness		S14mountnfs.sh		  S16x11-common
+S02udev		   S08checkroot-bootclean.sh  S11pppd-dns		S15mountnfs-bootclean.sh
+
+/etc/reader.conf.d:
+libccidtwin
+
+/etc/request-key.d:
+cifs.idmap.conf  cifs.spnego.conf  id_resolver.conf
+
+/etc/resolvconf:
+update-libc.d
+
+/etc/resolvconf/update-libc.d:
+avahi-daemon
+
+/etc/rlwrap:
+clojure1.2  clojure1.6
+
+/etc/rsyslog.d:
+
+/etc/runit:
+runsvdir
+
+/etc/runit/runsvdir:
+default
+
+/etc/runit/runsvdir/default:
+irqbalance
+
+/etc/samba:
+gdbcommands  smb.conf  tls
+
+/etc/samba/tls:
+
+/etc/sane.d:
+abaton.conf	     coolscan.conf	 gphoto2.conf	ma1509.conf	 plustek.conf	  tamarack.conf
+agfafocus.conf	     dc210.conf		 gt68xx.conf	magicolor.conf	 plustek_pp.conf  teco1.conf
+apple.conf	     dc240.conf		 hp3900.conf	matsushita.conf  qcam.conf	  teco2.conf
+artec.conf	     dc25.conf		 hp4200.conf	microtek2.conf	 ricoh.conf	  teco3.conf
+artec_eplus48u.conf  dell1600n_net.conf  hp5400.conf	microtek.conf	 rts8891.conf	  test.conf
+avision.conf	     dll.conf		 hp.conf	mustek.conf	 s9036.conf	  u12.conf
+bh.conf		     dll.d		 hpsj5s.conf	mustek_pp.conf	 saned.conf	  umax1220u.conf
+canon630u.conf	     dmc.conf		 hs2p.conf	mustek_usb.conf  sceptre.conf	  umax.conf
+canon.conf	     epjitsu.conf	 ibm.conf	nec.conf	 sharp.conf	  umax_pp.conf
+canon_dr.conf	     epson2.conf	 kodakaio.conf	net.conf	 sm3840.conf	  v4l.conf.dpkg-remove
+canon_pp.conf	     epson.conf		 kodak.conf	p5.conf		 snapscan.conf	  xerox_mfp.conf
+cardscan.conf	     epsonds.conf	 kvs1025.conf	pie.conf	 sp15c.conf
+coolscan2.conf	     fujitsu.conf	 leo.conf	pieusb.conf	 st400.conf
+coolscan3.conf	     genesys.conf	 lexmark.conf	pixma.conf	 stv680.conf
+
+/etc/sane.d/dll.d:
+
+/etc/scite:
+abaqus.properties	 csound.properties     kix.properties	     others.properties	     sorcins.properties
+abbrev.properties	 css.properties        latex.properties      pascal.properties	     specman.properties
+ada.properties		 d.properties	       lisp.properties	     perl.properties	     spice.properties
+asl.properties		 ecl.properties        lot.properties	     pov.properties	     sql.properties
+asm.properties		 eiffel.properties     lout.properties	     powerpro.properties     tacl.properties
+asn1.properties		 Embedded.properties   lua.properties	     powershell.properties   tal.properties
+au3.properties		 erlang.properties     markdown.properties   ps.properties	     tcl.properties
+ave.properties		 escript.properties    matlab.properties     purebasic.properties    tex.properties
+avs.properties		 flagship.properties   maxima.properties     python.properties	     txt2tags.properties
+baan.properties		 forth.properties      metapost.properties   rebol.properties	     vb.properties
+blitzbasic.properties	 fortran.properties    mmixal.properties     registry.properties     verilog.properties
+bullant.properties	 freebasic.properties  modula3.properties    r.properties	     vhdl.properties
+caml.properties		 gap.properties        nim.properties	     ruby.properties	     visualprolog.properties
+cmake.properties	 haskell.properties    nimrod.properties     rust.properties	     yaml.properties
+cobol.properties	 hex.properties        nncrontab.properties  SciTEGlobal.properties
+coffeescript.properties  html.properties       nsis.properties	     SciTE.properties
+conf.properties		 inno.properties       opal.properties	     scriptol.properties
+cpp.properties		 json.properties       oscript.properties    smalltalk.properties
+
+/etc/security:
+access.conf	 group.conf   limits.conf.dpkg-old  limits.ssh.conf  namespace.d     opasswd	   sepermit.conf
+capability.conf  limits.conf  limits.d		    namespace.conf   namespace.init  pam_env.conf  time.conf
+
+/etc/security/limits.d:
+
+/etc/security/namespace.d:
+
+/etc/selinux:
+semanage.conf
+
+/etc/sensors.d:
+
+/etc/sgml:
+catalog      docbook-xml.cat	  jade.cat	sgml-data.cat	   xml-core.cat
+docbook-xml  docutils-common.cat  openjade.cat	w3c-dtd-xhtml.cat
+
+/etc/sgml/docbook-xml:
+4.0  4.1.2  4.2  4.3  4.4  4.5
+
+/etc/sgml/docbook-xml/4.0:
+dbgenent.ent
+
+/etc/sgml/docbook-xml/4.1.2:
+dbgenent.mod
+
+/etc/sgml/docbook-xml/4.2:
+dbgenent.mod
+
+/etc/sgml/docbook-xml/4.3:
+dbgenent.mod
+
+/etc/sgml/docbook-xml/4.4:
+dbgenent.mod
+
+/etc/sgml/docbook-xml/4.5:
+dbgenent.mod
+
+/etc/skel:
+
+/etc/smartmontools:
+run.d  smartd_warning.d
+
+/etc/smartmontools/run.d:
+10mail
+
+/etc/smartmontools/smartd_warning.d:
+
+/etc/snmp:
+snmp.conf  snmpd.conf  snmpd.conf.save
+
+/etc/sound:
+events
+
+/etc/sound/events:
+gnome-2.soundlist  gtk-events-2.soundlist
+
+/etc/speech-dispatcher:
+clients  modules  speechd.conf
+
+/etc/speech-dispatcher/clients:
+emacs.conf
+
+/etc/speech-dispatcher/modules:
+baratinoo.conf	   espeak-generic.conf		  flite.conf		  mary-generic.conf
+cicero.conf	   espeak-mbrola-generic.conf	  ibmtts.conf		  pico-generic.conf
+dtk-generic.conf   espeak-ng.conf		  ivona.conf		  swift-generic.conf
+epos-generic.conf  espeak-ng-mbrola-generic.conf  kali.conf
+espeak.conf	   festival.conf		  llia_phon-generic.conf
+
+/etc/ssh:
+moduli		     sshd_config	   ssh_host_dsa_key.pub    ssh_host_ed25519_key      ssh_host_rsa_key.pub
+ssh_config	     sshd_config.ucf-dist  ssh_host_ecdsa_key	   ssh_host_ed25519_key.pub
+ssh_config.dpkg-old  ssh_host_dsa_key	   ssh_host_ecdsa_key.pub  ssh_host_rsa_key
+
+/etc/ssl:
+cacert.pem  certs  openssl.cnf	private
+
+/etc/ssl/certs:
+ 02265526.0
+ 03179a64.0
+ 062cdee6.0
+ 064e0aa9.0
+ 06dc52d5.0
+ 07ec2cc8
+ 07ec2cc8.0
+ 080911ac.0
+ 09789157.0
+ 0a775a30.0
+ 0b1b94ef.0
+ 0bf05006.0
+ 0c4c9b6c.0
+ 0f5dc4f3.0
+ 0f6fa695.0
+ 1001acf7.0
+ 106f3e4d.0
+ 128805a3.0
+ 14bc7599.0
+ 1636090b.0
+ 18856ac4.0
+ 1d3472b9.0
+ 1e08bfd1.0
+ 1e09d511.0
+ 244b5494.0
+ 2923b3f9.0
+ 2ae6433e.0
+ 2b349938.0
+ 2e5ac55d.0
+ 32888f65.0
+ 349f2832.0
+ 3513523f.0
+ 3bde41ac.0
+ 3e44d2f7.0
+ 3e45d192.0
+ 40193066.0
+ 4042bcee.0
+ 40547a79.0
+ 406c9bb1.0
+ 4304c5e5.0
+ 48bec511.0
+ 4a6481c9.0
+ 4b718d9b.0
+ 4bfab552.0
+ 4f316efb.0
+ 5273a94c.0
+ 5443e9e3.0
+ 54657681.0
+ 57bcb2da.0
+ 5a4d6896.0
+ 5ad8a5d6.0
+ 5c44d531.0
+ 5cd81ad7.0
+ 5d3033c5.0
+ 5e98733a.0
+ 5f15c80c.0
+ 607986c7.0
+ 626dceaf.0
+ 6410666e.0
+ 653b494a.0
+ 68dd7389.0
+ 6b99d060.0
+ 6d41d539.0
+ 6fa5da56.0
+ 706f604c.0
+ 749e9e03.0
+ 75d1b2ed.0
+ 76cb8f92.0
+ 76faf6c0.0
+ 7719f463.0
+ 773e07ad.0
+ 7aaf71c0.0
+ 7f3d5d1d.0
+ 8160b96c.0
+ 8867006a.0
+ 8cb5ee0f.0
+ 8d86cdd1.0
+ 930ac5d2.0
+ 93bc0acc.0
+ 988a38cb.0
+ 9c2e7d30.0
+ 9c8dfbd4.0
+ 9d04f354.0
+ a3418fda.0
+ a94d09e5.0
+ ACCVRAIZ1.pem
+ AC_RAIZ_FNMT-RCM.pem
+ Actalis_Authentication_Root_CA.pem
+ aee5f10d.0
+ AffirmTrust_Commercial.pem
+ AffirmTrust_Networking.pem
+ AffirmTrust_Premium_ECC.pem
+ AffirmTrust_Premium.pem
+ Amazon_Root_CA_1.pem
+ Amazon_Root_CA_2.pem
+ Amazon_Root_CA_3.pem
+ Amazon_Root_CA_4.pem
+ Atos_TrustedRoot_2011.pem
+ Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+ b0e59380.0
+ b1159c4c.0
+ b1b8a7f3.0
+ b66938e9.0
+ b727005e.0
+ b7a5b843.0
+ Baltimore_CyberTrust_Root.pem
+ Buypass_Class_2_Root_CA.pem
+ Buypass_Class_3_Root_CA.pem
+ c01eb047.0
+ c0ff1f52.0
+ c28a8a30.0
+ c47d9980.0
+ ca6e4ad9.0
+ ca-certificates.crt
+ CA_Disig_Root_R2.pem
+ cbf06781.0
+ cc450945.0
+ cd58d51e.0
+ cd8c0d63.0
+ ce5e74ef.0
+ Certigna.pem
+ Certigna_Root_CA.pem
+ certSIGN_ROOT_CA.pem
+ Certum_Trusted_Network_CA_2.pem
+ Certum_Trusted_Network_CA.pem
+ CFCA_EV_ROOT.pem
+ Chambers_of_Commerce_Root_-_2008.pem
+ Comodo_AAA_Services_root.pem
+ COMODO_Certification_Authority.pem
+ COMODO_ECC_Certification_Authority.pem
+ COMODO_RSA_Certification_Authority.pem
+ Cybertrust_Global_Root.pem
+ d4dae3dd.0
+ d6325660.0
+ d7e8dc79.0
+ d853d49e.0
+ dc4d6a89.0
+ dd8e9d41.0
+ de6d66f3.0
+ def36a68.0
+ DigiCert_Assured_ID_Root_CA.pem
+ DigiCert_Assured_ID_Root_G2.pem
+ DigiCert_Assured_ID_Root_G3.pem
+ DigiCert_Global_Root_CA.pem
+ DigiCert_Global_Root_G2.pem
+ DigiCert_Global_Root_G3.pem
+ DigiCert_High_Assurance_EV_Root_CA.pem
+ DigiCert_Trusted_Root_G4.pem
+ DST_Root_CA_X3.pem
+ D-TRUST_Root_Class_3_CA_2_2009.pem
+ D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+ e113c810.0
+ e18bfb83.0
+ e36a6752.0
+ e73d606e.0
+ e8de2f56.0
+ EC-ACC.pem
+ ee64a828.0
+ EE_Certification_Centre_Root_CA.pem
+ eed8c118.0
+ ef954a4e.0
+ emSign_ECC_Root_CA_-_C3.pem
+ emSign_ECC_Root_CA_-_G3.pem
+ emSign_Root_CA_-_C1.pem
+ emSign_Root_CA_-_G1.pem
+ Entrust.net_Premium_2048_Secure_Server_CA.pem
+ Entrust_Root_Certification_Authority_-_EC1.pem
+ Entrust_Root_Certification_Authority_-_G2.pem
+ Entrust_Root_Certification_Authority_-_G4.pem
+ Entrust_Root_Certification_Authority.pem
+ ePKI_Root_Certification_Authority.pem
+ E-Tugra_Certification_Authority.pem
+ f081611a.0
+ f0c70a8d.0
+ f30dd6ad.0
+ f3377b1b.0
+ f387163d.0
+ f39fc864.0
+ f51bb24c.0
+ fc5a8f99.0
+ fe8a2cd8.0
+ ff34af3f.0
+ GDCA_TrustAUTH_R5_ROOT.pem
+ GeoTrust_Universal_CA_2.pem
+ Global_Chambersign_Root_-_2008.pem
+ GlobalSign_ECC_Root_CA_-_R4.pem
+ GlobalSign_ECC_Root_CA_-_R5.pem
+ GlobalSign_Root_CA.pem
+ GlobalSign_Root_CA_-_R2.pem
+ GlobalSign_Root_CA_-_R3.pem
+ GlobalSign_Root_CA_-_R6.pem
+ Go_Daddy_Class_2_CA.pem
+ Go_Daddy_Root_Certificate_Authority_-_G2.pem
+ GTS_Root_R1.pem
+ GTS_Root_R2.pem
+ GTS_Root_R3.pem
+ GTS_Root_R4.pem
+ Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+ Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+ Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+ Hongkong_Post_Root_CA_1.pem
+ Hongkong_Post_Root_CA_3.pem
+ IdenTrust_Commercial_Root_CA_1.pem
+ IdenTrust_Public_Sector_Root_CA_1.pem
+ ISRG_Root_X1.pem
+ Izenpe.com.pem
+ LuxTrust_Global_Root_2.pem
+ Microsec_e-Szigno_Root_CA_2009.pem
+'NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem'
+ Network_Solutions_Certificate_Authority.pem
+ OISTE_WISeKey_Global_Root_GA_CA.pem
+ OISTE_WISeKey_Global_Root_GB_CA.pem
+ OISTE_WISeKey_Global_Root_GC_CA.pem
+ QuoVadis_Root_CA_1_G3.pem
+ QuoVadis_Root_CA_2_G3.pem
+ QuoVadis_Root_CA_2.pem
+ QuoVadis_Root_CA_3_G3.pem
+ QuoVadis_Root_CA_3.pem
+ QuoVadis_Root_CA.pem
+ Secure_Global_CA.pem
+ SecureSign_RootCA11.pem
+ SecureTrust_CA.pem
+ Security_Communication_RootCA2.pem
+ Security_Communication_Root_CA.pem
+ Sonera_Class_2_Root_CA.pem
+ ssl-cert-snakeoil.pem
+ SSL.com_EV_Root_Certification_Authority_ECC.pem
+ SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+ SSL.com_Root_Certification_Authority_ECC.pem
+ SSL.com_Root_Certification_Authority_RSA.pem
+ Staat_der_Nederlanden_EV_Root_CA.pem
+ Staat_der_Nederlanden_Root_CA_-_G2.pem
+ Staat_der_Nederlanden_Root_CA_-_G3.pem
+ Starfield_Class_2_CA.pem
+ Starfield_Root_Certificate_Authority_-_G2.pem
+ Starfield_Services_Root_Certificate_Authority_-_G2.pem
+ SwissSign_Gold_CA_-_G2.pem
+ SwissSign_Silver_CA_-_G2.pem
+ SZAFIR_ROOT_CA2.pem
+ Taiwan_GRCA.pem
+ TeliaSonera_Root_CA_v1.pem
+ TrustCor_ECA-1.pem
+ TrustCor_RootCert_CA-1.pem
+ TrustCor_RootCert_CA-2.pem
+ Trustis_FPS_Root_CA.pem
+ T-TeleSec_GlobalRoot_Class_2.pem
+ T-TeleSec_GlobalRoot_Class_3.pem
+ TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+ TWCA_Global_Root_CA.pem
+ TWCA_Root_Certification_Authority.pem
+ UCA_Extended_Validation_Root.pem
+ UCA_Global_G2_Root.pem
+ USERTrust_ECC_Certification_Authority.pem
+ USERTrust_RSA_Certification_Authority.pem
+ Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+ XRamp_Global_CA_Root.pem
+ls: cannot open directory '/etc/ssl/private': Permission denied
+
+/etc/stunnel:
+README
+
+/etc/subversion:
+config	servers
+
+/etc/sudoers.d:
+cs424  README  x2goserver
+
+/etc/sv:
+irqbalance
+
+/etc/sv/irqbalance:
+run  supervise
+
+/etc/sysctl.d:
+00-perf.conf  99-sysctl.conf  core-dump.conf  protect-links.conf  README.sysctl
+
+/etc/sysfs.d:
+
+/etc/sysstat:
+sysstat  sysstat.ioconf
+
+/etc/systemd:
+journald.conf		 logind.conf.dpkg-dist	pstore.conf    system	       user		    user.conf.save
+journald.conf.dpkg-dist  network		resolved.conf  system.conf     user.conf
+logind.conf		 networkd.conf		sleep.conf     timesyncd.conf  user.conf.dpkg-dist
+
+/etc/systemd/network:
+10-eth0.link
+
+/etc/systemd/system:
+acct.service.d				    halt.service		 paths.target.wants
+anacron.service.d			    headless.service		 rc.local.service
+apparmor.service.d			    hostname.service		 reboot.service
+autovt@.service.d			    import-linux1.mount		 remote-fs-pre.target.wants
+backup.mount				    import-linux1.mount.d	 remote-fs.target.requires
+backup.mount.d				    import-linux.mount		 rmnologin.service
+bluetooth.target.wants			    import-linux.mount.d	 rpcbind.service.d
+bootlogs.service			    killprocs.service		 rpc-gssd.service.requires
+bootmisc.service			    lightdm.service.d		 rpc-statd.service.d
+brightness.service			    local-fs.target.d		 rpc-svcgssd.service.requires
+checkfs.service				    microchip.mount.d		 rsyslog.service.d
+checkroot-bootclean.service		    mountall-bootclean.service	 samba-ad-dc.service
+checkroot.service			    mountall.service		 sendsigs.service
+console-kit-daemon.service.d		    mountdevsubfs.service	 single.service
+console-kit-log-system-restart.service.d    mountkernfs.service		 smbd.service.d
+console-kit-log-system-start.service.d	    mountnfs-bootclean.service	 snmpd.service.d
+console-kit-log-system-stop.service.d	    mountnfs.service		 sockets.target.wants
+cron.service.d				    multi-user.target.wants	 sshd.service
+dbus-fi.w1.wpa_supplicant1.service	    networking.service.d	 ssh.service.d
+dbus-org.freedesktop.ModemManager1.service  network-online.target.d	 sudo.service.d
+dbus-org.freedesktop.timesync1.service	    network-online.target.wants  sysinit.target.wants
+default.target.wants			    nfs-client.target.d		 syslog.service
+display-manager.service			    nfs-client.target.wants	 systemd-networkd-wait-online.service.d
+exim4.service.d				    nfs-idmapd.service.d	 systemd-tmpfiles-setup.service.d
+fail2ban.service.d			    nfs-idmapd.service.requires  timers.target.wants
+getty@.service.d			    nfs-mounts.service		 umountfs.service
+getty.target.requires			    nfs-server.service.wants	 umountnfs.service
+getty.target.wants			    nfs-utils.service.requires	 umountroot.service
+go-mmproxy.service			    nmbd.service.d		 urandom.service
+go-mmproxy.service.d			    nscd.service.d		 var-log.mount.d
+graphical.target.wants			    nslcd.service.d		 vmtoolsd.service
+gssproxy.service.requires		    open-vm-tools.service.d	 x2goserver.service.d
+
+/etc/systemd/system/acct.service.d:
+unit.conf
+
+/etc/systemd/system/anacron.service.d:
+mounts.conf
+ls: cannot open directory '/etc/systemd/system/apparmor.service.d': Permission denied
+
+/etc/systemd/system/backup.mount.d:
+unit.conf
+
+/etc/systemd/system/bluetooth.target.wants:
+bluetooth.service
+
+/etc/systemd/system/console-kit-daemon.service.d:
+mounts.conf
+
+/etc/systemd/system/console-kit-log-system-restart.service.d:
+mounts.conf
+
+/etc/systemd/system/console-kit-log-system-start.service.d:
+mounts.conf
+
+/etc/systemd/system/console-kit-log-system-stop.service.d:
+mounts.conf
+
+/etc/systemd/system/cron.service.d:
+mounts.conf
+
+/etc/systemd/system/default.target.wants:
+e2scrub_reap.service
+
+/etc/systemd/system/exim4.service.d:
+mounts.conf
+
+/etc/systemd/system/fail2ban.service.d:
+unit.conf
+
+/etc/systemd/system/getty@.service.d:
+notty.conf
+
+/etc/systemd/system/getty.target.requires:
+headless.service
+
+/etc/systemd/system/getty.target.wants:
+getty@tty1.service
+
+/etc/systemd/system/go-mmproxy.service.d:
+mm.conf
+
+/etc/systemd/system/graphical.target.wants:
+accounts-daemon.service  rtkit-daemon.service  udisks2.service
+
+/etc/systemd/system/gssproxy.service.requires:
+network-online.target
+
+/etc/systemd/system/import-linux1.mount.d:
+unit.conf
+
+/etc/systemd/system/import-linux.mount.d:
+mounts.conf
+
+/etc/systemd/system/lightdm.service.d:
+mount.conf
+
+/etc/systemd/system/local-fs.target.d:
+mounts.conf
+
+/etc/systemd/system/microchip.mount.d:
+mounts.conf
+
+/etc/systemd/system/multi-user.target.wants:
+anacron.service		irqbalance.service	     open-vm-tools.service  snmpd.service
+atd.service		lldpd.service		     openvpn.service	    ssh.service
+avahi-daemon.service	lm-sensors.service	     pppd-dns.service	    sysstat.service
+binfmt-support.service	ModemManager.service	     quotarpc.service	    vboxautostart-service.service
+console-setup.service	networking.service	     remote-fs.target	    vboxballoonctrl-service.service
+cron.service		nfs-client.target	     rpcbind.service	    vboxdrv.service
+fail2ban.service	nscd.service		     rpc-gssd.service	    vboxweb-service.service
+fancontrol.service	ntp.service		     rsync.service	    wpa_supplicant.service
+go-mmproxy.service	nvidia-persistenced.service  rsyslog.service	    x2goserver.service
+
+/etc/systemd/system/networking.service.d:
+service.conf
+
+/etc/systemd/system/network-online.target.d:
+unit.conf
+
+/etc/systemd/system/network-online.target.wants:
+networking.service  systemd-networkd-wait-online.service
+
+/etc/systemd/system/nfs-client.target.d:
+unit.conf
+
+/etc/systemd/system/nfs-client.target.wants:
+rpc-statd-notify.service
+
+/etc/systemd/system/nfs-idmapd.service.d:
+unit.conf
+
+/etc/systemd/system/nfs-idmapd.service.requires:
+network-online.target
+
+/etc/systemd/system/nfs-server.service.wants:
+rpc-statd.service
+
+/etc/systemd/system/nfs-utils.service.requires:
+network-online.target
+
+/etc/systemd/system/nmbd.service.d:
+mounts.conf
+
+/etc/systemd/system/nscd.service.d:
+unit.conf
+
+/etc/systemd/system/nslcd.service.d:
+unit.conf
+
+/etc/systemd/system/open-vm-tools.service.d:
+service.conf
+
+/etc/systemd/system/paths.target.wants:
+acpid.path
+
+/etc/systemd/system/remote-fs-pre.target.wants:
+rpcbind.target
+
+/etc/systemd/system/remote-fs.target.requires:
+nfs-mounts.service
+
+/etc/systemd/system/rpcbind.service.d:
+unit.conf
+
+/etc/systemd/system/rpc-gssd.service.requires:
+network-online.target
+
+/etc/systemd/system/rpc-statd.service.d:
+mounts.conf
+
+/etc/systemd/system/rpc-svcgssd.service.requires:
+network-online.target
+
+/etc/systemd/system/rsyslog.service.d:
+storage.conf
+
+/etc/systemd/system/smbd.service.d:
+mounts.conf
+
+/etc/systemd/system/snmpd.service.d:
+unit.conf
+
+/etc/systemd/system/sockets.target.wants:
+acpid.socket  avahi-daemon.socket  gpsd.socket	pcscd.socket  rpcbind.socket
+
+/etc/systemd/system/ssh.service.d:
+unit.conf
+
+/etc/systemd/system/sudo.service.d:
+mounts.conf
+
+/etc/systemd/system/sysinit.target.wants:
+apparmor.service  keyboard-setup.service  systemd-pstore.service  systemd-timesyncd.service
+
+/etc/systemd/system/systemd-networkd-wait-online.service.d:
+unit.conf
+
+/etc/systemd/system/systemd-tmpfiles-setup.service.d:
+mounts.conf
+
+/etc/systemd/system/timers.target.wants:
+anacron.timer  e2scrub_all.timer  exim4-base.timer  logrotate.timer  man-db.timer  phpsessionclean.timer
+
+/etc/systemd/system/var-log.mount.d:
+mounts.conf
+ls: cannot open directory '/etc/systemd/system/x2goserver.service.d': Permission denied
+
+/etc/systemd/user:
+default.target.wants  sockets.target.wants
+
+/etc/systemd/user/default.target.wants:
+pulseaudio.service
+
+/etc/systemd/user/sockets.target.wants:
+dirmngr.socket		  gpg-agent-extra.socket  gpg-agent-ssh.socket
+gpg-agent-browser.socket  gpg-agent.socket	  pulseaudio.socket
+
+/etc/terminfo:
+README
+
+/etc/tex4ht:
+tex4ht.env
+
+/etc/texmf:
+dvipdfmx  dvips  hyphen.d  tex	texdoctk  texmf.d  web2c
+
+/etc/texmf/dvipdfmx:
+
+/etc/texmf/dvips:
+config
+
+/etc/texmf/dvips/config:
+
+/etc/texmf/hyphen.d:
+
+/etc/texmf/tex:
+context  generic
+
+/etc/texmf/tex/context:
+user
+
+/etc/texmf/tex/context/user:
+cont-sys.rme
+
+/etc/texmf/tex/generic:
+config
+
+/etc/texmf/tex/generic/config:
+
+/etc/texmf/texdoctk:
+texdocrc.defaults
+
+/etc/texmf/texmf.d:
+00debian.cnf
+
+/etc/texmf/web2c:
+mktex.cnf  texmf.cnf
+
+/etc/thunderbird:
+pref
+
+/etc/thunderbird/pref:
+thunderbird.js
+
+/etc/tigervnc:
+ecparams.pem  ssleay.cnf
+
+/etc/timidity:
+freepats.cfg
+
+/etc/tmpfiles.d:
+acct.conf    home.conf	      lightdm.conf     screen-cleanup.conf  var-log.conf	  x2go.conf
+dbus.conf    home.local.conf  media.conf       snmpd.conf	    var-spool-exim4.conf
+debian.conf  legacy.conf      nfs-common.conf  ssh.conf		    var-work.conf
+
+/etc/udev:
+hwdb.d	rules.d  udev.conf
+
+/etc/udev/hwdb.d:
+
+/etc/udev/rules.d:
+1-jtag-rule.rules   60-vboxdrv.rules	     99-usb-power.rules  z010_mchp_tools.rules
+50-paparazzi.rules  80-net-setup-link.rules  wis-ezusb.rules
+
+/etc/udisks2:
+udisks2.conf
+
+/etc/ufw:
+applications.d
+
+/etc/ufw/applications.d:
+openssh-server	samba
+
+/etc/update-motd.d:
+10-uname
+
+/etc/UPower:
+UPower.conf
+
+/etc/usb_modeswitch.d:
+
+/etc/vbox:
+
+/etc/vim:
+gvimrc	vimrc  vimrc.tiny
+
+/etc/visualvm:
+visualvm.clusters  visualvm.conf
+
+/etc/vmware-tools:
+guestproxy-ssl.conf  quiesce_manifest.xml  statechange.subr    tools.conf.dpkg-old  vgauth
+poweroff-vm-default  resume-vm-default	   suspend-vm-default  tools.conf.example   vgauth.conf
+poweron-vm-default   scripts		   tools.conf	       tools.conf.old	    vm-support
+
+/etc/vmware-tools/scripts:
+vmware
+
+/etc/vmware-tools/scripts/vmware:
+network
+
+/etc/vmware-tools/vgauth:
+schemas
+
+/etc/vmware-tools/vgauth/schemas:
+catalog.xml		       xenc-schema.xsd		XMLSchema-hasFacetAndProperty.xsd  xml.xsd
+datatypes.dtd		       xmldsig-core-schema.xsd	XMLSchema-instance.xsd
+saml-schema-assertion-2.0.xsd  XMLSchema.dtd		XMLSchema.xsd
+
+/etc/vulkan:
+explicit_layer.d  icd.d  implicit_layer.d
+
+/etc/vulkan/explicit_layer.d:
+
+/etc/vulkan/icd.d:
+
+/etc/vulkan/implicit_layer.d:
+
+/etc/w3m:
+config	mailcap
+
+/etc/wildmidi:
+wildmidi.cfg
+
+/etc/wireshark:
+init.lua
+
+/etc/wpa_supplicant:
+action_wpa.sh  functions.sh  ifupdown.sh
+
+/etc/X11:
+app-defaults		 xorg.conf.g7				      xorg.conf.qxx-00
+conf			 xorg.conf.g7-00			      xorg.conf.radeon
+default-display-manager  xorg.conf.g7-00-nouveau		      Xreset
+fonts			 xorg.conf.g7-00-nvidia			      Xreset.d
+rgb.txt			 xorg.conf.G98				      Xresources
+X			 xorg.conf.jessie-current-working-2016-12-28  Xsession
+xinit			 xorg.conf.lab				      Xsession.d
+xkb			 xorg.conf.nvidia			      Xsession.options
+xorg.conf		 xorg.conf.nvidia-xconfig-original	      xsm
+xorg.conf.backup	 xorg.conf.omega			      XvMCConfig
+xorg.conf.basic		 xorg.conf.optimus			      Xvnc-session
+xorg.conf.class00	 xorg.conf.optimus-w			      Xwrapper.config
+
+/etc/X11/app-defaults:
+Bitmap	       Editres-color	 UXTerm		XClipboard	Xedit	     XLoad	  Xmessage-color
+Bitmap-color   GV		 UXTerm-color	XClock		Xedit-color  XLogo	  XMore
+Bitmap-nocase  GXditview	 Viewres	XClock-color	Xfd	     XLogo-color  XSm
+Clock-color    GXditview-color	 Viewres-color	XConsole	XFontSel     Xmag	  XTerm
+Ddd	       KOI8RXTerm	 XCalc		Xditview	Xgc	     Xman	  XTerm-color
+Editres        KOI8RXTerm-color  XCalc-color	Xditview-chrtr	Xgc-color    Xmessage	  Xvidtune
+
+/etc/X11/conf:
+
+/etc/X11/fonts:
+100dpi	75dpi  misc  Type1
+
+/etc/X11/fonts/100dpi:
+xfonts-100dpi.alias
+
+/etc/X11/fonts/75dpi:
+xfonts-75dpi.alias
+
+/etc/X11/fonts/misc:
+xfonts-base.alias
+
+/etc/X11/fonts/Type1:
+gsfonts-x11.alias  gsfonts-x11.scale  lmodern.scale  tex-gyre.scale  xfonts-scalable.scale
+
+/etc/X11/xinit:
+xinitrc  xserverrc
+
+/etc/X11/xkb:
+
+/etc/X11/Xreset.d:
+README
+
+/etc/X11/Xresources:
+x11-common  xpdf
+
+/etc/X11/Xsession.d:
+20dbus_xdg-runtime	   40x11-common_xsessionrc	   60xbrlapi	       90qt-a11y
+20x11-common_process-args  50x11-common_determine-startup  75dbus_dbus-launch  90x11-common_ssh-agent
+30x11-common_xresources    54xfce4-umask		   90atk-adaptor       95dbus_update-activation-env
+35x11-common_xhost-local   55xfce4-session		   90gpg-agent	       99x11-common_start
+
+/etc/X11/xsm:
+system.xsm
+
+/etc/x2go:
+applications	x2goagent.options  x2go_logout.d    x2gosql	Xsession    Xsession.options
+keystrokes.cfg	x2go_logout	   x2goserver.conf  Xresources	Xsession.d
+
+/etc/x2go/x2go_logout.d:
+010_userscripts.sh
+
+/etc/x2go/x2gosql:
+passwords  sql	sql.postgres
+ls: cannot open directory '/etc/x2go/x2gosql/passwords': Permission denied
+
+/etc/xdg:
+accept-languages.codes	kauth.categories	   knewstuff.categories		      org_kde_kwayland.categories
+ark.categories		kbookmarks.categories	   knotifications.categories	      save-xfce4
+attica.categories	kcodecs.categories	   kservice.categories		      solid.categories
+autostart		kconfigwidgets.categories  kshorturifilterrc		      sonnet.categories
+cantor_kalgebra.knsrc	kcoreaddons.categories	   ktexteditor.categories	      systemd
+cantor.knsrc		kcrash.categories	   kwallet.categories		      Thunar
+cantor_lua.knsrc	kdbusaddons.categories	   kwindowsystem.categories	      tumbler
+cantor_octave.knsrc	kglobalaccel.categories    kwindowsystem.kwayland.categories  ui
+cantor_qalculate.knsrc	kiconthemes.categories	   kxmlgui.categories		      user-dirs.conf
+cantor_scilab.knsrc	kidletime.categories	   kxmlrpcclient.categories	      user-dirs.defaults
+drkonqi.categories	kinit.categories	   kxmlrpcclient.renamecategories     xfce4
+filelightrc		kio.categories		   menus
+kactivities.categories	kitemmodels.categories	   new-xfce4
+karchive.categories	kjobwidgets.categories	   okular.categories
+
+/etc/xdg/autostart:
+at-spi-dbus-bus.desktop				     org.gnome.SettingsDaemon.Sharing.desktop
+geoclue-demo-agent.desktop			     org.gnome.SettingsDaemon.Smartcard.desktop
+gnome-keyring-pkcs11.desktop			     org.gnome.SettingsDaemon.Sound.desktop
+gnome-keyring-secrets.desktop			     org.gnome.SettingsDaemon.Wacom.desktop
+gnome-keyring-ssh.desktop			     org.gnome.SettingsDaemon.XSettings.desktop
+gsettings-data-convert.desktop			     polkit-gnome-authentication-agent-1.desktop
+light-locker.desktop				     print-applet.desktop
+orca-autostart.desktop				     pulseaudio.desktop
+org.gnome.SettingsDaemon.A11ySettings.desktop	     tracker-extract.desktop
+org.gnome.SettingsDaemon.Clipboard.desktop	     tracker-miner-apps.desktop
+org.gnome.SettingsDaemon.Color.desktop		     tracker-miner-fs.desktop
+org.gnome.SettingsDaemon.Datetime.desktop	     tracker-store.desktop
+org.gnome.SettingsDaemon.Housekeeping.desktop	     xdg-user-dirs.desktop
+org.gnome.SettingsDaemon.Keyboard.desktop	     xfce4-clipman-plugin-autostart.desktop
+org.gnome.SettingsDaemon.MediaKeys.desktop	     xfce4-notes-autostart.desktop
+org.gnome.SettingsDaemon.Mouse.desktop		     xfce4-power-manager.desktop
+org.gnome.SettingsDaemon.Power.desktop		     xfsettingsd.desktop
+org.gnome.SettingsDaemon.PrintNotifications.desktop  xscreensaver.desktop
+org.gnome.SettingsDaemon.Rfkill.desktop		     zeitgeist-datahub.desktop
+org.gnome.SettingsDaemon.ScreensaverProxy.desktop
+
+/etc/xdg/menus:
+gnome-applications.menu  kde-information.menu	xfce-applications.menu
+kde4-applications.menu	 kf5-applications.menu	xfce-settings-manager.menu
+
+/etc/xdg/new-xfce4:
+desktop  helpers.rc  panel  terminal  xfconf  xfwm4
+ls: cannot open directory '/etc/xdg/new-xfce4/desktop': Permission denied
+
+/etc/xdg/new-xfce4/panel:
+launcher-10  launcher-12  launcher-17  launcher-19  launcher-22  launcher-5  xfce4-mixer-plugin-16.rc
+launcher-11  launcher-15  launcher-18  launcher-21  launcher-23  launcher-9  xfce4-orageclock-plugin-24.rc
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-10': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-11': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-12': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-15': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-17': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-18': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-19': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-21': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-22': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-23': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-5': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-9': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/terminal': Permission denied
+
+/etc/xdg/new-xfce4/xfconf:
+xfce-perchannel-xml
+ls: cannot open directory '/etc/xdg/new-xfce4/xfconf/xfce-perchannel-xml': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/xfwm4': Permission denied
+
+/etc/xdg/save-xfce4:
+helpers.rc  panel  xfconf  Xft.xrdb  xinitrc
+
+/etc/xdg/save-xfce4/panel:
+default.xml  xfce4-clipman-actions.xml
+
+/etc/xdg/save-xfce4/xfconf:
+xfce-perchannel-xml
+
+/etc/xdg/save-xfce4/xfconf/xfce-perchannel-xml:
+thunar-volman.xml	      xfce4-panel.xml	       xfce4-session.xml
+xfce4-keyboard-shortcuts.xml  xfce4-power-manager.xml  xsettings.xml
+
+/etc/xdg/systemd:
+user
+
+/etc/xdg/Thunar:
+uca.xml
+
+/etc/xdg/tumbler:
+tumbler.rc
+
+/etc/xdg/ui:
+ui_standards.rc
+
+/etc/xdg/xfce4:
+helpers.rc  panel  whiskermenu	xfconf	Xft.xrdb  xinitrc
+
+/etc/xdg/xfce4/panel:
+default.xml  xfce4-clipman-actions.xml
+
+/etc/xdg/xfce4/whiskermenu:
+defaults.rc
+
+/etc/xdg/xfce4/xfconf:
+xfce-perchannel-xml
+
+/etc/xdg/xfce4/xfconf/xfce-perchannel-xml:
+thunar-volman.xml  xfce4-keyboard-shortcuts.xml  xfce4-power-manager.xml  xfce4-session.xml  xsettings.xml
+
+/etc/xfce4:
+defaults.list
+
+/etc/xml:
+catalog		    docbook-xml.xml	 docutils-common.xml	  resolver	     w3c-dtd-xhtml.xml.old
+catalog.old	    docbook-xml.xml.old  docutils-common.xml.old  sgml-data.xml      xml-core.xml
+dia-common.xml	    docbook-xsl.xml	 rarian-compat.xml	  sgml-data.xml.old  xml-core.xml.old
+dia-common.xml.old  docbook-xsl.xml.old  rarian-compat.xml.old	  w3c-dtd-xhtml.xml
+
+/etc/xml/resolver:
+CatalogManager.properties
+
+/etc/xpdf:
+includes  xpdfrc
+
+/etc/zsh:
+newuser.zshrc.recommended  zlogin  zlogout  zprofile  zshenv  zshrc
+estern7@remote05:~/i220a/submit/lab3$ mqn[K[K[Kman tr
+[?1049h[22;0;0t[?1h=TR(1)                                              User Commands                                             TR(1)[m
+[m
+[1mNAME[0m[m
+       tr - translate or delete characters[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[m
+       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+              use the complement of SET1[m
+[m
+       [1m-d[0m, [1m--delete[0m[m
+              delete characters in SET1, do not translate[m
+[m
+       [1m-s[0m, [1m--squeeze-repeats[0m[m
+              replace  each sequence of a repeated character that is listed in the last specified SET, with a sin‐[m
+              gle occurrence of that character[m
+[m
+       [1m-t[0m, [1m--truncate-set1[0m[m
+              first truncate SET1 to length of SET2[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       SETs are specified as strings of characters.  Most represent themselves.  Interpreted sequences are:[m
+[m
+       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[m
+       \\     backslash[m
+[m
+       \a     audible BEL[m
+[m
+       \b     backspace[m
+[m
+       \f     form feed[m
+[m
+       \n     new line[m
+[m
+       \r     return[m
+[m
+       \t     horizontal tab[m
+[m
+       \v     vertical tab[m
+[m
+       CHAR1-CHAR2[m
+              all characters from CHAR1 to CHAR2 in ascending order[m
+[m
+       [CHAR*][m
+              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*REPEAT][m
+[7m Manual page tr(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[7m Manual page tr(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alnum:][m
+[7m Manual page tr(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters and digits[m
+[7m Manual page tr(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alpha:][m
+[7m Manual page tr(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters[m
+[7m Manual page tr(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:blank:][m
+[7m Manual page tr(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal whitespace[m
+[7m Manual page tr(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:cntrl:][m
+[7m Manual page tr(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all control characters[m
+[7m Manual page tr(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:digit:][m
+[7m Manual page tr(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all digits[m
+[7m Manual page tr(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:graph:][m
+[7m Manual page tr(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all printable characters, not including space[m
+[7m Manual page tr(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:lower:][m
+[7m Manual page tr(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all lower case letters[m
+[7m Manual page tr(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:print:][m
+[7m Manual page tr(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all printable characters, including space[m
+[7m Manual page tr(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:punct:][m
+[7m Manual page tr(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all punctuation characters[m
+[7m Manual page tr(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:space:][m
+[7m Manual page tr(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal or vertical whitespace[m
+[7m Manual page tr(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:upper:][m
+[7m Manual page tr(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all upper case letters[m
+[7m Manual page tr(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:xdigit:][m
+[7m Manual page tr(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all hexadecimal digits[m
+[7m Manual page tr(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [=CHAR=][m
+[7m Manual page tr(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters which are equivalent to CHAR[m
+[7m Manual page tr(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Translation occurs if [1m-d[0m is not given and both SET1 and SET2 appear.  [1m-t[0m may be used only when translating.[m
+[7m Manual page tr(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \r     return[m
+[55;1H[K[7m Manual page tr(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \n     new line[m
+[55;1H[K[7m Manual page tr(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \f     form feed[m
+[55;1H[K[7m Manual page tr(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \b     backspace[m
+[55;1H[K[7m Manual page tr(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \a     audible BEL[m
+[55;1H[K[7m Manual page tr(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \\     backslash[m
+[55;1H[K[7m Manual page tr(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[55;1H[K[7m Manual page tr(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[55;1H[K[7m Manual page tr(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:space:][m
+[7m Manual page tr(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal or vertical whitespace[m
+[7m Manual page tr(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:upper:][m
+[7m Manual page tr(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all upper case letters[m
+[7m Manual page tr(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:xdigit:][m
+[7m Manual page tr(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all hexadecimal digits[m
+[7m Manual page tr(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [=CHAR=][m
+[7m Manual page tr(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters which are equivalent to CHAR[m
+[7m Manual page tr(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 44 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0testern7@remote05:~/i220a/submit/lab3$ ls[K[Kman tr ls [:upper:]
+[?1049h[22;0;0t[?1h=TR(1)                                              User Commands                                             TR(1)[m
+[m
+[1mNAME[0m[m
+       tr - translate or delete characters[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[m
+       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+              use the complement of SET1[m
+[m
+       [1m-d[0m, [1m--delete[0m[m
+              delete characters in SET1, do not translate[m
+[m
+       [1m-s[0m, [1m--squeeze-repeats[0m[m
+              replace  each sequence of a repeated character that is listed in the last specified SET, with a sin‐[m
+              gle occurrence of that character[m
+[m
+       [1m-t[0m, [1m--truncate-set1[0m[m
+              first truncate SET1 to length of SET2[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       SETs are specified as strings of characters.  Most represent themselves.  Interpreted sequences are:[m
+[m
+       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[m
+       \\     backslash[m
+[m
+       \a     audible BEL[m
+[m
+       \b     backspace[m
+[m
+       \f     form feed[m
+[m
+       \n     new line[m
+[m
+       \r     return[m
+[m
+       \t     horizontal tab[m
+[m
+       \v     vertical tab[m
+[m
+       CHAR1-CHAR2[m
+              all characters from CHAR1 to CHAR2 in ascending order[m
+[m
+       [CHAR*][m
+              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t--Man-- next: ls(1) [ view (return) | skip (Ctrl-D) | quit (Ctrl-C) ]
+^[[A^[[D^[[A^[[A^[[A^[[A^[[A^C
+estern7@remote05:~/i220a/submit/lab3$ man tr ls [:upper:][1P[1P[1P[1P
+tr: misaligned [:upper:] and/or [:lower:] construct
+estern7@remote05:~/i220a/submit/lab3$ tr ls [:upper:][C[C[C[1P[:upper:][1P[:upper:][1P[:upper:][C[C[C[C[C[C[C[C[C [K
+tr: missing operand after ‘[:upper:]’
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+estern7@remote05:~/i220a/submit/lab3$ tr [:upper:] ls
+^C
+estern7@remote05:~/i220a/submit/lab3$ tr [:upper:] ls
+^C
+estern7@remote05:~/i220a/submit/lab3$ exit
+
+Script done on 2020-09-17 14:06:51-04:00 [COMMAND_EXIT_CODE="130"]
+Script started on 2020-09-17 18:50:36-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="115" LINES="55"]
+estern7@remote02:~/i220a/submit/lab3$ ls [K[K[Kman tr
+[?1049h[22;0;0t[?1h=TR(1)                                             User Commands                                            TR(1)[m
+[m
+[1mNAME[0m[m
+       tr - translate or delete characters[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[m
+       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+              use the complement of SET1[m
+[m
+       [1m-d[0m, [1m--delete[0m[m
+              delete characters in SET1, do not translate[m
+[m
+       [1m-s[0m, [1m--squeeze-repeats[0m[m
+              replace  each  sequence  of  a repeated character that is listed in the last specified SET, with a[m
+              single occurrence of that character[m
+[m
+       [1m-t[0m, [1m--truncate-set1[0m[m
+              first truncate SET1 to length of SET2[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       SETs are specified as strings of characters.  Most represent themselves.  Interpreted sequences are:[m
+[m
+       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[m
+       \\     backslash[m
+[m
+       \a     audible BEL[m
+[m
+       \b     backspace[m
+[m
+       \f     form feed[m
+[m
+       \n     new line[m
+[m
+       \r     return[m
+[m
+       \t     horizontal tab[m
+[m
+       \v     vertical tab[m
+[m
+       CHAR1-CHAR2[m
+              all characters from CHAR1 to CHAR2 in ascending order[m
+[m
+       [CHAR*][m
+              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0testern7@remote02:~/i220a/submit/lab3$ exit
+
+Script done on 2020-09-17 18:51:12-04:00 [COMMAND_EXIT_CODE="0"]

@@ -10,8 +10,11 @@
 static inline unsigned get_bit(HammingWord word, int bitIndex)
 {
   assert(bitIndex > 0);
-  //@TODO
-  return 0;
+  //@TODO -- DONE
+
+  HammingWord bit = (word >> bitIndex - 1) % 2;
+  
+  return bit;
 }
 
 /** Return word with bit at bitIndex in word set to bitValue. */
@@ -19,7 +22,21 @@ static inline HammingWord set_bit(HammingWord word, int bitIndex, unsigned bitVa
 {
   assert(bitIndex > 0);
   assert(bitValue == 0 || bitValue == 1);
-  //@TODO
+  //@TODO -- DONE
+
+  if (word == 0 && bitValue == 1)
+    {
+      printf("Word is 0\n");
+      word = 1;
+      word = word << bitIndex;
+    }
+  else
+  {
+    printf("Word Changed\n");
+    word ^= (-bitValue ^ word) & (1UL << bitIndex - 1);
+  }
+  return word;
+  
   return 0;
 }
 
@@ -30,8 +47,9 @@ static inline HammingWord set_bit(HammingWord word, int bitIndex, unsigned bitVa
 static inline unsigned
 get_n_encoded_bits(unsigned nParityBits)
 {
-  //@TODO
-  return 0;
+  //@TODO -- DONE
+  
+  return 2 << nParityBits - 1;
 }
 
 /** Return non-zero if bitIndex indexes a bit which will be used for a
@@ -42,7 +60,16 @@ static inline int
 is_parity_position(int bitIndex)
 {
   assert(bitIndex > 0);
-  //@TODO
+  //@TODO -- DONE
+
+  for (int i = 1; i <= bitIndex; i *= 2)
+  {
+    if (bitIndex == i)
+    {
+      return 1;
+    }
+  }
+  
   return 0;
 }
 

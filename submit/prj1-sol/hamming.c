@@ -44,8 +44,7 @@ static inline HammingWord set_bit(HammingWord word, int bitIndex, unsigned bitVa
  *  i.e. the max # of bits in an encoded word (# data bits + # parity
  *  bits).
  */
-static inline unsigned
-get_n_encoded_bits(unsigned nParityBits)
+static inline unsigned get_n_encoded_bits(unsigned nParityBits)
 {
   //@TODO -- DONE
   
@@ -56,8 +55,7 @@ get_n_encoded_bits(unsigned nParityBits)
  *  Hamming parity bit; i.e. the bit representation of bitIndex
  *  contains only a single 1.
  */
-static inline int
-is_parity_position(int bitIndex)
+static inline int is_parity_position(int bitIndex)
 {
   assert(bitIndex > 0);
   //@TODO -- DONE
@@ -78,8 +76,7 @@ is_parity_position(int bitIndex)
  *  Equivalently, return parity over all data bits whose bit-index has
  *  a 1 in the same position as in bitIndex.
  */
-static int
-compute_parity(HammingWord word, int bitIndex, unsigned nBits)
+static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
 {
   assert(bitIndex > 0);
   //@TODO
@@ -140,10 +137,13 @@ compute_parity(HammingWord word, int bitIndex, unsigned nBits)
  *  Assumes data is within range of values which can be encoded using
  *  nParityBits.
  */
-HammingWord
-hamming_encode(HammingWord data, unsigned nParityBits)
+HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
 {
   //@TODO
+
+  HammingWord encoded = 0;
+
+  //copy loops from computeParity
   
   return 0;
 }

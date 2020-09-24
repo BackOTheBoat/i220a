@@ -83,19 +83,8 @@ compute_parity(HammingWord word, int bitIndex, unsigned nBits)
 {
   assert(bitIndex > 0);
   //@TODO
-  return 0;
-}
-
-/** Encode data using nParityBits Hamming code parity bits.
- *  Assumes data is within range of values which can be encoded using
- *  nParityBits.
- */
-HammingWord
-hamming_encode(HammingWord data, unsigned nParityBits)
-{
-  //@TODO
   
-  int totalBits = 1; //Number of bits used for PARITY and DATA
+    int totalBits = 1; //Number of bits used for PARITY and DATA
    
   while (totalBits <= nBits) //Find lowest power of 2 that can hold PARITY and DATA
   {
@@ -143,6 +132,18 @@ hamming_encode(HammingWord data, unsigned nParityBits)
   {
     return 0;
   }
+  
+  return 0;
+}
+
+/** Encode data using nParityBits Hamming code parity bits.
+ *  Assumes data is within range of values which can be encoded using
+ *  nParityBits.
+ */
+HammingWord
+hamming_encode(HammingWord data, unsigned nParityBits)
+{
+  //@TODO
   
   return 0;
 }

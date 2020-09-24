@@ -12,7 +12,7 @@
 /** 
  *  Read whitespace-separated HammingWord's from stream in.  If
  *  doDecode is non-zero, then hamming-decode them onto stream out;
- *  otherwise hamming-encode them on stream out.
+ * OB otherwise hamming-encode them on stream out.
  *  If isVerbose (must be isDecode), then output a * after every
  *  corrected output
  */

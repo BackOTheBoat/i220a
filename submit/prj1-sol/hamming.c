@@ -10,8 +10,11 @@
 static inline unsigned get_bit(HammingWord word, int bitIndex)
 {
   assert(bitIndex > 0);
-  //@TODO
-  return 0;
+  //@TODO -- DONE
+
+  HammingWord bit = (word >> bitIndex - 1) % 2;
+  
+  return bit;
 }
 
 /** Return word with bit at bitIndex in word set to bitValue. */
@@ -19,30 +22,46 @@ static inline HammingWord set_bit(HammingWord word, int bitIndex, unsigned bitVa
 {
   assert(bitIndex > 0);
   assert(bitValue == 0 || bitValue == 1);
-  //@TODO
-  return 0;
+  //@TODO -- DONE
+
+  int newValue = 0;
+  HammingWord tempWord = 0;
+
+  word ^= (-newValue ^ word) & (1UL << bitIndex - 1);
+    
+  return word;
 }
 
 /** Given a Hamming code with nParityBits, return 2**nParityBits - 1,
  *  i.e. the max # of bits in an encoded word (# data bits + # parity
  *  bits).
  */
-static inline unsigned
-get_n_encoded_bits(unsigned nParityBits)
+static inline unsigned get_n_encoded_bits(unsigned nParityBits)
 {
-  //@TODO
-  return 0;
+  //@TODO -- DONE
+
+  unsigned maxBits = (2 << nParityBits) - 1;
+  
+  return maxBits;
 }
 
 /** Return non-zero if bitIndex indexes a bit which will be used for a
  *  Hamming parity bit; i.e. the bit representation of bitIndex
  *  contains only a single 1.
  */
-static inline int
-is_parity_position(int bitIndex)
+static inline int is_parity_position(int bitIndex)
 {
   assert(bitIndex > 0);
-  //@TODO
+  //@TODO -- DONE
+
+  for (int i = 1; i <= bitIndex; i *= 2)
+  {
+    if (bitIndex == i)
+    {
+      return 1;
+    }
+  }
+  
   return 0;
 }
 
@@ -51,8 +70,7 @@ is_parity_position(int bitIndex)
  *  Equivalently, return parity over all data bits whose bit-index has
  *  a 1 in the same position as in bitIndex.
  */
-static int
-compute_parity(HammingWord word, int bitIndex, unsigned nBits)
+static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
 {
   assert(bitIndex > 0);
   //@TODO
@@ -63,10 +81,14 @@ compute_parity(HammingWord word, int bitIndex, unsigned nBits)
  *  Assumes data is within range of values which can be encoded using
  *  nParityBits.
  */
-HammingWord
-hamming_encode(HammingWord data, unsigned nParityBits)
+HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
 {
   //@TODO
+
+  HammingWord encoded = 0;
+
+  //commpute parity bit and set into hamming word
+  
   return 0;
 }
 

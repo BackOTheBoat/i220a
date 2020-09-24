@@ -26,13 +26,11 @@ static inline HammingWord set_bit(HammingWord word, int bitIndex, unsigned bitVa
 
   if (word == 0 && bitValue == 1)
     {
-      printf("Word is 0\n");
       word = 1;
       word = word << bitIndex;
     }
   else
   {
-    printf("Word Changed\n");
     word ^= (-bitValue ^ word) & (1UL << bitIndex - 1);
   }
   return word;
@@ -100,8 +98,6 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
       if (is_parity_position(j) == 0) //If current index in temp IS NOT a parity position
       {
         unsigned bit = get_bit(word, i);
-        printf("Bit from word: %d\n", bit);
-        printf("Set Bit: %llu\n", set_bit(temp, j, bit));
         temp = set_bit(temp, j, bit); //Set bit at current index in temp to DATA bit value
         nextBitLocation = j - 1;
         j = 1;
@@ -154,7 +150,7 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
   HammingWord temp = 0; //HammingWord with DATA entered. Room for PARITY
   int nextBitLocation = totalBits - 1;
 
-  for (int i = nBits; i >= 1; i = i - 1) //Iterating through HammingWord word by bit
+  for (int i = totalBits; i >= 1; i = i - 1) //Iterating through HammingWord word by bit
   {
     int j = nextBitLocation;
     
@@ -162,9 +158,7 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
     {
       if (is_parity_position(j) == 0) //If current index in temp IS NOT a parity position
       {
-        unsigned bit = get_bit(word, i);
-        printf("Bit from word: %d\n", bit);
-        printf("Set Bit: %llu\n", set_bit(temp, j, bit));
+        unsigned bit = get_bit(data, i);
         temp = set_bit(temp, j, bit); //Set bit at current index in temp to DATA bit value
         nextBitLocation = j - 1;
         j = 1;
@@ -173,9 +167,23 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
     }
   }
 
+  int nextParityLocation = 0;
+  while (nParityBits > 0)
+  {
+    for (int i = nextParityLocation; i < totalBits; i = i + 1)
+    {
+      if (is_parity_position(i) == 1)
+      {
+	int parity = compute_parity(data, i, totalBits);
+	encoded = set_bit(encoded, i, parity);
+
+	nextParityLocation = i + 1;
+	nParityBits = nParityBits - 1;
+      }
+    }
+  }
   
-  
-  return 0;
+  return encoded;
 }
 
 /** Decode encoded using nParityBits Hamming code parity bits.

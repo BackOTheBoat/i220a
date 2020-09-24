@@ -48,7 +48,7 @@ static inline unsigned get_n_encoded_bits(unsigned nParityBits)
 {
   //@TODO -- DONE
   
-  return 2 << nParityBits - 1;
+  return (1 << nParityBits) - 1;
 }
 
 /** Return non-zero if bitIndex indexes a bit which will be used for a
@@ -81,7 +81,7 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
   assert(bitIndex > 0);
   //@TODO
   
-    int totalBits = 1; //Number of bits used for PARITY and DATA
+  int totalBits = 1; //Number of bits used for PARITY and DATA
    
   while (totalBits <= nBits) //Find lowest power of 2 that can hold PARITY and DATA
   {
@@ -144,6 +144,36 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
   HammingWord encoded = 0;
 
   //copy loops from computeParity
+  int totalBits = 1; //Number of bits used for DATA
+   
+  while (1 << totalBits < data) //Find lowest power of 2 that can hold DATA
+  {
+    totalBits = totalBits + 1; //Set total bits to lowest power of 2 possible with DATA and PARITY
+  }
+
+  HammingWord temp = 0; //HammingWord with DATA entered. Room for PARITY
+  int nextBitLocation = totalBits - 1;
+
+  for (int i = nBits; i >= 1; i = i - 1) //Iterating through HammingWord word by bit
+  {
+    int j = nextBitLocation;
+    
+    while (j > 1) //Iterating through HammingWord temp by bit to add DATA
+    {
+      if (is_parity_position(j) == 0) //If current index in temp IS NOT a parity position
+      {
+        unsigned bit = get_bit(word, i);
+        printf("Bit from word: %d\n", bit);
+        printf("Set Bit: %llu\n", set_bit(temp, j, bit));
+        temp = set_bit(temp, j, bit); //Set bit at current index in temp to DATA bit value
+        nextBitLocation = j - 1;
+        j = 1;
+      }
+      j = j - 1;
+    }
+  }
+
+  
   
   return 0;
 }

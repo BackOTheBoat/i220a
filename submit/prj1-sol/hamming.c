@@ -140,12 +140,7 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
   HammingWord encoded = 0;
 
   //copy loops from computeParity
-  int totalBits = 1; //Number of bits used for DATA
-   
-  while (1 << totalBits < data) //Find lowest power of 2 that can hold DATA
-  {
-    totalBits = totalBits + 1; //Set total bits to lowest power of 2 possible with DATA and PARITY
-  }
+  int totalBits = get_n_encoded_bits(nParityBits); //Number of bits used for DATA
 
   HammingWord temp = 0; //HammingWord with DATA entered. Room for PARITY
   int nextBitLocation = totalBits - 1;
@@ -175,14 +170,14 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
       if (is_parity_position(i) == 1)
       {
 	int parity = compute_parity(data, i, totalBits);
-	encoded = set_bit(encoded, i, parity);
+	temp = set_bit(encoded, i, parity);
 
 	nextParityLocation = i + 1;
 	nParityBits = nParityBits - 1;
       }
     }
   }
-  
+  encoded = temp;
   return encoded;
 }
 
@@ -194,5 +189,40 @@ HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
 HammingWord hamming_decode(HammingWord encoded, unsigned nParityBits, int *hasError)
 {
   //@TODO
+
+  int syndrome = 0;
+  int totalBits = 0;
+
+  //find the total number of bits in ENCODED
+  while ((1 << totalBits) - 1 < encoded)
+  {
+    totalBits = totalBits + 1;
+  }
+
+  
+  for (int i = 0; i <= totalBits; i = i + 1)
+  {
+    unsigned bit = get_bit(encoded, i); //Retrieve bit from encoded at location i
+    if (bit == 1) //Does this position in encoded have a 1?
+    {
+      syndrome = syndrome ^ i; //XOR the index with the list of indicies with 1
+    }
+  }
+
+  if (syndrome != 0)
+  {
+    *hasError = 1; //Toggle the error variable
+    unsigned errorBit = get_bit(encoded, syndrome); //retrive the bit at location SYNDROME;
+
+    if (errorBit == 1)
+    {
+      encoded = set_bit(encoded, syndrome, 0);
+    }
+    else
+    {
+      encoded = set_bit(encoded, syndrome, 1);
+    }
+  }
+  
   return 0;
 }

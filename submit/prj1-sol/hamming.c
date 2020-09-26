@@ -1,6 +1,3 @@
-#include "hamming.h"
-#include <assert.h>
-
 /**
  * All bitIndex'es are numbered starting at the LSB which is given index 1
  * denotes exponentiation; note that 2**n == (1 << n)
@@ -9,10 +6,11 @@
 /** Return bit at bitIndex from word. */
 static inline unsigned get_bit(HammingWord word, int bitIndex)
 {
-  assert(bitIndex > 0);
+  assert(bitIndex >= 0);
   //@TODO -- DONE
 
-  HammingWord bit = (word >> bitIndex - 1) % 2;
+  //printf("Shift: %d\n", word >> bitIndex - 1);
+  unsigned bit = (word >> bitIndex) % 2;
   
   return bit;
 }
@@ -31,7 +29,7 @@ static inline HammingWord set_bit(HammingWord word, int bitIndex, unsigned bitVa
     }
   else
   {
-    word ^= (-bitValue ^ word) & (1UL << bitIndex - 1);
+    word ^= (-bitValue ^ word) & (1UL << bitIndex);
   }
   return word;
   
@@ -85,6 +83,7 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
   {
     totalBits = totalBits * 2; //Set total bits to lowest power of 2 possible with DATA and PARITY
   }
+  //printf("Total Bits: %d\n", totalBits);
 
   HammingWord temp = 0; //HammingWord with DATA entered. Room for PARITY
   int nextBitLocation = totalBits - 1;
@@ -97,7 +96,7 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
     {
       if (is_parity_position(j) == 0) //If current index in temp IS NOT a parity position
       {
-        unsigned bit = get_bit(word, i);
+        unsigned bit = get_bit(word, i - 1);
         temp = set_bit(temp, j, bit); //Set bit at current index in temp to DATA bit value
         nextBitLocation = j - 1;
         j = 1;
@@ -105,15 +104,24 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
       j = j - 1;
     }
   }
-
+  //printf("Temp: %llu\n", temp);
   int numOnes = 0;
+  int result;
+  
+  for (int x = 0; x >>= 1; x = x + 1)
+      result++;
 
   for (int i = 1; i < totalBits; i = i + 1) //Iterates through temp to compute number of ones
   {
-    if (get_bit(i, bitIndex) == 1) //Determines if parity bit is responsible for current position
+    //printf("I: %d\n", i);
+    int parityBitIndex = result;
+    //printf("PBI: %d\n", parityBitIndex);
+    unsigned bitOfIndex = get_bit(i, parityBitIndex);
+    //printf("indexBit: %d\n", bitOfIndex);
+    if (bitOfIndex == 1) //Determines if parity bit is responsible for current position
     {
-      unsigned bit = get_bit(temp, i + 1);
-      if (bit == 1) //Determines if bit at current position is a one
+      unsigned bitAtPos = get_bit(temp, i);
+      if (bitAtPos == 1) //Determines if bit at current position is a one
       numOnes = numOnes + 1; //If TRUE, adds a one to the counter
     }
   }
@@ -126,7 +134,7 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
     return 0;
   }
   
-  return 0;
+  return 1;
 }
 
 /** Encode data using nParityBits Hamming code parity bits.
@@ -136,48 +144,58 @@ static int compute_parity(HammingWord word, int bitIndex, unsigned nBits)
 HammingWord hamming_encode(HammingWord data, unsigned nParityBits)
 {
   //@TODO
-
-  HammingWord encoded = 0;
+  
+  int nBits = 1;
+  HammingWord encoded = 1;
+  
+  while (1 << nBits < data) //find the number of bits in data
+  {
+      nBits = nBits + 1;
+  }
+  nBits = nBits + 1;
+  //printf("NBits: %d\n", nBits);
 
   //copy loops from computeParity
   int totalBits = get_n_encoded_bits(nParityBits); //Number of bits used for DATA
 
   HammingWord temp = 0; //HammingWord with DATA entered. Room for PARITY
-  int nextBitLocation = totalBits - 1;
+  int nextBitLocation = totalBits;
 
-  for (int i = totalBits; i >= 1; i = i - 1) //Iterating through HammingWord word by bit
+  for (int i = nBits; i >= 1; i = i - 1) //Iterating through HammingWord DATA by bit
   {
+    //printf("Next Bit Location: %d\n", nextBitLocation);
     int j = nextBitLocation;
     
     while (j > 1) //Iterating through HammingWord temp by bit to add DATA
     {
-      if (is_parity_position(j) == 0) //If current index in temp IS NOT a parity position
+      int isParity = is_parity_position(j);
+      if (isParity == 0) //If current index in temp IS NOT a parity position
       {
-        unsigned bit = get_bit(data, i);
+        //printf("i: %d\n", i);
+        unsigned bit = get_bit(data, i - 1); //get bit from DATA
+        //printf("Bit: %d\n", bit);
+        //printf("J: %d\n", j);
         temp = set_bit(temp, j, bit); //Set bit at current index in temp to DATA bit value
+        //printf("Temp: %llu\n", temp);
         nextBitLocation = j - 1;
+        //printf("next bit for loop: %d\n", nextBitLocation);
         j = 1;
       }
       j = j - 1;
-    }
-  }
-
-  int nextParityLocation = 0;
-  while (nParityBits > 0)
-  {
-    for (int i = nextParityLocation; i < totalBits; i = i + 1)
-    {
-      if (is_parity_position(i) == 1)
-      {
-	int parity = compute_parity(data, i, totalBits);
-	temp = set_bit(encoded, i, parity);
-
-	nextParityLocation = i + 1;
-	nParityBits = nParityBits - 1;
-      }
+      //printf("I after loop: %d\n", i);
     }
   }
   encoded = temp;
+  //printf("encoded after loop: %llu\n", temp);
+  int nextParityLocation = 1;
+  
+  for (int i = 1; i < totalBits; i = i * 2)
+  {
+      int parity = compute_parity(data, i, totalBits);
+      printf("location: %d, parity: %d\n", i, parity);
+      encoded = set_bit(encoded, i, parity);
+  }
+  
   return encoded;
 }
 
@@ -200,7 +218,7 @@ HammingWord hamming_decode(HammingWord encoded, unsigned nParityBits, int *hasEr
   }
 
   
-  for (int i = 0; i <= totalBits; i = i + 1)
+  for (int i = 1; i <= totalBits; i = i + 1)
   {
     unsigned bit = get_bit(encoded, i); //Retrieve bit from encoded at location i
     if (bit == 1) //Does this position in encoded have a 1?
@@ -212,7 +230,7 @@ HammingWord hamming_decode(HammingWord encoded, unsigned nParityBits, int *hasEr
   if (syndrome != 0)
   {
     *hasError = 1; //Toggle the error variable
-    unsigned errorBit = get_bit(encoded, syndrome); //retrive the bit at location SYNDROME;
+    unsigned errorBit = get_bit(encoded, syndrome); //retrieve the bit at location SYNDROME;
 
     if (errorBit == 1)
     {
@@ -223,6 +241,25 @@ HammingWord hamming_decode(HammingWord encoded, unsigned nParityBits, int *hasEr
       encoded = set_bit(encoded, syndrome, 1);
     }
   }
+  //printf("Encoded: %llu\n", encoded);
   
-  return 0;
+  int originalBits = totalBits - nParityBits;
+  HammingWord original = 0;
+  
+  for (int i = totalBits; i > 0; i = i - 1)
+  {
+      printf("i: %d\n", i);
+      if (is_parity_position(i) == 0)
+      {
+          unsigned bit = get_bit(encoded, i);
+          printf("Bit: %d\n", bit);
+          printf("Original Bits %d\n", originalBits);
+          original = set_bit(original, originalBits, bit);
+          printf("Original: %llu\n", original >> 2);
+          originalBits = originalBits - 1;
+      }
+  }
+  original = original >> 1;
+  
+  return original;
 }

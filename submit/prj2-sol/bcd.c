@@ -72,6 +72,12 @@ int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
 Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
+
+  if (error != null) //confirm this is right
+  {
+    //Code
+  }
+
   return 0;
 }
 

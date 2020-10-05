@@ -13,8 +13,7 @@
  *  If error is not NULL, sets *error to OVERFLOW_ERR if binary is too
  *  big for the Bcd type, otherwise *error is unchanged.
  */
-Bcd
-binary_to_bcd(Binary value, BcdError *error)
+Bcd binary_to_bcd(Binary value, BcdError *error)
 {
   //@TODO
   return 0;
@@ -29,8 +28,7 @@ binary_to_bcd(Binary value, BcdError *error)
  *  a bad BCD digit.
  *  Cannot overflow since Binary can represent larger values than Bcd
  */
-Binary
-bcd_to_binary(Bcd bcd, BcdError *error)
+Binary bcd_to_binary(Bcd bcd, BcdError *error)
 {
   //@TODO
   return 0;
@@ -44,8 +42,7 @@ bcd_to_binary(Bcd bcd, BcdError *error)
  *  If error is not NULL, sets *error to OVERFLOW_ERR if binary is too
  *  big for the Bcd type, otherwise *error is unchanged.
  */
-Bcd
-str_to_bcd(const char *s, const char **p, BcdError *error)
+Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
 {
   //@TODO
   return 0;
@@ -73,8 +70,7 @@ bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
  *  contains a BCD digit which is greater than 9, OVERFLOW_ERR on
  *  overflow, otherwise *error is unchanged.
  */
-Bcd
-bcd_add(Bcd x, Bcd y, BcdError *error)
+Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
   return 0;
@@ -86,8 +82,7 @@ bcd_add(Bcd x, Bcd y, BcdError *error)
  * contains a BCD digit which is greater than 9, OVERFLOW_ERR on
  * overflow, otherwise *error is unchanged.
  */
-Bcd
-bcd_multiply(Bcd x, Bcd y, BcdError *error)
+Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
   return 0;

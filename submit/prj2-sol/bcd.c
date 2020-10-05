@@ -57,8 +57,7 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
  *  a BCD digit which is greater than 9, OVERFLOW_ERR if bufSize bytes
  *  is less than BCD_BUF_SIZE, otherwise *error is unchanged.
  */
-int
-bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
+int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
 {
   //@TODO
   return 0;

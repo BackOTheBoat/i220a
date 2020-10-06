@@ -5,6 +5,86 @@
 #include <limits.h>
 #include <stdio.h>
 
+/** Returns the value of a given index in BCD
+ *
+ * CHECK: Index >= 0
+ */
+int getBcdDigit(Bcd bcd, int index)
+{
+  if (index < 0)
+  {
+    printf("BAD INDEX! Index must be 0 or larger. Index is: %d\n", index);
+    return bcd;
+  }
+
+  int digit = 0;
+
+  while (index > 0)
+  {
+    bcd = bcd / 10;
+    index = index - 1;
+  }
+
+  digit = bcd % 10;
+  return digit;
+}
+
+/** Returns a BCD with the given INDEX changed to VALUE
+ *
+ * CHECK: Index >= 0
+ * CHECK: Value >= 0
+ */
+Bcd setBcdDigit(Bcd bcd, int index, int value)
+{
+  if (index < 0)
+  {
+    printf("BAD INDEX! Index must be 0 or larger. Index is: %d\n", index);
+    return bcd;
+  }
+
+  if (value < 0)
+  {
+    printf("BAD VALUE! Value must be 0 or larger. Value is: %d\n", value);
+    return bcd;
+  }
+  
+  Bcd temp = 1; //BCD where digits are stored. Set to 1 to accomodate for 0s in lower place values
+
+  if (bcd == 0) //Check for an empty BCD (no value)
+  {
+    bcd = value;
+
+    while (index > 0)
+    {
+      bcd = bcd * 10; //Add zeros to end of new number
+      index = index - 1;
+    }
+  }
+  else //executed if BCD has a value
+  {
+    while (index > 0) //save digits to temp
+    {
+      int digit = bcd % 10; //Get digit from BCD
+      temp = temp * 10; //Add a new place value to temp
+      temp = temp + digit; //put the digit in temp
+      bcd = bcd / 10; //remove the last digit of temp
+      index = index - 1;
+    }
+
+    bcd	= bcd /	10; //Remove last digit (to be changed)
+    bcd	= bcd *	10; //Add a new digit for new value
+    bcd	= bcd +	value; //Add the new value to the last digit
+
+    while (temp >= 1) //restore the digits held in temp to BCD
+    {
+      int digit = temp % 10;
+      bcd = bcd * 10;
+      bcd = bcd + digit;
+      temp = temp / 10;
+    }
+  }
+}
+
 /** Return BCD encoding of binary (which has normal binary representation).
  *
  *  Examples: binary_to_bcd(0xc) => 0x12;

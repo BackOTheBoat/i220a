@@ -96,7 +96,25 @@ Bcd setBcdDigit(Bcd bcd, int index, int value)
 Bcd binary_to_bcd(Binary value, BcdError *error)
 {
   //@TODO
-  return 0;
+  Bcd result = 0;
+  int index = 0;
+
+  if (error != NULL)
+  {
+    if ()
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+  
+  while (value > 0)
+  {
+    digit = value % 10;
+    result = setBcdDigit(result, index, digit);
+    value = value / 10;
+  }
+  
+  return result;
 }
 
 /** Return binary encoding of BCD value bcd.
@@ -111,6 +129,9 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
 Binary bcd_to_binary(Bcd bcd, BcdError *error)
 {
   //@TODO
+
+  Binary result = 0;
+  
   return 0;
 }
 

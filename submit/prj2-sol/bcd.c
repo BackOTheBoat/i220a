@@ -5,6 +5,68 @@
 #include <limits.h>
 #include <stdio.h>
 
+/** Returns the decimal value of a set of bits extracted from a value
+ *
+ *  EX: getHexSegment(1944, 4) = 9
+ *  EX: getHexSegment(1944, 0) = 8
+ */
+int getHexSegment(long long value, int startPos)
+{
+  if (startPos < 0)
+  {
+    printf("BAD INDEX! Index must be 0 or larger. Index is: %d\n", startPos);
+    return 0;
+  }  
+
+  if ((1 << startPos) - 1 > value)
+  {
+    printf("BAD INDEX! Index must be within the bounds of the given value\n");
+    printf("Index is %d. Value is %llu. %d is out of range\n", startPos, value, (1 << startPos) - 1);
+    return 0;
+  }
+  
+  long long mask = (1 << (4)) - 1;
+  int bitSegment = (value >> startPos) & mask;
+  
+  
+  return bitSegment;
+}
+
+
+/** Returns a digit in hexadecimal at place INDEX of a VALUE in base 10
+ *
+ *  EX: getHexDigit(1944, 0) = 8
+ *  EX: getHexDigit(1944, 1) = 9
+ *  EX: getHexDigit(1944, 2) = 7
+ */
+int getHexDigit(long long value, int index)
+{
+  int hexDigits = 1;
+  while (value > pow(16, hexDigits) - 1)
+  {
+    hexDigits = hexDigits + 1;
+  }
+
+  if (index < 0)
+  {
+    printf("BAD INDEX! Index must be 0 or larger. Index is: %d\n", index);
+    return value;
+  }
+
+  if (index > hexDigits)
+  {
+    printf("BAD INDEX! Index cannot be larger than the number of digits - 1\n");
+    printf("Index is: %d. There are %d digits in value\n", index, hexDigits);
+    return value;
+  }
+
+  int digit = 0;
+  int startBit = index * 4;
+  
+  digit = getHexSegment(value, startBit);
+  return digit;
+}
+
 /** Returns the value of a given index in BCD
  *
  * CHECK: Index >= 0
@@ -92,11 +154,19 @@ int pow(int value, int exponent)
     return 1;
   }
 
+  if (exponent < 0)
+  {
+    printf("BAD EXPONENT! Exponent must be 0 or larger\n"
+    return value;
+  }
+
   int result = value;
   while (exponent > 0)
   {
     result = result * value;
   }
+
+  return result;
 }
 
 /** Return BCD encoding of binary (which has normal binary representation).
@@ -109,7 +179,7 @@ int pow(int value, int exponent)
  */
 Bcd binary_to_bcd(Binary value, BcdError *error)
 {
-  //@TODO
+  //@TODO -- DONE
   Bcd result = 0;
   int index = 0;
 
@@ -191,12 +261,10 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
 
-  if (error != null) //confirm this is right
-  {
-    //Code
-  }
+  Binary bSum = x + y;
+  Bcd sum = binary_to_bcd(bSum, *error);
 
-  return 0;
+  return sum;
 }
 
 /** Return the BCD representation of the product of BCD int's x and y.
@@ -208,5 +276,9 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
-  return 0;
+
+  Binary bProduct = x * y;
+  Bcd product = binary_to_bcd(bProduct, *error);
+
+  return product;
 }

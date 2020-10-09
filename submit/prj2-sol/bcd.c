@@ -85,6 +85,20 @@ Bcd setBcdDigit(Bcd bcd, int index, int value)
   }
 }
 
+int pow(int value, int exponent)
+{
+    if (exponent == 0)
+    {
+	return 1;
+    }
+
+    int result = value;
+    while (exponent > 0)
+    {
+	result = result * value;
+    }
+}
+
 /** Return BCD encoding of binary (which has normal binary representation).
  *
  *  Examples: binary_to_bcd(0xc) => 0x12;
@@ -101,17 +115,20 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
 
   if (error != NULL)
   {
-    if ()
+    if (value > MAX_BCD_DIGITS)
     {
-      *error = OVERFLOW_ERR;
+	*error = OVERFLOW_ERR;
     }
   }
   
-  while (value > 0)
+  while (value > 0) //While there are still digits in value
   {
-    digit = value % 10;
-    result = setBcdDigit(result, index, digit);
-    value = value / 10;
+    int digit = value % 10; //isolate the last digit
+    digit = digit * pow(16, index); //Convert to base 16
+    setBcdDigit(result, index, digit); //Set result in BCD
+
+    index = index + 1; //Increment the index of BCD
+    value = value / 10; //Remove last digit from value
   }
   
   return result;

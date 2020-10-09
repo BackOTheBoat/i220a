@@ -87,16 +87,16 @@ Bcd setBcdDigit(Bcd bcd, int index, int value)
 
 int pow(int value, int exponent)
 {
-    if (exponent == 0)
-    {
-	return 1;
-    }
+  if (exponent == 0)
+  {
+    return 1;
+  }
 
-    int result = value;
-    while (exponent > 0)
-    {
-	result = result * value;
-    }
+  int result = value;
+  while (exponent > 0)
+  {
+    result = result * value;
+  }
 }
 
 /** Return BCD encoding of binary (which has normal binary representation).

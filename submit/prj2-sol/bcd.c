@@ -284,8 +284,6 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
   }
   
   return result;
-
-  return 0;
 }
 
 /** Convert bcd to a NUL-terminated string in buf[] without any
@@ -313,10 +311,13 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
 
-  Binary bSum = x + y;
-  Bcd sum = binary_to_bcd(bSum, &error);
+  Binary binX = bcd_to_binary(x, &error);
+  Binary binY = bcd_to-binary(y, &error);
 
-  return sum;
+  Binary sum = binX + binY;
+  Bcd result = binary_to_bcd(sum, &error);
+
+  return result;
 }
 
 /** Return the BCD representation of the product of BCD int's x and y.

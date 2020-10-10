@@ -137,6 +137,8 @@ Bcd setBcdDigit(Bcd bcd, int index, int value)
     bcd	= bcd *	10; //Add a new digit for new value
     bcd	= bcd +	value; //Add the new value to the last digit
 
+    printf("Temp: %d\n", temp);
+    
     while (temp >= 1) //restore the digits held in temp to BCD
     {
       int digit = temp % 10;
@@ -147,23 +149,28 @@ Bcd setBcdDigit(Bcd bcd, int index, int value)
   }
 }
 
-int pow(int value, int exponent)
+int power(int value, int exponent)
 {
+  //printf("Exponent: %d\n", exponent);
   if (exponent == 0)
   {
-    return 1;
+    int one = 1;
+    return one;
   }
 
   if (exponent < 0)
   {
-    printf("BAD EXPONENT! Exponent must be 0 or larger\n");
+    //printf("BAD EXPONENT! Exponent must be 0 or larger\n");
     return value;
   }
 
   int result = value;
-  while (exponent > 0)
+  //printf("Test");
+  while (exponent > 1)
   {
+    //printf("Result: %d\n", result);
     result = result * value;
+    exponent = exponent - 1;
   }
 
   return result;
@@ -194,8 +201,14 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
   while (value > 0) //While there are still digits in value
   {
     int digit = value % 10; //isolate the last digit
-    digit = digit * pow(16, index); //Convert to base 16
-    setBcdDigit(result, index, digit); //Set result in BCD
+    printf("Digit: %d\n", digit);
+    printf("Index: %d\n", index);
+    int powerof16 = power(16, index);
+    printf("pow16: %d\n", powerof16);
+    digit = digit * powerof16; //Convert to base 16
+    printf("Base 16 Digit: %d\n", digit);
+    result = result + digit;
+    //result = setBcdDigit(result, index, digit); //Set result in BCD
 
     index = index + 1; //Increment the index of BCD
     value = value / 10; //Remove last digit from value
@@ -217,9 +230,22 @@ Binary bcd_to_binary(Bcd bcd, BcdError *error)
 {
   //@TODO
 
+  int digits = 0;
   Binary result = 0;
+
+  while (power(16, digits + 1) < bcd)
+  {
+    digits = digits + 1;
+  }
+
+  while (digits >= 0)
+  {
+    result = result * 10;
+    result = result + getHexDigit(bcd, digits);
+    digits = digits - 1;
+  }
   
-  return 0;
+  return result;
 }
 
 /** Return BCD encoding of decimal number corresponding to string s.

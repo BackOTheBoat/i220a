@@ -5,6 +5,8 @@
 #include <limits.h>
 #include <stdio.h>
 
+#include <stdlib.h>
+
 /** Returns the decimal value of a set of bits extracted from a value
  *
  *  EX: getHexSegment(1944, 4) = 9
@@ -192,7 +194,7 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
 
   if (error != NULL)
   {
-    if (value > power(16, MAX_BCD_DIGITS) - 1)
+    if (value >> MAX_BCD_DIGITS != 0) 
     {
 	*error = OVERFLOW_ERR;
     }
@@ -260,7 +262,28 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
 {
   //@TODO
 
-  long l = strtol(s, &p, 10);
+  long value = strtol(s, &p, 10);
+
+  Bcd result = 0;
+  int index = 0;
+
+  while (value > 0) //While there are still digits in value
+  {
+    int digit = value % 10; //isolate the last digit
+    printf("Digit: %d\n", digit);
+    printf("Index: %d\n", index);
+    int powerof16 = power(16, index);
+    printf("pow16: %d\n", powerof16);
+    digit = digit * powerof16; //Convert to base 16
+    printf("Base 16 Digit: %d\n", digit);
+    result = result + digit;
+    //result = setBcdDigit(result, index, digit); //Set result in BCD
+
+    index = index + 1; //Increment the index of BCD
+    value = value / 10; //Remove last digit from value
+  }
+  
+  return result;
 
   return 0;
 }

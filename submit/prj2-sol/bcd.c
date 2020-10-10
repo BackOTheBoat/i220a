@@ -312,7 +312,7 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
   //@TODO
 
   Binary binX = bcd_to_binary(x, &error);
-  Binary binY = bcd_to-binary(y, &error);
+  Binary binY = bcd_to_binary(y, &error);
 
   Binary sum = binX + binY;
   Bcd result = binary_to_bcd(sum, &error);

@@ -156,7 +156,7 @@ int pow(int value, int exponent)
 
   if (exponent < 0)
   {
-    printf("BAD EXPONENT! Exponent must be 0 or larger\n"
+    printf("BAD EXPONENT! Exponent must be 0 or larger\n");
     return value;
   }
 
@@ -262,9 +262,9 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
   //@TODO
 
   Binary bSum = x + y;
-  Bcd sum = binary_to_bcd(bSum, *error);
+  //  Bcd sum = binary_to_bcd(bSum, *error);
 
-  return sum;
+  //  return sum;
 }
 
 /** Return the BCD representation of the product of BCD int's x and y.
@@ -278,7 +278,7 @@ Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
   //@TODO
 
   Binary bProduct = x * y;
-  Bcd product = binary_to_bcd(bProduct, *error);
+  //  Bcd product = binary_to_bcd(bProduct, *error);
 
-  return product;
+  //  return product;
 }

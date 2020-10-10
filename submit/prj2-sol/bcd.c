@@ -330,8 +330,11 @@ Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
 {
   //@TODO
 
-  Binary bProduct = x * y;
-  //Bcd product = binary_to_bcd(bProduct, &error);
+  Binary binX = bcd_to_binary(x, &error);
+  Binary binY = bcd_to_binary(y, &error);
 
-  return bProduct;
+  Binary sum = binX * binY;
+  Bcd result = binary_to_bcd(sum, &error);
+
+  return result;
 }

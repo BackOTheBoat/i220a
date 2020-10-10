@@ -42,7 +42,7 @@ int getHexSegment(long long value, int startPos)
 int getHexDigit(long long value, int index)
 {
   int hexDigits = 1;
-  while (value > pow(16, hexDigits) - 1)
+  while (value > power(16, hexDigits) - 1)
   {
     hexDigits = hexDigits + 1;
   }

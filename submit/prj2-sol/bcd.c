@@ -192,7 +192,7 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
 
   if (error != NULL)
   {
-    if (value > MAX_BCD_DIGITS)
+    if (value > power(16, MAX_BCD_DIGITS) - 1)
     {
 	*error = OVERFLOW_ERR;
     }
@@ -228,7 +228,7 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
  */
 Binary bcd_to_binary(Bcd bcd, BcdError *error)
 {
-  //@TODO
+  //@TODO -- DONE
 
   int digits = 0;
   Binary result = 0;
@@ -259,6 +259,9 @@ Binary bcd_to_binary(Bcd bcd, BcdError *error)
 Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
 {
   //@TODO
+
+  long l = strtol(s, &p, 10);
+
   return 0;
 }
 
@@ -288,9 +291,9 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
   //@TODO
 
   Binary bSum = x + y;
-  //  Bcd sum = binary_to_bcd(bSum, *error);
+  Bcd sum = binary_to_bcd(bSum, &error);
 
-  //  return sum;
+  return sum;
 }
 
 /** Return the BCD representation of the product of BCD int's x and y.
@@ -304,7 +307,7 @@ Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
   //@TODO
 
   Binary bProduct = x * y;
-  //  Bcd product = binary_to_bcd(bProduct, *error);
+  Bcd product = binary_to_bcd(bProduct, &error);
 
-  //  return product;
+  return product;
 }

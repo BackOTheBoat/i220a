@@ -345,6 +345,40 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
   Binary binX = bcd_to_binary(x, &error);
   Binary binY = bcd_to_binary(y, &error);
 
+  Binary temp = binX;
+  long long counter = 0;
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+  
+  if (error != NULL)
+  {
+    //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+
+  Binary temp = binY;
+  long long counter = 0;
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+  
+  if (error != NULL)
+  {
+    //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+
   Binary sum = binX + binY;
   Bcd result = binary_to_bcd(sum, &error);
 

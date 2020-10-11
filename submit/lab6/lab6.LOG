@@ -7524,4 +7524,1081 @@ estern7@remote01:~/i220a/submit/lab6/exercises/7-libgeom$ clear
 [?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
 [?12l[?25h[?12;25h[55;45H[?25lthai.el (source)...[K[H
 [?12l[?25h[?12;25h[55;64H[?25ldone[H
-[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)..
+[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)..Script started on 2020-10-11 14:15:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="226" LINES="59"]
+estern7@remote00:~/i220a/submit/lab6$ cd exercises/
+estern7@remote00:~/i220a/submit/lab6/exercises$ cd 7-libgeom/
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacsMAke[K[K[Kakefile
+bash: emacsMakefile: command not found
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacsMakefile Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[59d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[58d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[59;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[59;59H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[59;58H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[59;60H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[59;57H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[59;77H[?25ldone[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[59;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;61H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[59;96H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[59;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[59;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[59;64H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[59;65H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[59;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[59d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                             [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                                                                                                                                     [0m[39;49m[27m
+[A
+[38;5;130mCFLAGS[39;49m = -g -Wall -fPIC -std=c11[K
+[K
+[38;5;130mOBJS[39;49m = \[K
+        circ.o \[K
+        rect.o[K
+[38;5;21mall[39;49m:                    libgeom.a testgeom-static testgeom-dynamic[K
+[K
+[38;5;21mlibgeom.so[39;49m:             $([38;5;130mOBJS[39;49m)[K
+                        $([38;5;130mCC[39;49m) -shared $([38;5;130mOBJS[39;49m) -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mlibgeom.a[39;49m:              $([38;5;130mOBJS[39;49m)[K
+                        ar rcs [38;5;21m$[39;49m[38;5;30m@[39;49m $([38;5;130mOBJS[39;49m)[K
+[K
+[38;5;21mtestgeom-static[39;49m:        testgeom.o[K
+                        $([38;5;130mCC[39;49m)  -static testgeom.o -L. -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mtestgeom-dynamic[39;49m:       testgeom.o[K
+                        $([38;5;130mCC[39;49m) -static geom.h testgeom.o -L -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21m.PHONY[39;49m:                 clean[K
+[38;5;21mclean[39;49m:[K
+                        rm -f *.o *.so *.a testgeom-*[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L1    Git-lab6  (GNUmakefile) --------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[K[58;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m4[39;49m[5;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m5[39;49m[6;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m6[39;49m[7;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m7[39;49m[8;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m8[39;49m[9;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m9[39;49m[10;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m10[39;49m[11;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m1[39;49m[12;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m2[39;49m[13;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m3[39;49m[14;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m4[39;49m[15;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m5[39;49m[16;1H[?12l[?25h[?12;25h			[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[?25l[1@i[58;6H[30m[48;5;250m**[39;49m[16;58H[?12l[?25h[?12;25h[?25l[1@b[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m6[39;49m[17;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m7[39;49m[18;35H[?12l[?25h[?12;25h[58d[?25l[30m[48;5;250m8[39;49m[19;59H[?12l[?25h[?12;25h[C[C[C[?25l[1@i[?12l[?25h[?12;25h[?25l[1@b[?12l[?25h[?12;25h[59;1H[?25lSaving file /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile...[19;64H[?12l[?25h[?12;25h[59;1H[?25lWrote /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile[K[19;64H[?12l[?25h[?12;25h[58;6H[?25l[30m[48;5;250m----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L18   Git:[39;49m[19;64H[?12l[?25h[?12;25h[59;1H[K[19;64H[59;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make clean
+rm -f *.o *.so *.a testgeom-*
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ mk[Kake
+cc -g -Wall -fPIC -std=c11   -c -o circ.o circ.c
+cc -g -Wall -fPIC -std=c11   -c -o rect.o rect.c
+ar rcs libgeom.a circ.o rect.o
+cc -g -Wall -fPIC -std=c11   -c -o testgeom.o testgeom.c
+cc  -static testgeom.o -L. -libgeom -o testgeom-static
+/usr/bin/ld: cannot find -libgeom
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:15: testgeom-static] Error 1
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ ls
+circ.c	circ.o	geom.h	geom.h.gch  libgeom.a  Makefile  Makefile~  rect.c  rect.o  testgeom.c	testgeom.o
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ lsmake cleanemacs Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[59d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[58d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[59;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[59;59H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[59;58H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[59;60H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[59;57H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[59;77H[?25ldone[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[59;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;61H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[59;96H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[59;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[59;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[59;64H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[59;65H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[59;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[59d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                             [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                                                                                                                                     [0m[39;49m[27m
+[A
+[38;5;130mCFLAGS[39;49m = -g -Wall -fPIC -std=c11[K
+[K
+[38;5;130mOBJS[39;49m = \[K
+        circ.o \[K
+        rect.o[K
+[38;5;21mall[39;49m:                    libgeom.a testgeom-static testgeom-dynamic[K
+[K
+[38;5;21mlibgeom.so[39;49m:             $([38;5;130mOBJS[39;49m)[K
+                        $([38;5;130mCC[39;49m) -shared $([38;5;130mOBJS[39;49m) -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mlibgeom.a[39;49m:              $([38;5;130mOBJS[39;49m)[K
+                        ar rcs [38;5;21m$[39;49m[38;5;30m@[39;49m $([38;5;130mOBJS[39;49m)[K
+[K
+[38;5;21mtestgeom-static[39;49m:        testgeom.o[K
+                        $([38;5;130mCC[39;49m)  -static testgeom.o -L. -libgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mtestgeom-dynamic[39;49m:       testgeom.o[K
+                        $([38;5;130mCC[39;49m) -static geom.h testgeom.o -L -libgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21m.PHONY[39;49m:                 clean[K
+[38;5;21mclean[39;49m:[K
+                        rm -f *.o *.so *.a testgeom-*[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L1    Git:lab6  (GNUmakefile) --------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[K[58;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m4[39;49m[5;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m5[39;49m[6;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m6[39;49m[7;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m7[39;49m[8;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m8[39;49m[9;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m9[39;49m[10;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m10[39;49m[11;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m1[39;49m[12;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m2[39;49m[13;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m3[39;49m[14;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m4[39;49m[15;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m5[39;49m[16;1H[?12l[?25h[?12;25h			[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[?25l[1P[58;6H[30m[48;5;250m**[39;49m[16;57H[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m6[39;49m[17;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m7[39;49m[18;35H[?12l[?25h[?12;25h[58d[?25l[30m[48;5;250m8[39;49m[19;57H[?12l[?25h[?12;25h[C[C[C[C[C[C[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[59;1H[?25lSaving file /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile...[19;62H[?12l[?25h[?12;25h[59;1H[?25lWrote /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile[K[19;62H[?12l[?25h[?12;25h[58;6H[?25l[30m[48;5;250m----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L18   Git-[39;49m[19;62H[?12l[?25h[?12;25h[59;1H[K[19;62H[59;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacs Makefilels[Kmake
+cc  -static testgeom.o -L. -lgeom -o testgeom-static
+cc -static geom.h testgeom.o -L -lgeom -o testgeom-dynamic
+/usr/bin/ld: testgeom.o: in function `main':
+/home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_perimeter'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_perimeter'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:18: testgeom-dynamic] Error 1
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ makeemacs Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[59d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[58d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[59;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[59;59H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[59;58H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[59;60H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[59;57H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[59;77H[?25ldone[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[59;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;61H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[59;96H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[59;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[59;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[59;64H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[59;65H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[59;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[59d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                             [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                                                                                                                                     [0m[39;49m[27m
+[A
+[38;5;130mCFLAGS[39;49m = -g -Wall -fPIC -std=c11[K
+[K
+[38;5;130mOBJS[39;49m = \[K
+        circ.o \[K
+        rect.o[K
+[38;5;21mall[39;49m:                    libgeom.a testgeom-static testgeom-dynamic[K
+[K
+[38;5;21mlibgeom.so[39;49m:             $([38;5;130mOBJS[39;49m)[K
+                        $([38;5;130mCC[39;49m) -shared $([38;5;130mOBJS[39;49m) -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mlibgeom.a[39;49m:              $([38;5;130mOBJS[39;49m)[K
+                        ar rcs [38;5;21m$[39;49m[38;5;30m@[39;49m $([38;5;130mOBJS[39;49m)[K
+[K
+[38;5;21mtestgeom-static[39;49m:        testgeom.o[K
+                        $([38;5;130mCC[39;49m)  -static testgeom.o -L. -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mtestgeom-dynamic[39;49m:       testgeom.o[K
+                        $([38;5;130mCC[39;49m) -static geom.h testgeom.o -L -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21m.PHONY[39;49m:                 clean[K
+[38;5;21mclean[39;49m:[K
+                        rm -f *.o *.so *.a testgeom-*[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L1    Git-lab6  (GNUmakefile) --------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[K[58;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m4[39;49m[5;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m5[39;49m[6;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m6[39;49m[7;1H[?12l[?25h[?12;25h[C[C[C[C			[C[C[C[C[C[?25l[1@l[58;6H[30m[48;5;250m**[39;49m[7;26H[?12l[?25h[?12;25h[?25l[1@i[?12l[?25h[?12;25h[?25l[1@b[?12l[?25h[?12;25h[?25l[1@g[?12l[?25h[?12;25h[?25l[1@e[?12l[?25h[?12;25h[?25l[1@o[?12l[?25h[?12;25h[?25l[1@m[?12l[?25h[?12;25h[?25l[1@.[?12l[?25h[?12;25h[?25l[1@s[?12l[?25h[?12;25h[?25l[1@o[?12l[?25h[?12;25h[?25l[1@ [?12l[?25h[?12;25h[C[?25l[1@l[?12l[?25h[?12;25h[?25l[1@i[?12l[?25h[?12;25h[?25l[1@b[?12l[?25h[?12;25h[?25l[1@g[?12l[?25h[?12;25h[?25l[1@e[?12l[?25h[?12;25h[?25l[1@o[?12l[?25h[?12;25h[?25l[1@m[?12l[?25h[?12;25h[?25l[1@.[?12l[?25h[?12;25h[?25l[1@a[?12l[?25h[?12;25h[?25l[1@ [?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m7[39;49m[8;1H[?12l[?25h[?12;25h[59d[?25lSaving file /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile...[8;1H[?12l[?25h[?12;25h[59d[?25lWrote /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile[K[8;1H[?12l[?25h[?12;25h[58;6H[?25l[30m[48;5;250m----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L7    Git:[39;49m[8;1H[?12l[?25h[?12;25h[59d[K[8d[59d[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacs Makefilemake[K
+cc -shared circ.o rect.o -o libgeom.so
+cc -static geom.h testgeom.o -L -lgeom -o testgeom-dynamic
+/usr/bin/ld: testgeom.o: in function `main':
+/home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_perimeter'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_perimeter'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:18: testgeom-dynamic] Error 1
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make cla=ea[K[K[K[Kean
+rm -f *.o *.so *.a testgeom-*
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ 
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ clear
+[H[2J[3Jestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make
+cc -g -Wall -fPIC -std=c11   -c -o circ.o circ.c
+cc -g -Wall -fPIC -std=c11   -c -o rect.o rect.c
+cc -shared circ.o rect.o -o libgeom.so
+ar rcs libgeom.a circ.o rect.o
+cc -g -Wall -fPIC -std=c11   -c -o testgeom.o testgeom.c
+cc  -static testgeom.o -L. -lgeom -o testgeom-static
+cc -static geom.h testgeom.o -L -lgeom -o testgeom-dynamic
+/usr/bin/ld: testgeom.o: in function `main':
+/home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_perimeter'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_perimeter'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:18: testgeom-dynamic] Error 1
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ makeclearmake clean[Kemacs Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[59d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[58d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[59;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[59;59H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[59;58H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[59;60H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[59;57H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[59;77H[?25ldone[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[59;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;61H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[59;96H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[59;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[59;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[59;64H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[59;65H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[59;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[59d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                             [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                                                                                                                                     [0m[39;49m[27m
+[A
+[38;5;130mCFLAGS[39;49m = -g -Wall -fPIC -std=c11[K
+[K
+[38;5;130mOBJS[39;49m = \[K
+        circ.o \[K
+        rect.o[K
+[38;5;21mall[39;49m:                    libgeom.so libgeom.a libgeom.a testgeom-static testgeom-dynamic[K
+[K
+[38;5;21mlibgeom.so[39;49m:             $([38;5;130mOBJS[39;49m)[K
+                        $([38;5;130mCC[39;49m) -shared $([38;5;130mOBJS[39;49m) -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mlibgeom.a[39;49m:              $([38;5;130mOBJS[39;49m)[K
+                        ar rcs [38;5;21m$[39;49m[38;5;30m@[39;49m $([38;5;130mOBJS[39;49m)[K
+[K
+[38;5;21mtestgeom-static[39;49m:        testgeom.o[K
+                        $([38;5;130mCC[39;49m)  -static testgeom.o -L. -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mtestgeom-dynamic[39;49m:       testgeom.o[K
+                        $([38;5;130mCC[39;49m) -static geom.h testgeom.o -L -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21m.PHONY[39;49m:                 clean[K
+[38;5;21mclean[39;49m:[K
+                        rm -f *.o *.so *.a testgeom-*[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L1    Git:lab6  (GNUmakefile) --------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[K[58;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m4[39;49m[5;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m5[39;49m[6;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m6[39;49m[7;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m7[39;49m[8;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m8[39;49m[9;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m9[39;49m[10;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m10[39;49m[11;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m1[39;49m[12;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m2[39;49m[13;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m3[39;49m[14;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m4[39;49m[15;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m5[39;49m[16;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m6[39;49m[17;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m7[39;49m[18;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m8[39;49m[19;1H[?12l[?25h[?12;25h			[C[C[C[C[C[C[?25l[1P[58;6H[30m[48;5;250m**[39;49m[19;31H[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[59;1H[?25lSaving file /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile...[19;31H[?12l[?25h[?12;25h[59;1H[?25lWrote /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile[K[19;31H[?12l[?25h[?12;25h[58;6H[?25l[30m[48;5;250m--[39;49m[19;31H[?12l[?25h[?12;25h[59;1H[K[19;31H[59;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacs Makefilemake[K
+cc testgeom.o -L -lgeom -o testgeom-dynamic
+/usr/bin/ld: testgeom.o: in function `main':
+/home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_perimeter'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_perimeter'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:18: testgeom-dynamic] Error 1
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ ls -l
+total 2652
+-rw-r----- 1 estern7 estern7     376 Oct 11 14:15 circ.c
+-rw-r----- 1 estern7 estern7    3936 Oct 11 14:34 circ.o
+-rw-r----- 1 estern7 estern7     613 Oct 11 14:15 geom.h
+-rw-r----- 1 estern7 estern7 1774000 Oct  8 20:59 geom.h.gch
+-rw-r----- 1 estern7 estern7    7754 Oct 11 14:34 libgeom.a
+-rwxr-x--- 1 estern7 estern7   18080 Oct 11 14:34 libgeom.so
+-rw-r----- 1 estern7 estern7     425 Oct 11 14:34 Makefile
+-rw-r----- 1 estern7 estern7     411 Oct 11 14:15 Makefile~
+-rw-r----- 1 estern7 estern7     477 Oct 11 14:15 rect.c
+-rw-r----- 1 estern7 estern7    3560 Oct 11 14:34 rect.o
+-rw-r----- 1 estern7 estern7    1245 Oct 11 14:15 testgeom.c
+-rw-r----- 1 estern7 estern7    7312 Oct 11 14:34 testgeom.o
+-rwxr-x--- 1 estern7 estern7  865608 Oct 11 14:34 testgeom-static
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make cla[Kean
+rm -f *.o *.so *.a testgeom-*
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ clear
+[H[2J[3Jestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacs Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[59d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[58d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[59;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[59;59H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[59;58H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[59;60H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[59;57H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[59;77H[?25ldone[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[59;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;61H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[59;96H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[59;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[59;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[59;64H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[59;65H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[59;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[59d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                             [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                                                                                                                                     [0m[39;49m[27m
+[A
+[38;5;130mCFLAGS[39;49m = -g -Wall -fPIC -std=c11[K
+[K
+[38;5;130mOBJS[39;49m = \[K
+        circ.o \[K
+        rect.o[K
+[38;5;21mall[39;49m:                    libgeom.so libgeom.a libgeom.a testgeom-static testgeom-dynamic[K
+[K
+[38;5;21mlibgeom.so[39;49m:             $([38;5;130mOBJS[39;49m)[K
+                        $([38;5;130mCC[39;49m) -shared $([38;5;130mOBJS[39;49m) -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mlibgeom.a[39;49m:              $([38;5;130mOBJS[39;49m)[K
+                        ar rcs [38;5;21m$[39;49m[38;5;30m@[39;49m $([38;5;130mOBJS[39;49m)[K
+[K
+[38;5;21mtestgeom-static[39;49m:        testgeom.o[K
+                        $([38;5;130mCC[39;49m)  -static testgeom.o -L. -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mtestgeom-dynamic[39;49m:       testgeom.o[K
+                        $([38;5;130mCC[39;49m) testgeom.o -L -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21m.PHONY[39;49m:                 clean[K
+[38;5;21mclean[39;49m:[K
+                        rm -f *.o *.so *.a testgeom-*[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L1    Git:lab6  (GNUmakefile) --------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[K[2d[59d[?25l(No changes need to be saved)[H
+[?12l[?25h[?12;25h[59d[K[2d[59d[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ emacs Makefile[9Pclearmake clean
+rm -f *.o *.so *.a testgeom-*
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make
+cc -g -Wall -fPIC -std=c11   -c -o circ.o circ.c
+cc -g -Wall -fPIC -std=c11   -c -o rect.o rect.c
+cc -shared circ.o rect.o -o libgeom.so
+ar rcs libgeom.a circ.o rect.o
+cc -g -Wall -fPIC -std=c11   -c -o testgeom.o testgeom.c
+cc  -static testgeom.o -L. -lgeom -o testgeom-static
+cc testgeom.o -L -lgeom -o testgeom-dynamic
+/usr/bin/ld: testgeom.o: in function `main':
+/home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:30: undefined reference to `circ_perimeter'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_area'
+/usr/bin/ld: /home/estern7/i220a/submit/lab6/exercises/7-libgeom/testgeom.c:40: undefined reference to `rect_perimeter'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:18: testgeom-dynamic] Error 1
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make cleanemacs Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[59d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[58d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[59;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[59;59H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[59;58H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[59;60H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[59;57H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[59;77H[?25ldone[H
+[?12l[?25h[?12;25h[59;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[59;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[59;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;61H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[59;96H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[59;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[59;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[59;75H[?25ldone[H
+[?12l[?25h[?12;25h[59;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[59;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[59;64H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[59;65H[?25ldone[H
+[?12l[?25h[?12;25h[59;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[59;54H[?25ldone[H
+[?12l[?25h[?12;25h[59;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[59;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[59d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                             [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[59d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                                                                                                                                     [0m[39;49m[27m
+[A
+[38;5;130mCFLAGS[39;49m = -g -Wall -fPIC -std=c11[K
+[K
+[38;5;130mOBJS[39;49m = \[K
+        circ.o \[K
+        rect.o[K
+[38;5;21mall[39;49m:                    libgeom.so libgeom.a libgeom.a testgeom-static testgeom-dynamic[K
+[K
+[38;5;21mlibgeom.so[39;49m:             $([38;5;130mOBJS[39;49m)[K
+                        $([38;5;130mCC[39;49m) -shared $([38;5;130mOBJS[39;49m) -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mlibgeom.a[39;49m:              $([38;5;130mOBJS[39;49m)[K
+                        ar rcs [38;5;21m$[39;49m[38;5;30m@[39;49m $([38;5;130mOBJS[39;49m)[K
+[K
+[38;5;21mtestgeom-static[39;49m:        testgeom.o[K
+                        $([38;5;130mCC[39;49m)  -static testgeom.o -L. -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21mtestgeom-dynamic[39;49m:       testgeom.o[K
+                        $([38;5;130mCC[39;49m) testgeom.o -L -lgeom -o [38;5;21m$[39;49m[38;5;30m@[39;49m[K
+[K
+[38;5;21m.PHONY[39;49m:                 clean[K
+[38;5;21mclean[39;49m:[K
+                        rm -f *.o *.so *.a testgeom-*[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mMakefile    [0m[39;49m[30m[48;5;250m   All L1    Git:lab6  (GNUmakefile) --------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[59d[K[58;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m4[39;49m[5;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m5[39;49m[6;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m6[39;49m[7;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m7[39;49m[8;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m8[39;49m[9;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m9[39;49m[10;1H[?12l[?25h[?12;25h[58;34H[?25l[30m[48;5;250m10[39;49m[11;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m1[39;49m[12;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m2[39;49m[13;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m3[39;49m[14;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m4[39;49m[15;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m5[39;49m[16;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m6[39;49m[17;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m7[39;49m[18;1H[?12l[?25h[?12;25h[58;35H[?25l[30m[48;5;250m8[39;49m[19;1H[?12l[?25h[?12;25h			[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[?25l[1@.[58;6H[30m[48;5;250m**[39;49m[19;45H[?12l[?25h[?12;25h[59;1H[?25lSaving file /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile...[19;45H[?12l[?25h[?12;25h[59;1H[?25lWrote /home/estern7/i220a/submit/lab6/exercises/7-libgeom/Makefile[K[19;45H[?12l[?25h[?12;25h[58;6H[?25l[30m[48;5;250m--[39;49m[19;45H[?12l[?25h[?12;25h[59;1H[K[19;45H[59;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ make
+cc testgeom.o -L. -lgeom -o testgeom-dynamic
+estern7@remote00:~/i220a/submit/lab6/exercises/7-libgeom$ cd ~i[K/i220a
+estern7@remote00:~/i220a$ exit
+
+Script done on 2020-10-11 14:40:02-04:00 [COMMAND_EXIT_CODE="0"]

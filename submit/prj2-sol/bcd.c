@@ -193,11 +193,20 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
   Bcd result = 0;
   int index = 0;
 
+  Binary temp = value;
+  long long counter = 0;
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+  
   if (error != NULL)
   {
-    if (value >> MAX_BCD_DIGITS != 0) 
+    //error checking
+    if (counter > MAX_BCD_DIGITS)
     {
-	*error = OVERFLOW_ERR;
+      *error = OVERFLOW_ERR;
     }
   }
   

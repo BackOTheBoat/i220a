@@ -273,6 +273,24 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
   //@TODO
 
   Binary value = strtol(s, p, 10);
+
+  Binary temp = value;
+  long long counter = 0;
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+  
+  if (error != NULL)
+  {
+    //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+
   return binary_to_bcd(value, &error);
   
   /*

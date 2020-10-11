@@ -400,25 +400,40 @@
     return result; 
   } 
 
-  /** Return the BCD representation of the product of BCD int's x and y. 
-   * 
-   * If error is not NULL, sets *error to to BAD_VALUE_ERR is x or y 
-   * contains a BCD digit which is greater than 9, OVERFLOW_ERR on 
-   * overflow, otherwise *error is unchanged. 
-   */ 
-  Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error) 
+/** Return the BCD representation of the product of BCD int's x and y. 
+ * 
+ * If error is not NULL, sets *error to to BAD_VALUE_ERR is x or y 
+ * contains a BCD digit which is greater than 9, OVERFLOW_ERR on 
+ * overflow, otherwise *error is unchanged. 
+ */ 
+Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error) 
+{ 
+  //@TODO 
+  Binary binX = bcd_to_binary(x, &error); 
+  Binary binY = bcd_to_binary(y, &error); 
+
+  Binary temp = binX; 
+  long long counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
   { 
-    //@TODO 
+    temp = temp / 10; 
+    counter = counter + 1; 
+  }
 
-    Binary binX = bcd_to_binary(x, &error); 
-    Binary binY = bcd_to_binary(y, &error); 
+  if (error != NULL)
+  {                                                                                                                                                                                                                                             //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
 
-    Binary temp = binX; 
-    long long counter = 0; 
-    while (temp > 0) //Counting the number of digits in value 
-    { 
-      temp = temp / 10; 
-      counter = counter + 1; 
+  temp = binY; 
+  counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
+  { 
+    temp = temp / 10; 
+    counter = counter + 1; 
   }
 
   if (error != NULL)
@@ -430,6 +445,23 @@
   }
   
   Binary sum = binX * binY;
+
+  temp = sum; 
+  counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
+  { 
+    temp = temp / 10; 
+    counter = counter + 1; 
+  }
+
+  if (error != NULL)
+  {                                                                                                                                                                                                                                             //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+
   Bcd result = binary_to_bcd(sum, &error);
 
   return result;

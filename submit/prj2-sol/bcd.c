@@ -5,6 +5,7 @@
 #include <limits.h>
 #include <stdio.h>
 
+#include <string.h>
 #include <stdlib.h>
 
 /** Returns the decimal value of a set of bits extracted from a value
@@ -261,6 +262,11 @@ Binary bcd_to_binary(Bcd bcd, BcdError *error)
 Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
 {
   //@TODO
+
+  Binary value = strtol(s, p, 10);
+  return binary_to_bcd(value, &error);
+  
+  /*
   Binary number = 0;
   Bcd result = 0;
   for(char *x = s; *x != '\0'; x++)
@@ -280,6 +286,7 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
   result = binary_to_bcd(number, &error);
   
   return result;
+  */
 }
 
 /** Convert bcd to a NUL-terminated string in buf[] without any

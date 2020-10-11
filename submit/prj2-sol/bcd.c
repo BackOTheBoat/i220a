@@ -203,12 +203,12 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
   while (value > 0) //While there are still digits in value
   {
     int digit = value % 10; //isolate the last digit
-    printf("Digit: %d\n", digit);
-    printf("Index: %d\n", index);
+    //printf("Digit: %d\n", digit);
+    //printf("Index: %d\n", index);
     int powerof16 = power(16, index);
-    printf("pow16: %d\n", powerof16);
+    //printf("pow16: %d\n", powerof16);
     digit = digit * powerof16; //Convert to base 16
-    printf("Base 16 Digit: %d\n", digit);
+    //printf("Base 16 Digit: %d\n", digit);
     result = result + digit;
     //result = setBcdDigit(result, index, digit); //Set result in BCD
 
@@ -273,7 +273,7 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
     }
     else
     {
-      **p = &s;
+      //**p = &s;
     }
   }
   //printf("Number is: %d\n", number);

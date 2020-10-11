@@ -261,27 +261,23 @@ Binary bcd_to_binary(Bcd bcd, BcdError *error)
 Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
 {
   //@TODO
-
-  long value = strtol(s, &p, 10);
-
+  Binary number = 0;
   Bcd result = 0;
-  int index = 0;
-
-  while (value > 0) //While there are still digits in value
+  for(char *x = s; *x != '\0'; x++)
   {
-    int digit = value % 10; //isolate the last digit
-    printf("Digit: %d\n", digit);
-    printf("Index: %d\n", index);
-    int powerof16 = power(16, index);
-    printf("pow16: %d\n", powerof16);
-    digit = digit * powerof16; //Convert to base 16
-    printf("Base 16 Digit: %d\n", digit);
-    result = result + digit;
-    //result = setBcdDigit(result, index, digit); //Set result in BCD
-
-    index = index + 1; //Increment the index of BCD
-    value = value / 10; //Remove last digit from value
+    if ((int) *x <= 57 && (int) *x >= 48)
+    {
+      number = number * 10;
+      int digit = *x - '0';
+      number = number + digit;
+    }
+    else
+    {
+      **p = &s;
+    }
   }
+  //printf("Number is: %d\n", number);
+  result = binary_to_bcd(number, &error);
   
   return result;
 }

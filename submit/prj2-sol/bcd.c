@@ -179,55 +179,54 @@
     return result; 
   } 
 
-  /** Return BCD encoding of binary (which has normal binary representation). 
-   * 
-   *  Examples: binary_to_bcd(0xc) => 0x12; 
-   *            binary_to_bcd(0xff) => 0x255 
-   * 
-   *  If error is not NULL, sets *error to OVERFLOW_ERR if binary is too 
-   *  big for the Bcd type, otherwise *error is unchanged. 
-   */ 
-  Bcd binary_to_bcd(Binary value, BcdError *error) 
+/** Return BCD encoding of binary (which has normal binary representation). 
+ * 
+ *  Examples: binary_to_bcd(0xc) => 0x12; 
+ *            binary_to_bcd(0xff) => 0x255 
+ * 
+ *  If error is not NULL, sets *error to OVERFLOW_ERR if binary is too 
+ *  big for the Bcd type, otherwise *error is unchanged. 
+ */ 
+Bcd binary_to_bcd(Binary value, BcdError *error) 
+{ 
+  //@TODO -- DONE 
+  Bcd result = 0; 
+  int index = 0; 
+
+  Binary temp = value; 
+  long long counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
   { 
-    //@TODO -- DONE 
-    Bcd result = 0; 
-    int index = 0; 
-
-    Binary temp = value; 
-    long long counter = 0; 
-    while (temp > 0) //Counting the number of digits in value 
-    { 
-      temp = temp / 10; 
-      counter = counter + 1; 
-    } 
-  
-    if (error != NULL) 
-    { 
-      //error checking 
-      if (counter > MAX_BCD_DIGITS) 
-      { 
-        *error = OVERFLOW_ERR; 
-      } 
-    } 
-  
-    while (value > 0) //While there are still digits in value 
-    { 
-      int digit = value % 10; //isolate the last digit 
-      //printf("Digit: %d\n", digit); 
-      //printf("Index: %d\n", index); 
-      int powerof16 = power(16, index); 
-      //printf("pow16: %d\n", powerof16); 
-      digit = digit * powerof16; //Convert to base 16 
-      //printf("Base 16 Digit: %d\n", digit); 
-      result = result + digit; 
-      //result = setBcdDigit(result, index, digit); //Set result in BCD 
-
-      index = index + 1; //Increment the index of BCD 
-      value = value / 10; //Remove last digit from value 
-    } 
-  
-    return result; 
+    temp = temp / 10; 
+    counter = counter + 1; 
   } 
+ 
+  if (error != NULL) 
+  { 
+    //error checking 
+    if (counter > MAX_BCD_DIGITS) 
+    { 
+      *error = OVERFLOW_ERR; 
+    } 
+  } 
+  
+  while (value > 0) //While there are still digits in value 
+  { 
+    int digit = value % 10; //isolate the last digit 
+    //printf("Digit: %d\n", digit); 
+    //printf("Index: %d\n", index); 
+    int powerof16 = power(16, index); 
+    //printf("pow16: %d\n", powerof16); 
+    digit = digit * powerof16; //Convert to base 16 
+    //printf("Base 16 Digit: %d\n", digit); 
+    result = result + digit; 
+    //result = setBcdDigit(result, index, digit); //Set result in BCD 
+    index = index + 1; //Increment the index of BCD 
+    value = value / 10; //Remove last digit from value 
+  } 
+  
+  return result; 
+} 
 
   /** Return binary encoding of BCD value bcd. 
    * 
@@ -313,22 +312,42 @@
   
     return result; */
     //The above code was removed in favor of a shorter approach 
-  } 
+  }
+ 
+/** Convert bcd to a NUL-terminated string in buf[] without any 
+ *  non-significant leading zeros.  Never write more than bufSize 
+ *  characters into buf.  The return value is the number of characters 
+ *  written (excluding the NUL character used to terminate strings).
+ * 
+ *  If error is not NULL, sets *error to BAD_VALUE_ERR is bcd contains 
+ *  a BCD digit which is greater than 9, OVERFLOW_ERR if bufSize bytes 
+ *  is less than BCD_BUF_SIZE, otherwise *error is unchanged. 
+ */ 
+int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error) 
+{ 
+  //@TODO
 
-  /** Convert bcd to a NUL-terminated string in buf[] without any 
-   *  non-significant leading zeros.  Never write more than bufSize 
-   *  characters into buf.  The return value is the number of characters 
-   *  written (excluding the NUL character used to terminate strings). 
-   * 
-   *  If error is not NULL, sets *error to BAD_VALUE_ERR is bcd contains 
-   *  a BCD digit which is greater than 9, OVERFLOW_ERR if bufSize bytes 
-   *  is less than BCD_BUF_SIZE, otherwise *error is unchanged. 
-   */ 
-  int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error) 
-  { 
-    //@TODO 
-    return 0; 
-  } 
+  if (error != NULL)
+  {
+    if (bufSize < BCD_BUF_SIZE)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+  
+  Bcd temp = bcd;
+  while (temp > 0)
+  {
+    if (temp % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR
+    }
+  }
+
+  snprintf(buf, bufSize, "%x", bcd);
+
+  return strlen(buf); 
+} 
 
   /** Return the BCD representation of the sum of BCD int's x and y. 
    * 

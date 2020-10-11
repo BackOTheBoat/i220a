@@ -287,6 +287,7 @@ Bcd str_to_bcd(const char *s, const char **p, BcdError *error)
   
   return result;
   */
+  //The above code was removed in favor of a shorter approach
 }
 
 /** Convert bcd to a NUL-terminated string in buf[] without any

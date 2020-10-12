@@ -369,10 +369,68 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 { 
   //@TODO
 
+  //Error checking for Bcd X and Y                                                                                                                                                   
+  Bcd copy = x;
+  while (copy > 0)
+  {
+    if (copy % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    copy = copy / 16;
+  }
+
+  copy = y;
+  while (copy > 0)
+  {
+    if (copy % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    copy = copy / 16;
+  }
+  
   Binary binX = bcd_to_binary(x, &error);
   Binary binY = bcd_to_binary(y, &error);
 
+  //Error checking for BinX and BinY
+  
+  Binary temp = binX;
+  long long counter = 0;
+
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+
+  if (error != NULL)
+  {
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+  
   Binary sum = binX + binY;
+
+  temp = sum;
+  counter = 0;
+  while (temp > 0) //Counting the number of digits in value                                                                                                                          
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+
+  if (error != NULL)
+  {
+    if (counter > MAX_BCD_DIGITS)
+    {
+      //printf("%d\n", OVERFLOW_ERR);
+      *error = OVERFLOW_ERR;
+    }
+  }
+  
   Bcd result = binary_to_bcd(sum, &error);
 
   return result;
@@ -383,16 +441,74 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
  * If error is not NULL, sets *error to to BAD_VALUE_ERR is x or y 
  * contains a BCD digit which is greater than 9, OVERFLOW_ERR on 
  * overflow, otherwise *error is unchanged. 
- */ 
+ */
 Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error) 
 { 
-  //@TODO
+  //@TODO -- DONE
+
+  //Error checking for Bcd X and Y
+  Bcd copy = x;
+  while (copy > 0)
+  {
+    if (copy % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    copy = copy / 16;
+  }
+
+  copy = y;
+  while (copy > 0)
+  {
+    if (copy % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    copy = copy / 16;
+  }
   
   Binary binX = bcd_to_binary(x, &error);
   Binary binY = bcd_to_binary(y, &error);
 
-  Binary sum = binX * binY;
-  Bcd result = binary_to_bcd(sum, &error);
+  //Error checking for BinX and BinY
+  Binary temp = binX;
+  long long counter = 0;
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+
+  if (error != NULL)
+  {
+    //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+  
+  Binary product = binX * binY;
+
+  //Error checking for product
+  temp = product;
+  counter = 0;
+  while (temp > 0) //Counting the number of digits in value
+  {
+    temp = temp / 10;
+    counter = counter + 1;
+  }
+
+  if (error != NULL)
+  {
+    //error checking
+    if (counter > MAX_BCD_DIGITS)
+    {
+      *error = OVERFLOW_ERR;
+    }
+  }
+  
+  Bcd result = binary_to_bcd(product, &error);
 
   return result;
 }

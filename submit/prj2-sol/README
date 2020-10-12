@@ -2,5 +2,4 @@ Name:		Eric Stern
 B-Number:	B00775509
 Email:	estern7@binghamton.edu
 
-Add text here as needed.
-
+The only issues with this project are the seemingly random segmentation faults in the OVERFLOW error checking of add and multiply. All other methods work as expected.

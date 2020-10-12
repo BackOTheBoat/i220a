@@ -227,36 +227,46 @@ Bcd binary_to_bcd(Binary value, BcdError *error)
   return result; 
 } 
 
-  /** Return binary encoding of BCD value bcd. 
-   * 
-   *  Examples: bcd_to_binary(0x12) => 0xc; 
-   *            bcd_to_binary(0x255) => 0xff 
-   * 
-   *  If error is not NULL, sets *error to BAD_VALUE_ERR if bcd contains 
-   *  a bad BCD digit. 
-   *  Cannot overflow since Binary can represent larger values than Bcd 
-   */ 
-  Binary bcd_to_binary(Bcd bcd, BcdError *error) 
+/** Return binary encoding of BCD value bcd. 
+ * 
+ *  Examples: bcd_to_binary(0x12) => 0xc; 
+ *            bcd_to_binary(0x255) => 0xff 
+ * 
+ *  If error is not NULL, sets *error to BAD_VALUE_ERR if bcd contains 
+ *  a bad BCD digit. 
+ *  Cannot overflow since Binary can represent larger values than Bcd 
+ */ 
+Binary bcd_to_binary(Bcd bcd, BcdError *error) 
+{ 
+  //@TODO -- DONE
+
+  Bcd temp = bcd;
+  while (temp > 0)
+  {
+    if (temp % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    temp = temp / 16;
+  }
+
+  int digits = 0; 
+  Binary result = 0; 
+
+  while (power(16, digits + 1) < bcd) 
   { 
-    //@TODO -- DONE 
-
-    int digits = 0; 
-    Binary result = 0; 
-
-    while (power(16, digits + 1) < bcd) 
-    { 
-      digits = digits + 1; 
-    } 
-
-    while (digits >= 0) 
-    { 
-      result = result * 10; 
-      result = result + getHexDigit(bcd, digits); 
-      digits = digits - 1; 
-    } 
-  
-    return result; 
+    digits = digits + 1; 
   } 
+
+  while (digits >= 0) 
+  { 
+    result = result * 10; 
+    result = result + getHexDigit(bcd, digits); 
+    digits = digits - 1; 
+  } 
+  
+  return result; 
+} 
 
   /** Return BCD encoding of decimal number corresponding to string s. 
    *  Behavior undefined on overflow or if s contains a non-digit 
@@ -355,69 +365,89 @@ int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
    *  contains a BCD digit which is greater than 9, OVERFLOW_ERR on 
    *  overflow, otherwise *error is unchanged. 
    */ 
-  Bcd bcd_add(Bcd x, Bcd y, BcdError *error) 
+Bcd bcd_add(Bcd x, Bcd y, BcdError *error) 
+{ 
+  //@TODO 
+
+  Bcd temp = x;
+  while (temp > 0)
+  {
+    if (temp % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    temp = temp / 16;
+  }
+
+  Bcd temp = y;
+  while (temp > 0)
+  {
+    if (temp % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    temp = temp / 16;
+  }
+
+  Binary binX = bcd_to_binary(x, &error); 
+  Binary binY = bcd_to_binary(y, &error);
+
+  Binary temp = binX; 
+  long long counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
   { 
-    //@TODO 
-
-    Binary binX = bcd_to_binary(x, &error); 
-    Binary binY = bcd_to_binary(y, &error); 
-
-    Binary temp = binX; 
-    long long counter = 0; 
-    while (temp > 0) //Counting the number of digits in value 
-    { 
-      temp = temp / 10; 
-      counter = counter + 1; 
-    } 
-  
-    if (error != NULL) 
-    { 
-      //error checking 
-      if (counter > MAX_BCD_DIGITS) 
-      { 
-        *error = OVERFLOW_ERR; 
-      } 
-    } 
-
-    temp = binY; 
-    counter = 0; 
-    while (temp > 0) //Counting the number of digits in value 
-    { 
-      temp = temp / 10; 
-      counter = counter + 1; 
-    } 
-  
-    if (error != NULL) 
-    { 
-      //error checking 
-      if (counter > MAX_BCD_DIGITS) 
-      { 
-        *error = OVERFLOW_ERR; 
-      } 
-    } 
-
-    Binary sum = binX + binY; 
-
-    temp = sum; 
-    counter = 0; 
-    while (temp > 0) //Counting the number of digits in value 
-      { 
-        temp = temp / 10; 
-        counter = counter + 1; 
-      } 
-
-    if (error != NULL) 
-      {                                                                                                                                                                                                                                              //error checking 
-        if (counter > MAX_BCD_DIGITS) 
-  	{ 
-  	  *error = OVERFLOW_ERR; 
-  	} 
-      } 
-  
-    Bcd result = binary_to_bcd(sum, &error); 
-
-    return result; 
+    temp = temp / 10; 
+    counter = counter + 1; 
   } 
+  
+  if (error != NULL) 
+  { 
+    //error checking 
+    if (counter > MAX_BCD_DIGITS) 
+    { 
+      *error = OVERFLOW_ERR; 
+    } 
+  } 
+
+  temp = binY; 
+  counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
+  { 
+    temp = temp / 10; 
+    counter = counter + 1; 
+  } 
+  
+  if (error != NULL) 
+  { 
+    //error checking 
+    if (counter > MAX_BCD_DIGITS) 
+    { 
+      *error = OVERFLOW_ERR; 
+    } 
+  } 
+
+  Binary sum = binX + binY; 
+  
+  temp = sum; 
+  counter = 0; 
+  while (temp > 0) //Counting the number of digits in value 
+  { 
+    temp = temp / 10; 
+    counter = counter + 1; 
+  } 
+
+  if (error != NULL) 
+  {                                                                                                                                                                                                                                              //error checking 
+    if (counter > MAX_BCD_DIGITS) 
+    { 
+      *error = OVERFLOW_ERR; 
+    } 
+  } 
+  
+  Bcd result = binary_to_bcd(sum, &error); 
+
+  return result;
+} 
 
 /** Return the BCD representation of the product of BCD int's x and y. 
  * 
@@ -427,7 +457,28 @@ int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
  */ 
 Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error) 
 { 
-  //@TODO 
+  //@TODO
+
+  Bcd temp = x;
+  while (temp > 0)
+  {
+    if (temp % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    temp = temp / 16;
+  }
+
+  Bcd temp = y;
+  while (temp > 0)
+  {
+    if (temp % 16 > 9 && error != NULL)
+    {
+      *error = BAD_VALUE_ERR;
+    }
+    temp = temp / 16;
+  }
+
   Binary binX = bcd_to_binary(x, &error); 
   Binary binY = bcd_to_binary(y, &error); 
 

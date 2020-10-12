@@ -369,24 +369,24 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 { 
   //@TODO 
 
-  Bcd temp = x;
-  while (temp > 0)
+  Bcd copy = x;
+  while (copy > 0)
   {
-    if (temp % 16 > 9 && error != NULL)
+    if (copy % 16 > 9 && error != NULL)
     {
       *error = BAD_VALUE_ERR;
     }
-    temp = temp / 16;
+    copy = copy / 16;
   }
 
-  Bcd temp = y;
-  while (temp > 0)
+  copy = y;
+  while (copy > 0)
   {
-    if (temp % 16 > 9 && error != NULL)
+    if (copy % 16 > 9 && error != NULL)
     {
       *error = BAD_VALUE_ERR;
     }
-    temp = temp / 16;
+    copy = copy / 16;
   }
 
   Binary binX = bcd_to_binary(x, &error); 
@@ -459,24 +459,24 @@ Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
 { 
   //@TODO
 
-  Bcd temp = x;
-  while (temp > 0)
+  Bcd copy = x;
+  while (copy > 0)
   {
-    if (temp % 16 > 9 && error != NULL)
+    if (copy % 16 > 9 && error != NULL)
     {
       *error = BAD_VALUE_ERR;
     }
-    temp = temp / 16;
+    copy = copy / 16;
   }
 
-  Bcd temp = y;
-  while (temp > 0)
+  copy = y;
+  while (copy > 0)
   {
-    if (temp % 16 > 9 && error != NULL)
+    if (copy % 16 > 9 && error != NULL)
     {
       *error = BAD_VALUE_ERR;
     }
-    temp = temp / 16;
+    copy = copy / 16;
   }
 
   Binary binX = bcd_to_binary(x, &error); 

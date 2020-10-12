@@ -1,39 +1,38 @@
 #include "bcd.h"
 
 #include <assert.h> 
-  #include <ctype.h> 
-  #include <limits.h> 
-  #include <stdio.h> 
+#include <ctype.h> 
+#include <limits.h> 
+#include <stdio.h> 
 
-  #include <string.h> 
-  #include <stdlib.h> 
+#include <string.h> 
+#include <stdlib.h> 
 
-   /** Returns the decimal value of a set of bits extracted from a value 
-   *
-   *  EX: getHexSegment(1944, 4) = 9 
-   *  EX: getHexSegment(1944, 0) = 8 
-   */ 
-  int getHexSegment(long long value, int startPos) 
+/** Returns the decimal value of a set of bits extracted from a value 
+ *
+ *  EX: getHexSegment(1944, 4) = 9 
+ *  EX: getHexSegment(1944, 0) = 8 
+ */ 
+int getHexSegment(long long value, int startPos)
+{ 
+  if (startPos < 0) 
   { 
-    if (startPos < 0) 
-    { 
-      printf("BAD INDEX! Index must be 0 or larger. Index is: %d\n", startPos); 
-      return 0; 
-    }   
+    printf("BAD INDEX! Index must be 0 or larger. Index is: %d\n", startPos); 
+    return 0; 
+  }   
 
-    if ((1 << startPos) - 1 > value) 
-    { 
-      printf("BAD INDEX! Index must be within the bounds of the given value\n"); 
-      printf("Index is %d. Value is %llu. %d is out of range\n", startPos, value, (1 << startPos) - 1); 
-      return 0; 
-    } 
-  
-    long long mask = (1 << (4)) - 1; 
-    int bitSegment = (value >> startPos) & mask; 
-  
-  
-    return bitSegment; 
+  if ((1 << startPos) - 1 > value) 
+  { 
+    printf("BAD INDEX! Index must be within the bounds of the given value\n"); 
+    printf("Index is %d. Value is %llu. %d is out of range\n", startPos, value, (1 << startPos) - 1); 
+    return 0; 
   } 
+  
+  long long mask = (1 << (4)) - 1; 
+  int bitSegment = (value >> startPos) & mask; 
+    
+  return bitSegment; 
+} 
 
 
   /** Returns a digit in hexadecimal at place INDEX of a VALUE in base 10 
@@ -340,8 +339,9 @@ int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
   {
     if (temp % 16 > 9 && error != NULL)
     {
-      *error = BAD_VALUE_ERR
+      *error = BAD_VALUE_ERR;
     }
+    temp = temp / 16;
   }
 
   snprintf(buf, bufSize, "%x", bcd);

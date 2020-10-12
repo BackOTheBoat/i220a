@@ -359,12 +359,12 @@ int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
   return strlen(buf); 
 } 
 
-  /** Return the BCD representation of the sum of BCD int's x and y. 
-   * 
-   *  If error is not NULL, sets *error to to BAD_VALUE_ERR is x or y 
-   *  contains a BCD digit which is greater than 9, OVERFLOW_ERR on 
-   *  overflow, otherwise *error is unchanged. 
-   */ 
+/** Return the BCD representation of the sum of BCD int's x and y. 
+ * 
+ *  If error is not NULL, sets *error to to BAD_VALUE_ERR is x or y 
+ *  contains a BCD digit which is greater than 9, OVERFLOW_ERR on 
+ *  overflow, otherwise *error is unchanged. 
+ */ 
 Bcd bcd_add(Bcd x, Bcd y, BcdError *error) 
 { 
   //@TODO 

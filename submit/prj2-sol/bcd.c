@@ -369,7 +369,7 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 { 
   //@TODO 
 
-  Bcd copy = x;
+  /*Bcd copy = x;
   while (copy > 0)
   {
     if (copy % 16 > 9 && error != NULL)
@@ -387,7 +387,7 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
       *error = BAD_VALUE_ERR;
     }
     copy = copy / 16;
-  }
+  }*/
 
   Binary binX = bcd_to_binary(x, &error); 
   Binary binY = bcd_to_binary(y, &error);
@@ -459,7 +459,7 @@ Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
 { 
   //@TODO
 
-  Bcd copy = x;
+/*  Bcd copy = x;
   while (copy > 0)
   {
     if (copy % 16 > 9 && error != NULL)
@@ -477,7 +477,7 @@ Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error)
       *error = BAD_VALUE_ERR;
     }
     copy = copy / 16;
-  }
+  }*/
 
   Binary binX = bcd_to_binary(x, &error); 
   Binary binY = bcd_to_binary(y, &error); 

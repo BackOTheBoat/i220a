@@ -367,84 +367,13 @@ int bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
  */ 
 Bcd bcd_add(Bcd x, Bcd y, BcdError *error) 
 { 
-  //@TODO 
+  //@TODO
 
-  /*Bcd copy = x;
-  while (copy > 0)
-  {
-    if (copy % 16 > 9 && error != NULL)
-    {
-      *error = BAD_VALUE_ERR;
-    }
-    copy = copy / 16;
-  }
-
-  copy = y;
-  while (copy > 0)
-  {
-    if (copy % 16 > 9 && error != NULL)
-    {
-      *error = BAD_VALUE_ERR;
-    }
-    copy = copy / 16;
-  }*/
-
-  Binary binX = bcd_to_binary(x, &error); 
+  Binary binX = bcd_to_binary(x, &error);
   Binary binY = bcd_to_binary(y, &error);
 
-  Binary temp = binX; 
-  long long counter = 0; 
-  while (temp > 0) //Counting the number of digits in value 
-  { 
-    temp = temp / 10; 
-    counter = counter + 1; 
-  } 
-  
-  if (error != NULL) 
-  { 
-    //error checking 
-    if (counter > MAX_BCD_DIGITS) 
-    { 
-      *error = OVERFLOW_ERR; 
-    } 
-  } 
-
-  temp = binY; 
-  counter = 0; 
-  while (temp > 0) //Counting the number of digits in value 
-  { 
-    temp = temp / 10; 
-    counter = counter + 1; 
-  } 
-  
-  if (error != NULL) 
-  { 
-    //error checking 
-    if (counter > MAX_BCD_DIGITS) 
-    { 
-      *error = OVERFLOW_ERR; 
-    } 
-  } 
-
-  Binary sum = binX + binY; 
-  
-  temp = sum; 
-  counter = 0; 
-  while (temp > 0) //Counting the number of digits in value 
-  { 
-    temp = temp / 10; 
-    counter = counter + 1; 
-  } 
-
-  if (error != NULL) 
-  {                                                                                                                                                                                                                                              //error checking 
-    if (counter > MAX_BCD_DIGITS) 
-    { 
-      *error = OVERFLOW_ERR; 
-    } 
-  } 
-  
-  Bcd result = binary_to_bcd(sum, &error); 
+  Binary sum = binX + binY;
+  Bcd result = binary_to_bcd(sum, &error);
 
   return result;
 } 
@@ -458,81 +387,11 @@ Bcd bcd_add(Bcd x, Bcd y, BcdError *error)
 Bcd bcd_multiply(Bcd x, Bcd y, BcdError *error) 
 { 
   //@TODO
-
-/*  Bcd copy = x;
-  while (copy > 0)
-  {
-    if (copy % 16 > 9 && error != NULL)
-    {
-      *error = BAD_VALUE_ERR;
-    }
-    copy = copy / 16;
-  }
-
-  copy = y;
-  while (copy > 0)
-  {
-    if (copy % 16 > 9 && error != NULL)
-    {
-      *error = BAD_VALUE_ERR;
-    }
-    copy = copy / 16;
-  }*/
-
-  Binary binX = bcd_to_binary(x, &error); 
-  Binary binY = bcd_to_binary(y, &error); 
-
-  /*Binary temp = binX; 
-  long long counter = 0; 
-  while (temp > 0) //Counting the number of digits in value 
-  { 
-    temp = temp / 10; 
-    counter = counter + 1; 
-  }
-
-  if (error != NULL)
-  {                                                                                                                                                                                     //error checking
-    if (counter > MAX_BCD_DIGITS)
-    {
-      *error = OVERFLOW_ERR;
-    }
-  }
-
-  temp = binY; 
-  counter = 0; 
-  while (temp > 0) //Counting the number of digits in value 
-  { 
-    temp = temp / 10; 
-    counter = counter + 1; 
-  }
-
-  if (error != NULL)
-  {                                                                                                                                                                                     //error checking
-    if (counter > MAX_BCD_DIGITS)
-    {
-      *error = OVERFLOW_ERR;
-    }
-    }*/
   
-  Binary product = binX * binY;
-  /*
-  temp = sum;
-  counter = 0;
-  while (temp > 0) //Counting the number of digits in value                                                                                                                          
-  {
-    temp = temp / 10;
-    counter = counter + 1;
-  }
+  Binary binX = bcd_to_binary(x, &error);
+  Binary binY = bcd_to_binary(y, &error);
 
-  if (error != NULL)
-  {
-    //error checking  
-    if (counter > MAX_BCD_DIGITS)
-    {
-      *error = OVERFLOW_ERR;
-    }
-  }*/
-
+  Binary sum = binX * binY;
   Bcd result = binary_to_bcd(sum, &error);
 
   return result;

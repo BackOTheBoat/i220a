@@ -1,0 +1,1320 @@
+Script started on 2020-10-15 11:25:35-04:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="237" LINES="55"]
+estern7@remote03:~/i220a/submit/lab7$ cd exercises/
+estern7@remote03:~/i220a/submit/lab7/exercises$ cd 1[K[K[K[Kls -l
+total 12
+-rw-r--r-- 1 estern7 estern7  440 Oct 12 20:30 hello.c
+-rw-r--r-- 1 estern7 estern7  141 Oct 13 10:30 Makefile
+-rw-r--r-- 1 estern7 estern7 3104 Oct 13 10:30 mystery.o
+estern7@remote03:~/i220a/submit/lab7/exercises$ emacs hello.c
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[55d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[54d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[55;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[55;59H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[55;58H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[55;60H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[55;57H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[55;77H[?25ldone[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[55;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;61H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[55;96H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[55;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[55;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[55;64H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[55;65H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[55;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[55d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                                        [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools C Help                                                                                                                                                                                                       [0m[39;49m[27m
+[A
+[38;5;60m#include[39;49m [38;5;89m<stdio.h>[39;49m[K
+[38;5;60m#include[39;49m [38;5;89m<stdlib.h>[39;49m[K
+[K
+[38;5;124m/** Say hello to who on stream out. */[39;49m[K
+[38;5;129mstatic[39;49m [38;5;28mvoid[39;49m[K
+[38;5;21mhello[39;49m([38;5;28mFILE[39;49m *[38;5;130mout[39;49m, [38;5;129mconst[39;49m [38;5;28mchar[39;49m *[38;5;130mwho[39;49m)[K
+{[K
+  fprintf(out, [38;5;89m"hello %s\n"[39;49m, who);[K
+}[K
+[K
+[K
+[38;5;124m/** Say hello to 1-or-more command-line arguments. */[39;49m[K
+[38;5;28mint[39;49m[K
+[38;5;21mmain[39;49m([38;5;28mint[39;49m [38;5;130margc[39;49m, [38;5;129mconst[39;49m [38;5;28mchar[39;49m *[38;5;130margv[39;49m[])[K
+{[K
+  [38;5;129mif[39;49m (argc == 1) {[K
+    fprintf(stderr, [38;5;89m"usage: %s NAME...\n"[39;49m, argv[0]);[K
+    exit(0xdeadbeef);[K
+  }[K
+  [38;5;129mfor[39;49m ([38;5;28mint[39;49m [38;5;130mi[39;49m = 1; i < argc; i++) {[K
+    hello(stdout, argv[i]);[K
+  }[K
+  [38;5;129mreturn[39;49m 0;[K
+}[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mhello.c     [0m[39;49m[30m[48;5;250m   All L1    Git-lab7  (C/*l Abbrev) -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[K[2d[?25lx#include <stdio.h>[54;6H[30m[48;5;250m**[39;49m[2;2H[?12l[?25h[?12;25h[55;1H[?25lSaving file /home/estern7/i220a/submit/lab7/exercises/hello.c...[2;2H[?12l[?25h[?12;25h[55;1H[?25lWrote /home/estern7/i220a/submit/lab7/exercises/hello.c[K[2;2H[?12l[?25h[?12;25h[54;6H[?25l[30m[48;5;250m----F1  [39;49m[1m[30m[48;5;250mhello.c     [0m[39;49m[30m[48;5;250m   All L1    Git:[39;49m[2;2H[?12l[?25h[?12;25h[55;1H[K[2;2H[55;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote03:~/i220a/submit/lab7/exercises$ emacs hello.c
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[55d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[54d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[55;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[55;59H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[55;58H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[55;60H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[55;57H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[55;77H[?25ldone[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[55;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;61H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[55;96H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[55;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[55;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[55;64H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[55;65H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[55;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[55d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                                        [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools C Help                                                                                                                                                                                                       [0m[39;49m[27m
+[A
+x#include <stdio.h>[K
+[38;5;60m#include[39;49m [38;5;89m<stdlib.h>[39;49m[K
+[K
+[38;5;124m/** Say hello to who on stream out. */[39;49m[K
+[38;5;129mstatic[39;49m [38;5;28mvoid[39;49m[K
+hello([38;5;28mFILE[39;49m *[38;5;130mout[39;49m, [38;5;129mconst[39;49m [38;5;28mchar[39;49m *[38;5;130mwho[39;49m)[K
+{[K
+  fprintf(out, [38;5;89m"hello %s\n"[39;49m, who);[K
+}[K
+[K
+[K
+[38;5;124m/** Say hello to 1-or-more command-line arguments. */[39;49m[K
+[38;5;28mint[39;49m[K
+[38;5;21mmain[39;49m([38;5;28mint[39;49m [38;5;130margc[39;49m, [38;5;129mconst[39;49m [38;5;28mchar[39;49m *[38;5;130margv[39;49m[])[K
+{[K
+  [38;5;129mif[39;49m (argc == 1) {[K
+    fprintf(stderr, [38;5;89m"usage: %s NAME...\n"[39;49m, argv[0]);[K
+    exit(0xdeadbeef);[K
+  }[K
+  [38;5;129mfor[39;49m ([38;5;28mint[39;49m [38;5;130mi[39;49m = 1; i < argc; i++) {[K
+    hello(stdout, argv[i]);[K
+  }[K
+  [38;5;129mreturn[39;49m 0;[K
+}[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mhello.c     [0m[39;49m[30m[48;5;250m   All L1    Git:lab7  (C/*l Abbrev) -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[K[2d[?25l[38;5;60m#include[39;49m [38;5;89m<stdio.h>[39;49m[K[54;6H[30m[48;5;250m**[39;49m[H
+[?12l[?25h[?12;25h[7d[?25l[38;5;21mhello[39;49m[H
+[?12l[?25h[?12;25h[55d[?25lSaving file /home/estern7/i220a/submit/lab7/exercises/hello.c...[H
+[?12l[?25h[?12;25h[55d[?25lWrote /home/estern7/i220a/submit/lab7/exercises/hello.c[K[H
+[?12l[?25h[?12;25h[54;6H[?25l[30m[48;5;250m----F1  [39;49m[1m[30m[48;5;250mhello.c     [0m[39;49m[30m[48;5;250m   All L1    Git-[39;49m[H
+[?12l[?25h[?12;25h[55d[K[2d[55d[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote03:~/i220a/submit/lab7/exercises$ mk[Kake
+cc -g -Wall  -std=c11    hello.c   -o hello
+cc -g -Wall  -std=c11 -S hello.c
+estern7@remote03:~/i220a/submit/lab7/exercises$ size hello
+   text	   data	    bss	    dec	    hex	filename
+   1874	    592	     48	   2514	    9d2	hello
+estern7@remote03:~/i220a/submit/lab7/exercises$ siza [K[Ke -A hello
+hello  :
+section              size    addr
+.interp                28     680
+.note.ABI-tag          32     708
+.note.gnu.build-id     36     740
+.gnu.hash              48     776
+.dynsym               240     824
+.dynstr               152    1064
+.gnu.version           20    1216
+.gnu.version_r         32    1240
+.rela.dyn             240    1272
+.rela.plt              48    1512
+.init                  23    4096
+.plt                   48    4128
+.plt.got                8    4176
+.text                 513    4192
+.fini                   9    4708
+.rodata                33    8192
+.eh_frame_hdr          68    8228
+.eh_frame             296    8296
+.init_array             8   15848
+.fini_array             8   15856
+.dynamic              480   15864
+.got                   40   16344
+.got.plt               40   16384
+.data                  16   16424
+.bss                   48   16448
+.comment               28       0
+.debug_aranges         48       0
+.debug_info           860       0
+.debug_abbrev         287       0
+.debug_line           308       0
+.debug_str            597       0
+Total                4642
+
+
+estern7@remote03:~/i220a/submit/lab7/exercises$ b[Kobjdum[[Kp -d hello > hollo[K[K[K[Kello.objdump
+estern7@remote03:~/i220a/submit/lab7/exercises$ emacs holl[K[K[Kek[Kllo.objdump 
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[55d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[54d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[55;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[55;59H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[55;58H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[55;60H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[55;57H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[55;77H[?25ldone[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[55;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;61H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[55;96H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[55;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[55;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[55;64H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[55;65H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[55;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[55d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                                        [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Help                                                                                                                                                                                                         [0m[39;49m[27m
+[A
+[K
+hello:     file format elf64-x86-64[K
+[K
+[K
+Disassembly of section .init:[K
+[K
+0000000000001000 <_init>:[K
+    1000:       48 83 ec 08             sub    $0x8,%rsp[K
+    1004:       48 8b 05 dd 2f 00 00    mov    0x2fdd(%rip),%rax        # 3fe8 <__gmon_start__>[K
+    100b:       48 85 c0                test   %rax,%rax[K
+    100e:       74 02                   je     1012 <_init+0x12>[K
+    1010:       ff d0                   callq  *%rax[K
+    1012:       48 83 c4 08             add    $0x8,%rsp[K
+    1016:       c3                      retq[K
+[K
+Disassembly of section .plt:[K
+[K
+0000000000001020 <.plt>:[K
+    1020:       ff 35 e2 2f 00 00       pushq  0x2fe2(%rip)        # 4008 <_GLOBAL_OFFSET_TABLE_+0x8>[K
+    1026:       ff 25 e4 2f 00 00       jmpq   *0x2fe4(%rip)        # 4010 <_GLOBAL_OFFSET_TABLE_+0x10>[K
+    102c:       0f 1f 40 00             nopl   0x0(%rax)[K
+[K
+0000000000001030 <fprintf@plt>:[K
+    1030:       ff 25 e2 2f 00 00       jmpq   *0x2fe2(%rip)        # 4018 <fprintf@GLIBC_2.2.5>[K
+    1036:       68 00 00 00 00          pushq  $0x0[K
+    103b:       e9 e0 ff ff ff          jmpq   1020 <.plt>[K
+[K
+0000000000001040 <exit@plt>:[K
+    1040:       ff 25 da 2f 00 00       jmpq   *0x2fda(%rip)        # 4020 <exit@GLIBC_2.2.5>[K
+    1046:       68 01 00 00 00          pushq  $0x1[K
+    104b:       e9 d0 ff ff ff          jmpq   1020 <.plt>[K
+[K
+Disassembly of section .plt.got:[K
+[K
+0000000000001050 <__cxa_finalize@plt>:[K
+    1050:       ff 25 a2 2f 00 00       jmpq   *0x2fa2(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>[K
+    1056:       66 90                   xchg   %ax,%ax[K
+[K
+Disassembly of section .text:[K
+[K
+0000000000001060 <_start>:[K
+    1060:       31 ed                   xor    %ebp,%ebp[K
+    1062:       49 89 d1                mov    %rdx,%r9[K
+    1065:       5e                      pop    %rsi[K
+    1066:       48 89 e2                mov    %rsp,%rdx[K
+    1069:       48 83 e4 f0             and    $0xfffffffffffffff0,%rsp[K
+    106d:       50                      push   %rax[K
+    106e:       54                      push   %rsp[K
+    106f:       4c 8d 05 ea 01 00 00    lea    0x1ea(%rip),%r8        # 1260 <__libc_csu_fini>[K
+    1076:       48 8d 0d 83 01 00 00    lea    0x183(%rip),%rcx        # 1200 <__libc_csu_init>[K
+    107d:       48 8d 3d f0 00 00 00    lea    0xf0(%rip),%rdi        # 1174 <main>[K
+    1084:       ff 15 56 2f 00 00       callq  *0x2f56(%rip)        # 3fe0 <__libc_start_main@GLIBC_2.2.5>[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mhello.objdump[0m[39;49m[30m[48;5;250m   Top L1     (Fundamental) ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[K[54;35H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m4[39;49m[5;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m5[39;49m[6;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m6[39;49m[7;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m7[39;49m[8;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m8[39;49m[9;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m9[39;49m[10;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m10[39;49m[11;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m1[39;49m[12;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m2[39;49m[13;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m3[39;49m[14;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m4[39;49m[15;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m5[39;49m[16;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m6[39;49m[17;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m7[39;49m[18;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m8[39;49m[19;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m9[39;49m[20;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m20[39;49m[21;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m1[39;49m[22;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m2[39;49m[23;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m3[39;49m[24;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m4[39;49m[25;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m5[39;49m[26;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m6[39;49m[27;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m7[39;49m[28;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m8[39;49m[29;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m9[39;49m[30;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m30[39;49m[31;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m1[39;49m[32;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m2[39;49m[33;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m3[39;49m[34;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m4[39;49m[35;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m5[39;49m[36;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m6[39;49m[37;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m7[39;49m[38;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m8[39;49m[39;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m9[39;49m[40;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m40[39;49m[41;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m1[39;49m[42;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m2[39;49m[43;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m3[39;49m[44;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m4[39;49m[45;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m5[39;49m[46;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m6[39;49m[47;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m7[39;49m[48;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m8[39;49m[49;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m9[39;49m[50;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m50[39;49m[51;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m1[39;49m[52;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m2[39;49m[A[?12l[?25h[?12;25h[1;53r[3;1H[26M[1;55r[28;1H[?25l    108a:       f4                      hlt[K
+    108b:       0f 1f 44 00 00          nopl   0x0(%rax,%rax,1)[K
+[K
+0000000000001090 <deregister_tm_clones>:[K
+    1090:       48 8d 3d a1 2f 00 00    lea    0x2fa1(%rip),%rdi        # 4038 <__TMC_END__>[K
+    1097:       48 8d 05 9a 2f 00 00    lea    0x2f9a(%rip),%rax        # 4038 <__TMC_END__>[K
+    109e:       48 39 f8                cmp    %rdi,%rax[K
+    10a1:       74 15                   je     10b8 <deregister_tm_clones+0x28>[K
+    10a3:       48 8b 05 2e 2f 00 00    mov    0x2f2e(%rip),%rax        # 3fd8 <_ITM_deregisterTMCloneTable>[K
+    10aa:       48 85 c0                test   %rax,%rax[K
+    10ad:       74 09                   je     10b8 <deregister_tm_clones+0x28>[K
+    10af:       ff e0                   jmpq   *%rax[K
+    10b1:       0f 1f 80 00 00 00 00    nopl   0x0(%rax)[K
+    10b8:       c3                      retq[K
+    10b9:       0f 1f 80 00 00 00 00    nopl   0x0(%rax)[K
+[K
+00000000000010c0 <register_tm_clones>:[K
+    10c0:       48 8d 3d 71 2f 00 00    lea    0x2f71(%rip),%rdi        # 4038 <__TMC_END__>[K
+    10c7:       48 8d 35 6a 2f 00 00    lea    0x2f6a(%rip),%rsi        # 4038 <__TMC_END__>[K
+    10ce:       48 29 fe                sub    %rdi,%rsi[K
+    10d1:       48 c1 fe 03             sar    $0x3,%rsi[K
+    10d5:       48 89 f0                mov    %rsi,%rax[K
+    10d8:       48 c1 e8 3f             shr    $0x3f,%rax[K
+    10dc:       48 01 c6                add    %rax,%rsi[K
+    10df:       48 d1 fe                sar    %rsi[K
+    10e2:       74 14                   je     10f8 <register_tm_clones+0x38>[K[54;30H[30m[48;5;250m10% L53[39;49m[28;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m4[39;49m[29;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m5[39;49m[30;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m6[39;49m[31;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m7[39;49m[32;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m8[39;49m[33;1H[?12l[?25h[?12;25h[54;36H[?25l[30m[48;5;250m9[39;49m[34;1H[?12l[?25h[?12;25h[54;35H[?25l[30m[48;5;250m60[39;49m[35;1H[?12l[?25h[?12;25h[55d[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote03:~/i220a/submit/lab7/exercises$ emacs hello.objdump objdump -d hello > hello.objdump[1@-[1@s[1@ [1@-[1@x[1@ 
+estern7@remote03:~/i220a/submit/lab7/exercises$ objdump -d -s -x hello > hello.objdump[18Pemacs hello.objdump 
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[55d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[54d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[55;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[55;59H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[55;58H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[55;60H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[55;57H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[55;77H[?25ldone[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[55;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;61H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[55;96H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[55;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[55;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[55;64H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[55;65H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[55;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[55d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                                        [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Help                                                                                                                                                                                                         [0m[39;49m[27m
+[A
+[K
+hello:     file format elf64-x86-64[K
+hello[K
+architecture: i386:x86-64, flags 0x00000150:[K
+HAS_SYMS, DYNAMIC, D_PAGED[K
+start address 0x0000000000001060[K
+[K
+Program Header:[K
+    PHDR off    0x0000000000000040 vaddr 0x0000000000000040 paddr 0x0000000000000040 align 2**3[K
+         filesz 0x0000000000000268 memsz 0x0000000000000268 flags r--[K
+  INTERP off    0x00000000000002a8 vaddr 0x00000000000002a8 paddr 0x00000000000002a8 align 2**0[K
+         filesz 0x000000000000001c memsz 0x000000000000001c flags r--[K
+    LOAD off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**12[K
+         filesz 0x0000000000000618 memsz 0x0000000000000618 flags r--[K
+    LOAD off    0x0000000000001000 vaddr 0x0000000000001000 paddr 0x0000000000001000 align 2**12[K
+         filesz 0x000000000000026d memsz 0x000000000000026d flags r-x[K
+    LOAD off    0x0000000000002000 vaddr 0x0000000000002000 paddr 0x0000000000002000 align 2**12[K
+         filesz 0x0000000000000190 memsz 0x0000000000000190 flags r--[K
+    LOAD off    0x0000000000002de8 vaddr 0x0000000000003de8 paddr 0x0000000000003de8 align 2**12[K
+         filesz 0x0000000000000250 memsz 0x0000000000000288 flags rw-[K
+ DYNAMIC off    0x0000000000002df8 vaddr 0x0000000000003df8 paddr 0x0000000000003df8 align 2**3[K
+         filesz 0x00000000000001e0 memsz 0x00000000000001e0 flags rw-[K
+    NOTE off    0x00000000000002c4 vaddr 0x00000000000002c4 paddr 0x00000000000002c4 align 2**2[K
+         filesz 0x0000000000000044 memsz 0x0000000000000044 flags r--[K
+EH_FRAME off    0x0000000000002024 vaddr 0x0000000000002024 paddr 0x0000000000002024 align 2**2[K
+         filesz 0x0000000000000044 memsz 0x0000000000000044 flags r--[K
+   STACK off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**4[K
+         filesz 0x0000000000000000 memsz 0x0000000000000000 flags rw-[K
+   RELRO off    0x0000000000002de8 vaddr 0x0000000000003de8 paddr 0x0000000000003de8 align 2**0[K
+         filesz 0x0000000000000218 memsz 0x0000000000000218 flags r--[K
+[K
+Dynamic Section:[K
+  NEEDED               libc.so.6[K
+  INIT                 0x0000000000001000[K
+  FINI                 0x0000000000001264[K
+  INIT_ARRAY           0x0000000000003de8[K
+  INIT_ARRAYSZ         0x0000000000000008[K
+  FINI_ARRAY           0x0000000000003df0[K
+  FINI_ARRAYSZ         0x0000000000000008[K
+  GNU_HASH             0x0000000000000308[K
+  STRTAB               0x0000000000000428[K
+  SYMTAB               0x0000000000000338[K
+  STRSZ                0x0000000000000098[K
+  SYMENT               0x0000000000000018[K
+  DEBUG                0x0000000000000000[K
+  PLTGOT               0x0000000000004000[K
+  PLTRELSZ             0x0000000000000030[K
+  PLTREL               0x0000000000000007[K
+  JMPREL               0x00000000000005e8[K
+  RELA                 0x00000000000004f8[K
+  RELASZ               0x00000000000000f0[K
+  RELAENT              0x0000000000000018[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mhello.objdump[0m[39;49m[30m[48;5;250m   Top L1     (Fundamental) ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[K[2d[55d[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote03:~/i220a/submit/lab7/exercises$ ojb[K[Kbjdump -d hello | grep -A40 main.:
+0000000000001174 <main>:
+    1174:	55                   	push   %rbp
+    1175:	48 89 e5             	mov    %rsp,%rbp
+    1178:	48 83 ec 20          	sub    $0x20,%rsp
+    117c:	89 7d ec             	mov    %edi,-0x14(%rbp)
+    117f:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+    1183:	83 7d ec 01          	cmpl   $0x1,-0x14(%rbp)
+    1187:	75 2c                	jne    11b5 <main+0x41>
+    1189:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    118d:	48 8b 10             	mov    (%rax),%rdx
+    1190:	48 8b 05 c9 2e 00 00 	mov    0x2ec9(%rip),%rax        # 4060 <stderr@@GLIBC_2.2.5>
+    1197:	48 8d 35 70 0e 00 00 	lea    0xe70(%rip),%rsi        # 200e <_IO_stdin_used+0xe>
+    119e:	48 89 c7             	mov    %rax,%rdi
+    11a1:	b8 00 00 00 00       	mov    $0x0,%eax
+    11a6:	e8 85 fe ff ff       	callq  1030 <fprintf@plt>
+    11ab:	bf ef be ad de       	mov    $0xdeadbeef,%edi
+    11b0:	e8 8b fe ff ff       	callq  1040 <exit@plt>
+    11b5:	c7 45 fc 01 00 00 00 	movl   $0x1,-0x4(%rbp)
+    11bc:	eb 2d                	jmp    11eb <main+0x77>
+    11be:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    11c1:	48 98                	cltq   
+    11c3:	48 8d 14 c5 00 00 00 	lea    0x0(,%rax,8),%rdx
+    11ca:	00 
+    11cb:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    11cf:	48 01 d0             	add    %rdx,%rax
+    11d2:	48 8b 10             	mov    (%rax),%rdx
+    11d5:	48 8b 05 64 2e 00 00 	mov    0x2e64(%rip),%rax        # 4040 <stdout@@GLIBC_2.2.5>
+    11dc:	48 89 d6             	mov    %rdx,%rsi
+    11df:	48 89 c7             	mov    %rax,%rdi
+    11e2:	e8 5e ff ff ff       	callq  1145 <hello>
+    11e7:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+    11eb:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    11ee:	3b 45 ec             	cmp    -0x14(%rbp),%eax
+    11f1:	7c cb                	jl     11be <main+0x4a>
+    11f3:	b8 00 00 00 00       	mov    $0x0,%eax
+    11f8:	c9                   	leaveq 
+    11f9:	c3                   	retq   
+    11fa:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001200 <__libc_csu_init>:
+    1200:	41 57                	push   %r15
+estern7@remote03:~/i220a/submit/lab7/exercises$ ls -l hello
+-rwxr-x--- 1 estern7 estern7 19376 Oct 15 11:30 hello
+estern7@remote03:~/i220a/submit/lab7/exercises$ strip hello
+estern7@remote03:~/i220a/submit/lab7/exercises$ ls -l hello
+-rwxr-x--- 1 estern7 estern7 14416 Oct 15 11:43 hello
+estern7@remote03:~/i220a/submit/lab7/exercises$ make clear[Kn
+rm -f hello hello.s *.objdump *~
+estern7@remote03:~/i220a/submit/lab7/exercises$ clear
+[H[2J[3Jestern7@remote03:~/i220a/submit/lab7/exercises$ objdump mystery.o -d >myster[K[K[K[K[K[K yster[K[K[K[K[Kmystery.onjdump
+estern7@remote03:~/i220a/submit/lab7/exercises$ objdump mystery.o -d > mystery.onjdump[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kemacs mystery.onjdump 
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[55d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[54d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[55;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[55;59H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[55;58H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[55;60H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[55;57H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[55;77H[?25ldone[H
+[?12l[?25h[?12;25h[55;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[55;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[55;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;61H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[55;96H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[55;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[55;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[55;75H[?25ldone[H
+[?12l[?25h[?12;25h[55;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[55;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[55;64H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[55;65H[?25ldone[H
+[?12l[?25h[?12;25h[55;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[55;54H[?25ldone[H
+[?12l[?25h[?12;25h[55;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[55;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[55d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                                                                                                                                        [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?2004h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[55d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Help                                                                                                                                                                                                         [0m[39;49m[27m
+[A
+[K
+mystery.o:     file format elf64-x86-64[K
+[K
+[K
+Disassembly of section .text:[K
+[K
+0000000000000000 <mystery>:[K
+   0:   55                      push   %rbp[K
+   1:   48 89 e5                mov    %rsp,%rbp[K
+   4:   89 7d fc                mov    %edi,-0x4(%rbp)[K
+   7:   8b 45 fc                mov    -0x4(%rbp),%eax[K
+   a:   25 ff ff 7f 00          and    $0x7fffff,%eax[K
+   f:   c9                      leaveq[K
+  10:   c3                      retq[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mmystery.onjdump[0m[39;49m[30m[48;5;250m   All L1     (Fundamental) -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[55d[K[2d[55d[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mestern7@remote03:~/i220a/submit/lab7/exercises$ emacs mystery.onjdump objdump mystery.o -d > mystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pstery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pstery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pystery.onjdump[1Pstery.onjdump[1Ptery.onjdump[1Pery.onjdump[1Pry.onjdump[1Py.onjdump[1P.onjdump[1Ponjdump[1Pnjdump[1Pjdump[1Pdump[1Pump[1Pmp[1Pp[Kclera[K[Kar
+[H[2J[3Jestern7@remote03:~/i220a/submit/lab7/exercises$ make
+cc -g -Wall  -std=c11    hello.c   -o hello
+cc -g -Wall  -std=c11 -S hello.c
+estern7@remote03:~/i220a/submit/lab7/exercises$ g[Kgdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) b maon[K[Kin
+Breakpoint 1 at 0x1183: file hello.c, line 16.
+(gdb) r
+Starting program: /import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe8a8) at hello.c:16
+16	  if (argc == 1) {
+(gdb) diss[Kas /m
+Dump of assembler code for function main:
+15	{
+   0x0000555555555174 <+0>:	push   %rbp
+   0x0000555555555175 <+1>:	mov    %rsp,%rbp
+   0x0000555555555178 <+4>:	sub    $0x20,%rsp
+   0x000055555555517c <+8>:	mov    %edi,-0x14(%rbp)
+   0x000055555555517f <+11>:	mov    %rsi,-0x20(%rbp)
+
+16	  if (argc == 1) {
+=> 0x0000555555555183 <+15>:	cmpl   $0x1,-0x14(%rbp)
+   0x0000555555555187 <+19>:	jne    0x5555555551b5 <main+65>
+
+17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+   0x0000555555555189 <+21>:	mov    -0x20(%rbp),%rax
+   0x000055555555518d <+25>:	mov    (%rax),%rdx
+   0x0000555555555190 <+28>:	mov    0x2ec9(%rip),%rax        # 0x555555558060 <stderr@@GLIBC_2.2.5>
+   0x0000555555555197 <+35>:	lea    0xe70(%rip),%rsi        # 0x55555555600e
+   0x000055555555519e <+42>:	mov    %rax,%rdi
+   0x00005555555551a1 <+45>:	mov    $0x0,%eax
+   0x00005555555551a6 <+50>:	callq  0x555555555030 <fprintf@plt>
+
+18	    exit(0xdeadbeef);
+   0x00005555555551ab <+55>:	mov    $0xdeadbeef,%edi
+   0x00005555555551b0 <+60>:	callq  0x555555555040 <exit@plt>
+
+19	  }
+20	  for (int i = 1; i < argc; i++) {
+   0x00005555555551b5 <+65>:	movl   $0x1,-0x4(%rbp)
+   0x00005555555551bc <+72>:	jmp    0x5555555551eb <main+119>
+   0x00005555555551e7 <+115>:	addl   $0x1,-0x4(%rbp)
+   0x00005555555551eb <+119>:	mov    -0x4(%rbp),%eax
+   0x00005555555551ee <+122>:	cmp    -0x14(%rbp),%eax
+   0x00005555555551f1 <+125>:	jl     0x5555555551be <main+74>
+
+21	    hello(stdout, argv[i]);
+   0x00005555555551be <+74>:	mov    -0x4(%rbp),%eax
+   0x00005555555551c1 <+77>:	cltq   
+   0x00005555555551c3 <+79>:	lea    0x0(,%rax,8),%rdx
+   0x00005555555551cb <+87>:	mov    -0x20(%rbp),%rax
+   0x00005555555551cf <+91>:	add    %rdx,%rax
+   0x00005555555551d2 <+94>:	mov    (%rax),%rdx
+   0x00005555555551d5 <+97>:	mov    0x2e64(%rip),%rax        # 0x555555558040 <stdout@@GLIBC_2.2.5>
+   0x00005555555551dc <+104>:	mov    %rdx,%rsi
+   0x00005555555551df <+107>:	mov    %rax,%rdi
+   0x00005555555551e2 <+110>:	callq  0x555555555145 <hello>
+
+22	  }
+23	  return 0;
+   0x00005555555551f3 <+127>:	mov    $0x0,%eax
+
+24	}
+   0x00005555555Script started on 2020-10-15 14:46:11-04:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="237" LINES="55"]
+estern7@remote00:~/i220a/submit/lab7$ cd w[Kexercises/
+estern7@remote00:~/i220a/submit/lab7/exercises$ ls
+hello  hello.c	hello.s  Makefile  mystery.o  mystery.onjdump
+estern7@remote00:~/i220a/submit/lab7/exercises$ clear
+[H[2J[3Jestern7@remote00:~/i220a/submit/lab7/exercises$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) b main
+Breakpoint 1 at 0x1183: file hello.c, line 16.
+(gdb) disas /m[K[K[K[K[K[K[K[Kr
+Starting program: /import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe8a8) at hello.c:16
+16	  if (argc == 1) {
+(gdb) disas /m
+Dump of assembler code for function main:
+15	{
+   0x0000555555555174 <+0>:	push   %rbp
+   0x0000555555555175 <+1>:	mov    %rsp,%rbp
+   0x0000555555555178 <+4>:	sub    $0x20,%rsp
+   0x000055555555517c <+8>:	mov    %edi,-0x14(%rbp)
+   0x000055555555517f <+11>:	mov    %rsi,-0x20(%rbp)
+
+16	  if (argc == 1) {
+=> 0x0000555555555183 <+15>:	cmpl   $0x1,-0x14(%rbp)
+   0x0000555555555187 <+19>:	jne    0x5555555551b5 <main+65>
+
+17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+   0x0000555555555189 <+21>:	mov    -0x20(%rbp),%rax
+   0x000055555555518d <+25>:	mov    (%rax),%rdx
+   0x0000555555555190 <+28>:	mov    0x2ec9(%rip),%rax        # 0x555555558060 <stderr@@GLIBC_2.2.5>
+   0x0000555555555197 <+35>:	lea    0xe70(%rip),%rsi        # 0x55555555600e
+   0x000055555555519e <+42>:	mov    %rax,%rdi
+   0x00005555555551a1 <+45>:	mov    $0x0,%eax
+   0x00005555555551a6 <+50>:	callq  0x555555555030 <fprintf@plt>
+
+18	    exit(0xdeadbeef);
+   0x00005555555551ab <+55>:	mov    $0xdeadbeef,%edi
+   0x00005555555551b0 <+60>:	callq  0x555555555040 <exit@plt>
+
+19	  }
+20	  for (int i = 1; i < argc; i++) {
+   0x00005555555551b5 <+65>:	movl   $0x1,-0x4(%rbp)
+   0x00005555555551bc <+72>:	jmp    0x5555555551eb <main+119>
+   0x00005555555551e7 <+115>:	addl   $0x1,-0x4(%rbp)
+   0x00005555555551eb <+119>:	mov    -0x4(%rbp),%eax
+   0x00005555555551ee <+122>:	cmp    -0x14(%rbp),%eax
+   0x00005555555551f1 <+125>:	jl     0x5555555551be <main+74>
+
+21	    hello(stdout, argv[i]);
+   0x00005555555551be <+74>:	mov    -0x4(%rbp),%eax
+   0x00005555555551c1 <+77>:	cltq   
+   0x00005555555551c3 <+79>:	lea    0x0(,%rax,8),%rdx
+   0x00005555555551cb <+87>:	mov    -0x20(%rbp),%rax
+   0x00005555555551cf <+91>:	add    %rdx,%rax
+   0x00005555555551d2 <+94>:	mov    (%rax),%rdx
+   0x00005555555551d5 <+97>:	mov    0x2e64(%rip),%rax        # 0x555555558040 <stdout@@GLIBC_2.2.5>
+   0x00005555555551dc <+104>:	mov    %rdx,%rsi
+   0x00005555555551df <+107>:	mov    %rax,%rdi
+   0x00005555555551e2 <+110>:	callq  0x555555555145 <hello>
+
+22	  }
+23	  return 0;
+   0x00005555555551f3 <+127>:	mov    $0x0,%eax
+
+24	}
+   0x00005555555551f8 <+132>:	leaveq 
+   0x00005555555551f9 <+133>:	retq   
+
+--Type <RET> for more, q to quit, c to continue without paging--i reg
+End of assembler dump.
+(gdb) i reg
+rax            0x555555555174      93824992235892
+rbx            0x0                 0
+rcx            0x7ffff7f8d718      140737353668376
+rdx            0x7fffffffe8b8      140737488349368
+rsi            0x7fffffffe8a8      140737488349352
+rdi            0x1                 1
+rbp            0x7fffffffe7c0      0x7fffffffe7c0
+rsp            0x7fffffffe7a0      0x7fffffffe7a0
+r8             0x7ffff7f8ed80      140737353674112
+r9             0x7ffff7f8ed80      140737353674112
+r10            0x3                 3
+r11            0x0                 0
+r12            0x555555555060      93824992235616
+r13            0x7fffffffe8a0      140737488349344
+r14            0x0                 0
+r15            0x0                 0
+rip            0x555555555183      0x555555555183 <main+15>
+eflags         0x206               [ PF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+(gdb) p arc[Kgc
+$1 = 1
+(gdb) p *($rbp -20 20[C[C)
+Attempt to dereference a generic pointer.
+(gdb) p *(int)(rbp - 20)
+No symbol "rbp" in current context.
+(gdb) p *(int)(rbp - 20)[1@$
+Cannot access memory at address 0xffffffffffffe7ac
+(gdb) p *(int)($rbp - 20)[1P[C[C[C[C[C[C[C[C[C[1@$[C[C[C[C[C[C[C[C[C[1@ [1@*
+$2 = 1
+(gdb) p rg[K[Kargv
+$3 = (const char **) 0x7fffffffe8a8
+(gdb) p *(const char ***)(%[K$rbp -32 32[C[C)
+$4 = (const char **) 0x7fffffffe8a8
+(gdb) v[Kp argv[0]
+$5 = 0x7fffffffeb04 "/import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello"
+(gdb) p (*(const char ***)($rbp - 0xa[K20))[0]
+$6 = 0x7fffffffeb04 "/import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello"
+(gdb) siapl=[K[K[K[K[K[Kdis[[Kplay /i *%[K$pc
+1: x/i *$pc
+=> 0x555555555183 <main+15>:	cmpl   $0x1,-0x14(%rbp)
+(gdb) ni
+0x0000555555555187	16	  if (argc == 1) {
+1: x/i *$pc
+=> 0x555555555187 <main+19>:	jne    0x5555555551b5 <main+65>
+(gdb) p $eflags
+$7 = [ PF ZF IF ]
+(gdb) ni
+17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x555555555189 <main+21>:	mov    -0x20(%rbp),%rax
+(gdb) *****[K[K[K[K[Kp (char *)0xnnnnn
+Invalid number "0xnnnnn".
+(gdb) p (char *)0xnnnnn[K[K[K[K[KQuit
+(gdb) Quit
+(gdb) p (char *)0xnnnnn[K[K[K[K[K55555189[C[C[C[C[C[C[C5189[C[C[C[C[C5189[C[C[C[C[C5189[C[C[C[C[C5189
+$8 = 0x555555555189 <main+21> "H\213E\340H\213\020H\213\005\311."
+(gdb) n9[Ki
+0x000055555555518d	17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x55555555518d <main+25>:	mov    (%rax),%rdx
+(gdb) ni
+0x0000555555555190	17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x555555555190 <main+28>:	mov    0x2ec9(%rip),%rax        # 0x555555558060 <stderr@@GLIBC_2.2.5>
+(gdb) ni
+0x0000555555555197	17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x555555555197 <main+35>:	lea    0xe70(%rip),%rsi        # 0x55555555600e
+(gdb) ni
+0x000055555555519e	17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x55555555519e <main+42>:	mov    %rax,%rdi
+(gdb) ni
+0x00005555555551a1	17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x5555555551a1 <main+45>:	mov    $0x0,%eax
+(gdb) ni
+0x00005555555551a6	17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+1: x/i *$pc
+=> 0x5555555551a6 <main+50>:	callq  0x555555555030 <fprintf@plt>
+(gdb) 
+usage: /import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello NAME...
+18	    exit(0xdeadbeef);
+1: x/i *$pc
+=> 0x5555555551ab <main+55>:	mov    $0xdeadbeef,%edi
+(gdb) ni[Knip (char *)0x555555555189[7Pnnnnn555555555189[K[Kab
+$9 = 0x5555555551ab <main+55> "\277ﾭ\336\350\213\376\377\377\307E\374\001"
+(gdb) ni
+0x00005555555551b0	18	    exit(0xdeadbeef);
+1: x/i *$pc
+=> 0x5555555551b0 <main+60>:	callq  0x555555555040 <exit@plt>
+(gdb) 
+[Inferior 1 (process 518415) exited with code 0357]
+(gdb) 
+The program is not being run.
+(gdb) 
+The program is not being run.
+(gdb) 
+The program is not being run.
+(gdb) quit
+estern7@remote00:~/i220a/submit/lab7/exercises$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) b helo
+Function "helo" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) b helolo
+Breakpoint 1 at 0x1155: file hello.c, line 8.
+(gdb) r joe
+Starting program: /import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello joe
+
+Breakpoint 1, hello (out=0x7ffff7f8e760 <_IO_2_1_stdout_>, who=0x7fffffffeb47 "joe") at hello.c:8
+8	  fprintf(out, "hello %s\n", who);
+(gdb) p (h[K[K[K[Kp (*(const char ***)($rbp - 0x20))[0]
+Cannot access memory at address 0x1
+(gdb) p *(const char ***)($rbp - 32)
+$1 = (const char **) 0x1
+(gdb) p (char *)0x7fffffffeb47
+$2 = 0x7fffffffeb47 "joe"
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 536018] will be killed.
+
+Quit anyway? (y or n) t[Ky
+estern7@remote00:~/i220a/submit/lab7/exercises$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) b main[K[K[K[K[K[Kstart joe
+Temporary breakpoint 1 at 0x1183: file hello.c, line 16.
+Starting program: /import/linux/home1/estern7/projects/i220a/submit/lab7/exercises/hello joe
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe8a8) at hello.c:16
+16	  if (argc == 1) {
+(gdb) disass /m
+Dump of assembler code for function main:
+15	{
+   0x0000555555555174 <+0>:	push   %rbp
+   0x0000555555555175 <+1>:	mov    %rsp,%rbp
+   0x0000555555555178 <+4>:	sub    $0x20,%rsp
+   0x000055555555517c <+8>:	mov    %edi,-0x14(%rbp)
+   0x000055555555517f <+11>:	mov    %rsi,-0x20(%rbp)
+
+16	  if (argc == 1) {
+=> 0x0000555555555183 <+15>:	cmpl   $0x1,-0x14(%rbp)
+   0x0000555555555187 <+19>:	jne    0x5555555551b5 <main+65>
+
+17	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+   0x0000555555555189 <+21>:	mov    -0x20(%rbp),%rax
+   0x000055555555518d <+25>:	mov    (%rax),%rdx
+   0x0000555555555190 <+28>:	mov    0x2ec9(%rip),%rax        # 0x555555558060 <stderr@@GLIBC_2.2.5>
+   0x0000555555555197 <+35>:	lea    0xe70(%rip),%rsi        # 0x55555555600e
+   0x000055555555519e <+42>:	mov    %rax,%rdi
+   0x00005555555551a1 <+45>:	mov    $0x0,%eax
+   0x00005555555551a6 <+50>:	callq  0x555555555030 <fprintf@plt>
+
+18	    exit(0xdeadbeef);
+   0x00005555555551ab <+55>:	mov    $0xdeadbeef,%edi
+   0x00005555555551b0 <+60>:	callq  0x555555555040 <exit@plt>
+
+19	  }
+20	  for (int i = 1; i < argc; i++) {
+   0x00005555555551b5 <+65>:	movl   $0x1,-0x4(%rbp)
+   0x00005555555551bc <+72>:	jmp    0x5555555551eb <main+119>
+   0x00005555555551e7 <+115>:	addl   $0x1,-0x4(%rbp)
+   0x00005555555551eb <+119>:	mov    -0x4(%rbp),%eax
+   0x00005555555551ee <+122>:	cmp    -0x14(%rbp),%eax
+   0x00005555555551f1 <+125>:	jl     0x5555555551be <main+74>
+
+21	    hello(stdout, argv[i]);
+   0x00005555555551be <+74>:	mov    -0x4(%rbp),%eax
+   0x00005555555551c1 <+77>:	cltq   
+   0x00005555555551c3 <+79>:	lea    0x0(,%rax,8),%rdx
+   0x00005555555551cb <+87>:	mov    -0x20(%rbp),%rax
+   0x00005555555551cf <+91>:	add    %rdx,%rax
+   0x00005555555551d2 <+94>:	mov    (%rax),%rdx
+   0x00005555555551d5 <+97>:	mov    0x2e64(%rip),%rax        # 0x555555558040 <stdout@@GLIBC_2.2.5>
+   0x00005555555551dc <+104>:	mov    %rdx,%rsi
+   0x00005555555551df <+107>:	mov    %rax,%rdi
+   0x00005555555551e2 <+110>:	callq  0x555555555145 <hello>
+
+22	  }
+23	  return 0;
+   0x00005555555551f3 <+127>:	mov    $0x0,%eax
+
+24	}
+   0x00005555555551f8 <+132>:	leaveq 
+   0x00005555555551f9 <+133>:	retq   
+
+--Type <RET> for more, q to quit, c to continue without paging--c
+End of assembler dump.
+(gdb) b *0x00005555555551ee
+Breakpoint 2 at 0x5555555551ee: file hello.c, line 20.
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00005555555551ee in main (argc=2, argv=0x7fffffffe8a8) at hello.c:20
+20	  for (int i = 1; i < argc; i++) {
+(gdb) p i
+$1 = 1
+(gdb) c
+Continuing.
+hello joe
+
+Breakpoint 2, 0x00005555555551ee in main (argc=2, argv=0x7fffffffe8a8) at hello.c:20
+20	  for (int i = 1; i < argc; i++) {
+(gdb) pi[K i
+$2 = 2
+(gdb) set $([Keax = $eax - 1
+(gdb) c
+Continuing.
+hello (null)
+
+Breakpoint 2, 0x00005555555551ee in main (argc=2, argv=0x7fffffffe8a8) at hello.c:20
+20	  for (int i = 1; i < argc; i++) {
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 537760] will be killed.
+
+Quit anyway? (y or n) y
+estern7@remote00:~/i220a/submit/lab7/exercises$ cd i2[K[K~/i220a
+estern7@remote00:~/i220a$ exit
+
+Script done on 2020-10-15 16:08:37-04:00 [COMMAND_EXIT_CODE="0"]

@@ -68,6 +68,8 @@ static void set_add_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
   //@TODO
 
   result = opA + opB;
+
+  return result;
 }
 
 /** Set condition codes for subtraction operation with operands opA, opB

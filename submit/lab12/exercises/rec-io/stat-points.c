@@ -64,13 +64,23 @@ statPoints(DynArray *points, FILE *out)
 int
 main(int argc, const char *argv[])
 {
-  if (argc != 2) {
+  if (argc != 2 && argc != 3) {
     fprintf(stderr, "usage: %s BINARY_POINTS_FILE\n", argv[0]);
     exit(1);
   }
+  
   DynArray *points = newDynArray(sizeof(Point2));
   readPoints(argv[1], points);
-  statPoints(points, stdout);
+
+  if (argc == 3)
+  {
+    FILE *filename = fopen(argv[2], "a"); //Set filename of output file
+    statPoints(points, filename);
+  }
+  else
+  {
+    statPoints(points, stdout);
+  }
   freeDynArray(points);
   return 0;
 }

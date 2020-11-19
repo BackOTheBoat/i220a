@@ -1,7 +1,6 @@
 #include "y86.h"
 #include "yas.h"
 #include "ysim.h"
-
 #include "errors.h"
 
 #include <assert.h>
@@ -152,6 +151,7 @@ main(int argc, const char *argv[])
   if (argc == 1) {
     usage(argv[0]);
   }
+
   Args args;
   memset(&args, 0, sizeof(args));
   first_pass_args(argc, argv, &args);

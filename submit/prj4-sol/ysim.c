@@ -68,8 +68,6 @@ static void set_add_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
   //@TODO
 
   result = opA + opB;
-
-  return result;
 }
 
 /** Set condition codes for subtraction operation with operands opA, opB
@@ -107,4 +105,111 @@ typedef enum {
 void step_ysim(Y86 *y86)
 {
   //@TODO
+
+  /*if (read_status_y86(y86) != STATUS_AOK && read_status_y86(y86) != STATUS_HLT)
+  {
+    return;
+  }*/
+
+  Address programCounter = read_pc_y86(y86);
+  Byte memoryByte = read_memory_byte_y86(y86, programCounter);
+
+  if (read_status_y86(y86) != STATUS_AOK)
+  {
+    return;
+  }
+  
+  Byte highNibble = get_nybble(memoryByte, 1);
+  //printf("TEST");
+
+  switch (highNibble)
+  {
+    case HALT_CODE:
+    	write_status_y86(y86, STATUS_HLT);
+    	break;
+    case NOP_CODE:
+    	write_pc_y86(y86, programCounter + 1);
+    	break;
+    case CMOVxx_CODE:
+      break;
+    case IRMOVQ_CODE:
+    	irmovq(y86);
+      break;
+    case RMMOVQ_CODE:
+      break;
+    case MRMOVQ_CODE:
+      break;
+    case OP1_CODE:
+      break;
+    case Jxx_CODE:
+      break;
+    //case CALL_CODE:
+      call(y86);
+      break;
+    //case RET_CODE:
+      ret(y86);
+      break;
+    case PUSHQ_CODE:
+      break;
+    case POPQ_CODE:
+      break;
+    default:
+    {
+      write_status_y86(y86, STATUS_INS);
+      break;
+    }
+  }
+}
+
+void incrementPC(Y86 *y86)
+{
+  Address programCounter = read_pc_y86(y86);
+  write_pc_y86(y86, programCounter + 1);
+  
+  return;
+}
+
+void push(Y86 *y86, Word value)
+{
+  return;
+}
+
+void pop(Y86 *y86)
+{
+  return;
+}
+
+void irmovq(Y86 *y86)
+{
+  Address programCounter = read_pc_y86(y86);
+  Byte memoryByte = read_memory_byte_y86(y86, programCounter);
+  memoryByte = get_nybble(memoryByte, 0); //get lower byte
+  
+  Register destination = memoryByte; //Set the register to be modified
+  Word value = read_memory_word_y86(y86, programCounter); //Get the value to place in the register
+
+  write_register_y86(y86, destination, value);
+  incrementPC(y86);
+  
+  return;
+}
+
+void call(Y86 *y86)
+{
+  Address programCounter = read_pc_y86(y86);
+  Byte memoryByte = read_memory_byte_y86(y86, programCounter);
+  memoryByte = get_nybble(memoryByte, 0); //get lower byte
+  
+  push(y86, programCounter);
+  write_pc_y86(y86, memoryByte);
+  
+  return;
+}
+
+void ret(Y86 *y86)
+{
+  Address returnPC = read_register_y86(y86, REG_RSP);
+  write_pc_y86(y86, returnPC);
+  
+  return;
 }

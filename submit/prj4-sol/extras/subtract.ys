@@ -1,0 +1,28 @@
+# Execution begins at address 0 
+       .pos    0
+       
+init:  irmovq stack, %rsp # set up stack pointer  
+       call    main       # execute main program
+       halt               # terminate program
+
+operand:  .quad   0x000000000000000b
+
+#should set both rax and rbx to 0x7000000000000000
+main:
+	irmovq	operand, %rsi
+	mrmovq	(%rsi), %rsi
+	irmovq	$1, %rdi
+	call   	abs_diff     #rax = abx_diff(val2, val1)
+        ret
+
+#abs_diff(x, y)
+# rdi = x, rsi = y
+abs_diff:
+        subq    %rdi, %rdx     #rdx = y - x
+        ret
+
+        
+
+#stack starts here and grows to lower addresses  
+        .pos   0x200
+stack:

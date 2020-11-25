@@ -1,9 +1,22 @@
 # Execution begins at address 0 
         .pos    0
        
-init:   
-	irmovq $4, %rax
-        halt               # terminate program 
+init:	irmovq stack, %rsp
+	#irmovq $1, %rax
+	irmovq $0xf, %rbx
+	call   main
+        halt               # terminate program
+
+abc:	.quad		   $0x2234567890abcdef
+
+main:	irmovq $11, %rcx
+	irmovq $0xaa, %rcx
+	irmovq $0xff, %rcx
+	irmovq $111, %rcx
+	irmovq $0xabc, %rcx
+	irmovq abc, %rcx
+	#irmovq in, %rcx
+	ret
 
 #stack starts here and grows to lower addresses  
        .pos   0x200

@@ -9,8 +9,8 @@ operand:  .quad   0x000000000000000b
 
 #should set both rax and rbx to 0x7000000000000000
 main:
-	irmovq	operand, %rsi
-	mrmovq	(%rsi), %rsi
+	irmovq	operand, %rdx
+	mrmovq	(%rdx), %rdx
 	irmovq	$1, %rdi
 	call   	abs_diff     #rax = abx_diff(val2, val1)
         ret
@@ -18,8 +18,11 @@ main:
 #abs_diff(x, y)
 # rdi = x, rsi = y
 abs_diff:
-        subq    %rdi, %rdx     #rdx = y - x
-        ret
+        subq    %rdx, %rdi     #rdx = y - x
+	irmovq	$1, %rbx
+	irmovq	$2, %rcx
+	addq	%rbx, %rcx
+	ret
 
         
 

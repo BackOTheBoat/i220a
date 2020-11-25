@@ -1,0 +1,26 @@
+# Execution begins at address 0
+        .pos    0
+
+init:   irmovq stack, %rsp # set up stack pointer
+        call    main       # execute main program
+        halt               # terminate program
+
+main:
+	irmovq $1, %rax
+	irmovq $3, %rcx
+	irmovq $1, %rbx
+	jmp loop
+
+loop:
+	addq   %rax, %rbx
+	andq   %rax, %rcx
+	#jeq    end
+	#jmp    loop
+	irmovq $2, %rax
+
+end:
+	ret
+
+#stack starts here and grows to lower addresses
+       .pos   0x200
+stack:

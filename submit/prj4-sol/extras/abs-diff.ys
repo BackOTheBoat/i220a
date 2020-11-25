@@ -34,8 +34,6 @@ abs_diff:
         cmovle  %rdx, %rax     #if x <= y rax = y - x
         ret
 
-        
-
 #stack starts here and grows to lower addresses  
         .pos   0x200
 stack:

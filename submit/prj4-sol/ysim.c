@@ -36,7 +36,9 @@ bool check_cc(const Y86 *y86, Byte op)
 {
   bool ret = false;
   Condition condition = get_nybble(op, 0);
+  //printf("Condition is: %d\n", condition);
   Byte cc = read_cc_y86(y86);
+  
   switch (condition) {
   case ALWAYS_COND:
     ret = true;
@@ -52,13 +54,53 @@ bool check_cc(const Y86 *y86, Byte op)
     ret = get_zf(cc);
     break;
   case NE_COND:
-    ret = ~get_zf(cc);
+    //printf("ZF: %d. MATH RESULT is: %d\n", get_zf(cc), ~get_zf(cc));
+    if (get_zf(cc) == 0)
+    {
+      ret = true;
+    }
+    else if (get_zf(cc) != 0)
+    {
+      ret = false;
+    }
+    //printf("RET: %d. MATH RESULT is: %d\n", ret, ~zf);
     break;
   case GE_COND:
-    ret = ~(get_sf(cc) ^ get_of(cc));
+    //printf("SF: %d. MATH RESULT is: %d\n", get_sf(cc), ~get_sf(cc));
+    ret = (get_sf(cc) ^ get_of(cc));
+
+    if (ret == 0)
+    {
+      ret = 1;
+    }
+    else if (ret != 0)
+    {
+      ret = 0;
+    }
+    //printf("RET: %d. MATH RESULT is: %d\n", ret, ~get_sf(cc));
     break;
   case GT_COND:
-    ret = ~(get_sf(cc) ^ get_of(cc)) & get_zf(cc);
+    //printf("ZF: %d. MATH RESULT is: %d\n", get_sf(cc), ~get_sf(cc));
+    ret = (get_sf(cc) ^ get_of(cc));
+    //printf("RET = %d\n", ret);
+    if (ret == 0)
+    {
+      ret = 1;
+    }
+    else if (ret != 0)
+    {
+      ret = 0;
+    }
+
+    if (get_zf(cc) == 0)
+    {
+      ret = ret & 1;
+    }
+    else if (get_zf(cc) != 0)
+    {
+      ret = ret & 0;
+    }
+    //printf("RET: %d. MATH RESULT is: %d\n", ret, ~get_sf(cc));
     break;
   default: {
     Address pc = read_pc_y86(y86);
@@ -85,10 +127,11 @@ static void set_add_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
   
   if (result == 0) //Test if result is zero
   {
-    cc = cc + 1; //Set zero flag -> ZF = 1
+    cc = cc + 4; //Set zero flag -> ZF = 1
   }
-  
-  if (result & 0x800000000000000 == 0x800000000000000)
+
+  int digit = result >> ((4 * 16) - 1);
+  if (digit == 1)
   {
     cc = cc + 2; //Set sign flag -> SF = 1
   }
@@ -96,12 +139,12 @@ static void set_add_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
   //Checking for overflow
   if (opA > 0 && opB > 0 && result < 0)
   {   //A and B are +, RESULT is -
-    cc = cc + 4;
+    cc = cc + 1;
   }
   
   if (opA < 0 && opB < 0 && result > 0)
   {   //A and B are -, RESULT is +
-    cc = cc + 4;
+    cc = cc + 1;
   }
   
   write_cc_y86(y86, cc);
@@ -114,28 +157,36 @@ static void set_sub_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
 {
   //@TODO -- DONE
   Byte cc = 0;
-  
+
   if (result == 0)
   {
-    cc = cc + 1;
+    cc = cc + 4;
   }
-  
-  if (result & 0x800000000000000 == 0x800000000000000)
+
+  Word negTest = result & 0x800000000000000;
+  int digit = result >> ((4 * 16) - 1);
+  //printf("Digit is %d\n", digit);
+  //printf("Result is: %lx\n", result);
+  //printf("Test result is: %lx but should be %lx\n", negTest, result & 0x8000000000000000);
+
+  if (digit == 1)
   {
+    //printf("Case is true\n");
     cc = cc + 2;
   }
   
   //Checking for overflow
   if (opA > 0 && opB < 0 && result < 0)
   {   //A is +, B is -, RESULT is NOT +
-    cc = cc + 4;
+    cc = cc + 1;
   }
   
   if (opA < 0 && opB > 0 && result > 0)
   {   //A is -, B is +, RESULT is NOT -
-    cc = cc + 4;
+    cc = cc + 1;
   }
-  
+
+  //printf("CC is: %lx\n", cc);
   write_cc_y86(y86, cc);
 }
 
@@ -146,10 +197,11 @@ static void set_logic_op_cc(Y86 *y86, Word result)
 
   if (result == 0)
   {
-    cc = cc + 1;
+    cc = cc + 4;
   }
-  
-  if (result & 0x800000000000000 == 0x800000000000000)
+
+  int digit = result >> ((4 * 16) - 1);
+  if (digit == 1)
   {
     cc = cc + 2;
   }
@@ -170,13 +222,15 @@ static void op1(Y86 *y86, Byte op, Register regA, Register regB)
   switch (op)
   {
     case ADDL_FN:
+      //printf("OP 1: %lx OP 2: %lx\n", read_register_y86(y86, regA), read_register_y86(y86, regB));
       result = read_register_y86(y86, regA) + read_register_y86(y86, regB);
       set_add_arith_cc(y86, read_register_y86(y86, regA), read_register_y86(y86, regB), result);
       write_register_y86(y86, regB, result);
       break;
     case SUBL_FN:
       //printf("OP 1: %lx OP 2: %lx\n", read_register_y86(y86, regA), read_register_y86(y86, regB));
-      result = read_register_y86(y86, regA) - read_register_y86(y86, regB);
+      //printf("Destination is %d\n", regB);
+      result = read_register_y86(y86, regB) - read_register_y86(y86, regA);
       set_sub_arith_cc(y86, read_register_y86(y86, regA), read_register_y86(y86, regB), result);
       write_register_y86(y86, regB, result);
       break;
@@ -249,6 +303,7 @@ void step_ysim(Y86 *y86)
       parseOp1(y86);
       break;
     case Jxx_CODE:
+      jump(y86);
       break;
     case CALL_CODE:
       call(y86);
@@ -257,8 +312,10 @@ void step_ysim(Y86 *y86)
       ret(y86);
       break;
     case PUSHQ_CODE:
+      push(y86);
       break;
     case POPQ_CODE:
+      pop(y86);
       break;
     default:
     {
@@ -279,11 +336,36 @@ void incrementPC(Y86 *y86)
 
 void push(Y86 *y86, Word value)
 {
+  Address programCounter = read_pc_y86(y86); //Read program counter
+  Byte sourceRegister = get_nybble(read_memory_byte_y86(y86, programCounter + sizeof(Byte)), 1);
+  
+  Word rsp = read_register_y86(y86, REG_RSP); //Get address from RSP
+  rsp -= sizeof(Word); //Decrement RSP
+  write_memory_word_y86(y86, rsp, read_register_y86(y86, sourceRegister));
+  write_register_y86(y86, REG_RSP, rsp); //Set RSP to new stack address
+  write_pc_y86(y86, programCounter + (2 * sizeof(Byte)));
+  
   return;
 }
 
 void pop(Y86 *y86)
 {
+  Address programCounter = read_pc_y86(y86);
+  Byte destination = get_nybble(read_memory_byte_y86(y86, programCounter + sizeof(Byte)), 1);
+
+  Word rsp = read_register_y86(y86, REG_RSP);
+  //printf("Reading from location %lx\n", rsp);
+  Word returnValue = read_memory_word_y86(y86, rsp);
+  //printf("Value is %lx\n", returnValue);
+  rsp += sizeof(Word);
+  write_register_y86(y86, destination, returnValue);
+
+  if (destination != REG_RSP)
+  {
+    write_register_y86(y86, REG_RSP, rsp);
+  }
+  
+  write_pc_y86(y86, programCounter + (2 * sizeof(Byte)));
   return;
 }
 
@@ -378,7 +460,8 @@ void cmovq(Y86 *y86)
   Byte sourceRegister = get_nybble(registerByte, 1); //RegA
   Byte destination = get_nybble(registerByte, 0); //RegB
 
-  Byte conditionCodes = read_cc_y86(y86);
+  Byte conditionCodes = get_nybble(read_memory_byte_y86(y86, programCounter), 0);
+  
   if (check_cc(y86, conditionCodes))
   {
     Word value = read_register_y86(y86, sourceRegister);
@@ -386,8 +469,8 @@ void cmovq(Y86 *y86)
   }
   else
   {
-    destination = 0xf; //Destination = NO REGISTER <- 0xf
-    write_register_y86(y86, destination, read_register_y86(y86, sourceRegister));
+    //destination = REG_NONE; //Destination = NO REGISTER <- 0xe
+    //write_register_y86(y86, destination, read_register_y86(y86, sourceRegister));
   }
 
   write_pc_y86(y86, programCounter + (2 * sizeof(Byte)));
@@ -401,6 +484,24 @@ void parseOp1(Y86 *y86)
   Byte regA = get_nybble(registers, 1);
   Byte regB = get_nybble(registers, 0);
 
+  //printf("Operator is: %d\n", operator);
   op1(y86, operator, regA, regB);
   write_pc_y86(y86, programCounter + (2 * sizeof(Byte)));
+}
+
+void jump(Y86 *y86)
+{
+  Address programCounter = read_pc_y86(y86); //Read program counter
+  Byte conditionCode = get_nybble(read_memory_byte_y86(y86, programCounter), 0); //Get condition code
+  Word jumpDestination = read_memory_word_y86(y86, programCounter + sizeof(Byte)); //Get jump target
+
+  if (check_cc(y86, conditionCode))
+  {
+    write_pc_y86(y86, jumpDestination);
+  }
+  else
+  {
+    //printf("Next Address: %lx", programCounter + sizeof(Byte)+ sizeof(Word));
+    write_pc_y86(y86, programCounter + sizeof(Byte) + sizeof(Word));
+  }   
 }

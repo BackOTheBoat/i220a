@@ -1,0 +1,200 @@
+Script started on 2020-12-04 19:18:02-05:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="24"]
+estern7@remote-n43:~/i220a/submit/lab13$ clear
+[H[2J[3Jestern7@remote-n43:~/i220a/submit/lab13$ cd .e[K[Kexercises/
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ make poll.ll[K[Kcom
+as --32 -a=poll.lst poll.s -o poll.o
+poll.s: Assembler messages:
+poll.s:51: Error: no such instruction: `j main1'
+make: *** [Makefile:18: poll.com] Error 1
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+112 bytes copied, 0.00190222 s, 58.9 kB/s
+rm poll.bin
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ ls -l
+total 80
+-rw-r----- 1 estern7 estern7   81 Dec  4 18:02  block.com
+-rw-r----- 1 estern7 estern7 4379 Dec  4 18:02  block.lst
+-rw-r----- 1 estern7 estern7 1751 Dec  4 18:01  block.s
+-rw-r----- 1 estern7 estern7 1751 Nov 30 19:54  block.s~
+-rw-r----- 1 estern7 estern7  209 Dec  4 18:02  key-int.com
+-rw-r----- 1 estern7 estern7 9355 Dec  4 18:02  key-int.lst
+-rw-r----- 1 estern7 estern7 4346 Dec  4 18:02  key-int.s
+-rw-r----- 1 estern7 estern7 4346 Nov 30 19:54  key-int.s~
+-rw-r----- 1 estern7 estern7  617 Nov 30 19:54  Makefile
+-rw-r----- 1 estern7 estern7  112 Dec  4 19:26  poll.com
+-rw-r----- 1 estern7 estern7 5521 Dec  4 19:26  poll.lst
+-rw-r----- 1 estern7 estern7 2295 Dec  4 19:28 '#poll.s#'
+-rw-r----- 1 estern7 estern7 2307 Dec  4 19:26  poll.s
+-rw-r----- 1 estern7 estern7 2295 Nov 30 19:54  poll.s~
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ rm poll.[K[K[K[K[K#\#poll.s# 
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ clearc[K
+[H[2J[3Jestern7@remote-n43:~/i220a/submit/lab13/exercises$ makepoll.c[C poll.c[C[C[C[C[C[Com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+110 bytes copied, 0.00165607 s, 66.4 kB/s
+rm poll.bin
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+113 bytes copied, 0.00193367 s, 58.4 kB/s
+rm poll.bin
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+113 bytes copied, 0.00180122 s, 62.7 kB/s
+rm poll.bin
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ clear
+[H[2J[3Jestern7@remote-n43:~/i220a/submit/lab13/exercises$ ls -l
+total 76
+-rw-r----- 1 estern7 estern7   81 Dec  4 18:02 block.com
+-rw-r----- 1 estern7 estern7 4379 Dec  4 18:02 block.lst
+-rw-r----- 1 estern7 estern7 1751 Dec  4 18:01 block.s
+-rw-r----- 1 estern7 estern7 1751 Nov 30 19:54 block.s~
+-rw-r----- 1 estern7 estern7  209 Dec  4 18:02 key-int.com
+-rw-r----- 1 estern7 estern7 9355 Dec  4 18:02 key-int.lst
+-rw-r----- 1 estern7 estern7 4346 Dec  4 18:02 key-int.s
+-rw-r----- 1 estern7 estern7 4346 Nov 30 19:54 key-int.s~
+-rw-r----- 1 estern7 estern7  617 Nov 30 19:54 Makefile
+-rw-r----- 1 estern7 estern7  113 Dec  4 19:41 poll.com
+-rw-r----- 1 estern7 estern7 5522 Dec  4 19:41 poll.lst
+-rw-r----- 1 estern7 estern7 2295 Dec  4 19:42 poll.s
+-rw-r----- 1 estern7 estern7 2308 Dec  4 19:41 poll.s~
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ ls -lclearmake poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+110 bytes copied, 0.00171908 s, 64.0 kB/s
+rm poll.bin
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+110 bytes copied, 0.00215824 s, 51.0 kB/s
+rm poll.bin
+estern7@remote-n43:~/i220a/submit/lab13/exercises$ clear
+[H[2J[3Jestern7@remote-n43:~/i220a/submit/lab13/exercises$ clear
+[H[2J[3Jestern7@remote-n43:~/i220a/submit/lab13/exercises$ exirt[K[Kt
+exit
+
+Script done on 2020-12-04 20:30:14-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2020-12-04 22:30:26-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+estern7@remote-n13:~/i220a/submit/lab13$ cd exercises/
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ rm #\#poll.s# [K
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ clear
+[H[2J[3Jestern7@remote-n13:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+110 bytes copied, 0.00157598 s, 69.8 kB/s
+rm poll.bin
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ make poll.com
+make: 'poll.com' is up to date.
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+114 bytes copied, 0.0014988 s, 76.1 kB/s
+rm poll.bin
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+114 bytes copied, 0.0018666 s, 61.1 kB/s
+rm poll.bin
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ clear
+[H[2J[3Jestern7@remote-n13:~/i220a/submit/lab13/exercises$ exit[K[K[K[Kexit[K[K[K[Kc[Kclear
+[H[2J[3Jestern7@remote-n13:~/i220a/submit/lab13/exercises$ doxbox &
+[1] 3672321
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ bash: doxbox: command not found
+^C
+[1]+  Exit 127                doxbox
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ dosbox &
+[1] 3672383
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file /home/estern7/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+clear
+[H[2J[3Jestern7@remote-n13:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+110 bytes copied, 0.00128672 s, 85.5 kB/s
+rm poll.bin
+estern7@remote-n13:~/i220a/submit/lab13/exercises$ exit
+
+Script done on 2020-12-05 01:44:08-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2020-12-05 11:14:40-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+estern7@remote-n02:~/i220a/submit/lab13$ cd exercises/
+estern7@remote-n02:~/i220a/submit/lab13/exercises$ dosbox &
+[1] 3937690
+estern7@remote-n02:~/i220a/submit/lab13/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file /home/estern7/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+clear
+[H[2J[3Jestern7@remote-n02:~/i220a/submit/lab13/exercises$ make poll.cpm[K[Kon[Km
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+110 bytes copied, 0.00149858 s, 73.4 kB/s
+rm poll.bin
+estern7@remote-n02:~/i220a/submit/lab13/exercises$ make poll.com
+as --32 -a=poll.lst poll.s -o poll.o
+objcopy -O binary poll.o poll.bin
+rm poll.o
+dd if=poll.bin of=poll.com bs=256 skip=1
+0+1 records in
+0+1 records out
+117 bytes copied, 0.0014899 s, 78.5 kB/s
+rm poll.bin
+estern7@remote-n02:~/i220a/submit/lab13/exercises$ make key-int.com
+make: 'key-int.com' is up to date.
+estern7@remote-n02:~/i220a/submit/lab13/exercises$ exit
+exit
+
+Script done on 2020-12-05 12:59:14-05:00 [COMMAND_EXIT_CODE="0"]
